@@ -1,13 +1,111 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+    <!-- topContent模板引入 -->
+    <import src="../templates/topContent.wxml"/>
+    <template is="searchTemplate" data="{{searchInfo}}" />
+    <template is="swiperTemplate" data="{{imgList,currentSwiper}}" />
+
+    <!-- 取车还车 -->
+    <view class="selectCarWrap">
+        <view class="addressWrap">
+            <view>
+              <icon class="iconfont iconfanhui1" />
+              <text class="carTitle">取车地点</text>
+            </view>
+            <view>
+              <text class="carleft">贵阳市</text>
+              <text class="carRight">南明区喜来登大酒店</text>
+            </view>
+        </view>
+        <view class="addressWrap">
+            <view>
+              <icon class="iconfont iconfanhui1 iconReverse" style="color: #18a8ea;" />
+              <text class="carTitle">还车地点</text>
+            </view>
+            <view>
+              <text class="carleft">铜仁市</text>
+              <text class="carRight">思南县白鹭洲大酒店</text>
+            </view>
+        </view>
+        <view class="selectCarBtn flex justify-center"><button class="bg-blue cu-btn bg-gradual-blue shadow-blur round" bindtap="selectCarInto">立即选车</button></view>
+        <view class="iconWrap">
+            <view>
+              <image src="https://www.youmuzhe.net/image/tcar.png" />
+              <text>有车加盟</text>
+            </view>
+            <view>
+                <image src="https://www.youmuzhe.net/image/nocar.png" />
+                <text>无车加盟</text>
+            </view>
+        </view>
+    </view>
+
+    <!-- 特价酒店 -->
+    <view class="specialHotelWrap">
+        <view class="title">
+            <view class="columnBlue"></view>
+            <text>特价酒店</text>
+        </view>
+        <view class="specialHotelList">
+            <block wx:for="{{specialHotelList}}" wx:key="index">
+                <view class="specialHotelItem">
+                    <image src="{{specialHotelList[index].imgUrl}}" mode="scaleToFill" />
+                    <view>{{specialHotelList[index].hotelTitle}}</view>
+                </view>
+            </block>
+        </view>
+    </view>
+
+    <!-- 热门酒店 -->
+    <view class="hotHotelWrap">
+        <view class="title">
+            <view class="columnBlue"></view>
+            <text>热门酒店</text>
+        </view>
+        <view class="more">
+            查看更多>
+        </view>
+        
+        <view class="hotHotelList">
+            <block wx:for="{{hotHotelList}}" wx:key="index">
+                <view class="hotHotelItem">
+                      <view class="hotHotelImg">
+                          <image src="{{hotHotelList[index].imgUrl}}" mode="scaleToFill" />
+                      </view>
+                      <view class="hotHotelTitle">{{hotHotelList[index].hotelTitle}}</view>
+                      <view class="hotelIcontWrap">
+                          <view>
+                              <icon class="iconfont iconwifi" />
+                              <text>无线上网</text>
+                          </view>
+                          <view>
+                                <icon class="iconfont icontingchechang" />
+                                <text>免费停车</text>
+                          </view>
+                          <view>
+                                <icon class="iconfont iconchangyongicon-" />
+                                <text>行李寄存</text>
+                          </view>
+                          <view>
+                                <icon class="iconfont iconshuilongtouhuasaanzhuang" />
+                                <text>热水洗浴</text>
+                          </view>
+                      </view>
+                      <view class="priceWrap">
+                          <view class="priceLeft">
+                              <text style="font-size: 22rpx;">￥</text>
+                              <text style="font-size: 38rpx;">168</text>
+                          </view>
+                          <view class="priceRight">
+                              <text>满意度96%</text>
+                              <text>销量20</text>
+                          </view>
+                      </view>
+                </view>
+            </block>
+         
+
+        </view>
+    </view>
+
 </view>

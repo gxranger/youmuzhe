@@ -1,0 +1,80 @@
+  <view class="makeCarWrap">
+        
+        <!-- carInfo模板引入 -->
+      <import src="../../templates/carInfo.wxml"/>
+      <template is="carInfoTemplate" data="{{carInfo}}" />
+
+        <view class="itemCheck" bindtap="confirmContract">
+            <icon class="iconfont iconxuanzhong {{isContract?'iconActive':''}}" />
+            <text>我已阅读并同意</text>
+            <text class="contract">《租车合同》</text>
+        </view>
+        
+        <view class="bottomBtn">
+            <button class="lightBtn bg-green">
+                <icon class="iconfont iconyuanguangdeng" />
+               灯光寻车
+            </button>
+            <button class="unlockBtn" bindtap="showModel" data-target="makeCarModal">
+                <icon class="iconfont iconweisuoding" />
+                开锁用车
+            </button>
+        </view>
+    </view>
+     
+         <!-- 验车弹窗 -->
+      <view class="cu-modal  {{isCheckShow?'show':''}}">
+          <view class="cu-dialog bg-white">
+          <view class="text-left text-xl padding flex justify-between">
+              <view>
+                      <icon class="iconfont iconjianchaxiang" />
+                      <text class="text-black text-bold">车辆外观检查</text>
+              </view>
+          </view>
+            <view class="text-left padding">
+                 请在开锁前完成车辆外观检查
+            </view>
+            <view class="cu-bar bg-white justify-end">
+              <view class="action" bindtap="checkOutCar">
+              <button class="cu-btn bg-blue lg">前去验车</button>
+              </view>
+            </view>
+          </view>
+        </view>
+
+         <!-- 取车超时弹窗 -->
+      <view class="cu-modal {{isTimeShow?'show':''}}">
+            <view class="cu-dialog bg-white">
+            <view class="text-left text-xl padding flex justify-between">
+                <view>
+                        <icon class="iconfont iconicon-" />
+                        <text class="text-black text-bold">取车已超时</text>
+                </view>
+                <view bindtap="hideModal">
+                        <text class="cuIcon-close text-red"></text>
+                </view>
+            </view>
+              <view class="text-left padding">
+                    您的订单已超时等待30分钟，未了不影响他人用车，我们自动帮您结算了订单，您需支付30分钟等待费6元
+              </view>
+              <view class="cu-bar bg-white justify-end">
+                <view class="action">
+                <button class="cu-btn bg-blue lg">支付</button>
+                </view>
+              </view>
+            </view>
+          </view>
+
+          <!-- 开锁用车弹窗 -->
+              <view class="cu-modal {{modalName=='makeCarModal'?'show':''}}">
+                <view class="cu-dialog bg-white padding-top padding-left padding-right">
+                <view class="text-left padding-bottom">
+                        您可在15：30前进行验车，超时将支付等候费用并自动结算订单，如有疑问可提交说明；如发现车辆无法使用，可提交问题报告至平台，平台将第一时间为您解决问题。
+                </view>
+                  <view class="bg-img" style="background-image: url('https://www.youmuzhe.net/image/key.png');height:200px;">
+                  </view>
+                  <view class="cu-bar bg-white margin-top solid-top">
+                    <view class="action margin-0 flex-sub text-blue solid-left" bindtap="hideModal">我知道了</view>
+                  </view>
+                </view>
+              </view>

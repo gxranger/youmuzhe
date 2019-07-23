@@ -1,0 +1,76 @@
+
+   
+    <!-- topContent模板引入 -->
+    <import src="../../templates/topContent.wxml"/>
+    <template is="searchTemplate" data="{{searchInfo}}" />
+    <template is="swiperTemplate" data="{{imgList,currentSwiper}}" />
+
+    <view class="hotelWrap">
+    <view class="researchHotelWrap">   
+        <view class="destinationWrap">
+            <view>目的地</view>
+            <view class="destinationSelect flex justify-between align-center">
+                <text>贵阳</text>
+                <icon class="iconfont iconjiantou" />
+            </view>
+        </view>
+            <view class="dateSelectWrap flex" bindtap="calenderInto">
+                    <view class="dateSelectDate">
+                        <view>入住</view>
+                        <view class="dateInfo text-bold">{{checkInDate}}</view>
+                    </view>
+                    <view class="hotelNum flex align-center justify-center">
+                        <view>共{{hotelNum}}晚</view>
+                    </view>
+                    <view class="dateSelectDate flex align-end">
+                        <view>离店</view>
+                        <view class="dateInfo text-bold">{{checkOutDate}}</view>
+                    </view>
+            </view>
+        <view class="bandSearchWrap flex justify-between align-center">
+            <text>价格/星级</text>
+            <icon class="iconfont iconjiantou" />
+        </view>
+        <view class="searchHotelBtn">
+            <button class="bg-blue cu-btn bg-gradual-blue shadow-blur round">查询酒店</button>
+        </view>
+    </view>
+    <view class="rowBannerWrap">
+        <swiper class="card-swiper {{DotStyle?'square-dot':'round-dot'}}" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500" bindchange="cardSwiper" indicator-color="#8799a3" indicator-active-color="#18A8EA">
+            <swiper-item wx:for="{{cardList}}" wx:key class="{{cardCur==index?'cur':''}}">
+                <view class="swiper-item">
+                <image  src="{{item.url}}"  wx:if="{{item.type=='image'}}"></image>
+                <video src="{{item.url}}" autoplay loop muted show-play-btn="{{false}}" controls="{{false}}" objectFit="cover" wx:if="{{item.type=='video'}}"></video>
+                </view>
+            </swiper-item>
+        </swiper>
+    </view>
+    <view class="recommendHotelWrap">
+        <view class="recommendHotelTitle">
+            <view class="title">
+                    <view class="columnBlue"></view>
+                    <text>推荐酒店</text>
+                    <view class="new">NEW</view>
+            </view>
+            <view class="more">
+                    查看更多>
+            </view>
+        </view>
+        <view class="recommendHotelSwiper">
+            <swiper class="screen-swiper square-dot" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500">
+                    <swiper-item wx:for="{{swiperList}}" wx:key>
+                        <view class="priceTag">
+                            <text>￥1200</text>
+                            <text>每晚</text>
+                        </view>
+                        <view class="hotelName">贵阳雅迪尔国际大酒店</view>
+                        <image src="{{item.url}}" mode="aspectFill" wx:if="{{item.type=='image'}}"></image>
+                        <video src="{{item.url}}" autoplay loop muted show-play-btn="{{false}}" controls="{{false}}" objectFit="cover" wx:if="{{item.type=='video'}}"></video>
+                    </swiper-item>
+            </swiper>
+        </view>
+    </view>
+    <view class="hotHotelWrap">
+
+    </view>
+</view>

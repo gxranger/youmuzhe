@@ -1,0 +1,43 @@
+<view class="faultWrap">
+  <view class="faultTitle">
+    <text class="text-black text-bold">上报后，将无法操作车辆，请联系平台</text>
+    <text>请将车钥匙放回原处，并确保锁好车窗</text>
+  </view>
+  <view class="faultImg">
+    <image src="https://www.youmuzhe.net/image/key.png"></image>
+  </view>
+  <view class="faultDetailWrap">
+    <view class="faultDetailTitle">
+      <icon class="iconfont iconguzhang" />
+      <text>故障原因</text>
+    </view>
+    <view class="faultDetailContent">
+      <view class="faultDetail">
+        <block wx:for="{{checkBoxList}}" wx:key="index">
+            <view bindtap="checkSelect" data-index="{{index}}">
+                <icon class="iconfont iconok {{checkBoxList[index].status?'iconokActive':''}}" />
+                <text>{{checkBoxList[index].content}}</text>
+              </view>
+        </block>
+        
+      </view>
+    </view>
+  </view>
+  <view class="submitFaultBtn" bindtap="submitLock">
+    <button class="bg-blue">提交并锁车</button>
+  </view>
+
+  <view class="cu-modal  {{isOther?'show':''}}">
+      <view class="cu-dialog bg-white">
+        <view class="padding text-left">
+            <textarea bindinput="bindArea" maxlength="-1" placeholder="请描述您遇到的具体问题" />
+        </view>
+        <view class="cu-bar bg-white justify-end">
+          <view class="action">
+          <button class="cu-btn bg-blue lg" bindtap="confirmOther">确认提交</button>
+          <button class="cu-btn bg-green lg" bindtap="cancelOther">点错了，取消</button>
+          </view>
+        </view>
+      </view>
+    </view>
+</view>

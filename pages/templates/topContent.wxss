@@ -1,0 +1,115 @@
+/* 搜索框 */
+.SearchWrapper {
+    display: flex;
+    justify-content:center; 
+    padding:15rpx 0;
+    background: #fff;
+  }
+  .search {
+    width: 90%;
+  }
+  .SearchInput {
+    height: 70rpx;
+    line-height: 70rpx;
+    border-radius: 10rpx;
+    background: #e8e8e8;
+    color:#a4a4a4;
+    font-size: 26rpx;
+    padding-left:90rpx; 
+  }
+  .SearchWrapper .iconchaxun {
+   position: absolute;
+    font-size: 38rpx;
+    width: 70rpx;
+    height: 70rpx;
+    line-height: 70rpx;
+    margin-left: 30rpx;
+    color:#999999;
+  }
+  
+  /* 幻灯片 */
+  .swiperWarp {
+    height: auto;
+    position: relative;
+  }
+  .swiper{
+    height: 300rpx;
+  }
+  .swiper .img{
+    width: 100%;
+    height: 100%;
+  }
+  .dots{
+    width: 200rpx;
+    height: 36rpx;
+    display: flex; 
+    flex-direction: row;
+    position: absolute;
+    bottom: 25rpx;
+    justify-content: center;
+    align-items: center;
+  }
+  .dot{
+  width: 13rpx;
+  height: 13rpx;
+  border-radius: 13rpx;
+  margin: 0 15rpx;
+  background-color: rgba(255, 255, 255, 0.5);
+  }
+  .iconlingxing{
+    width: 13rpx;
+    height: 13rpx;
+    font-size: 22rpx;
+    position: relative;
+    bottom:8rpx;
+    color: #fff;
+    margin: 0 15rpx;
+  }
+
+  /* 取车还车 */
+.selectCarWrap {
+  background: #fff;
+  box-shadow: 0 0 20rpx #d1d1d1;
+  margin: 20rpx 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.addressWrap {
+  border-bottom: #e8e8e8 1px solid; 
+  padding-bottom: 5rpx;
+  width: 85%;
+  height: 110rpx;
+}
+.addressWrap view {
+  margin: 10rpx 0;
+}
+.iconReverse {
+  transform: scale(-1,1);
+}
+.iconfanhui1 {
+  color: #15cad5;
+  font-size: 38rpx;
+}
+.carTitle {
+  font-size: 36rpx;
+}
+.carleft {
+  float: left;
+  color: #bdbdbd;
+  font-size: 28rpx;
+}
+.carRight {
+  float: right;
+  color: #bdbdbd;
+  font-size: 28rpx;
+}
+.selectCarBtn {
+  width: 100%;
+  margin:20rpx 0;
+}
+.selectCarBtn button {
+  width: 90%;
+  height: 90rpx;
+  font-size: 30rpx;
+}

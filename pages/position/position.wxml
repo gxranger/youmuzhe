@@ -1,0 +1,4 @@
+{{myCity.cityName}}
+<view class='wrapper'>
+    <list-html data="{{city}}" my-city="{{myCity}}" binddetail="bindtap" config="{{config}}"></list-html>
+</view>

@@ -1,0 +1,133 @@
+.carModeWrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.carModeItem {
+    width:90%;
+    background: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20rpx 0;
+    box-shadow: 0 10rpx 25rpx #d1d1d1;
+    padding: 15rpx 25rpx;
+}
+.topMediaContent {
+    display: flex;
+}
+.carDescribe {
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 10rpx;
+}
+.carDescribeLeft {
+    width:50%;
+    display: flex;
+    flex-direction: column;
+}
+.carDescribe text {
+    height: 45rpx;
+}
+.carTitle {
+    font-size: 32rpx;
+    color:#000;
+}
+.carNumber {
+    font-size: 28rpx;
+    color:#888888;
+}
+.carCapacity {
+    font-size: 26rpx;
+    color: #888888;
+}
+.petrolPercentage {
+    width: 100%;
+    /* border:solid 1px red; */
+    height: 50rpx;
+    display: flex;
+    align-items: baseline;
+}
+.petrolPercentage text {
+    color: #888888;
+    font-size: 24rpx;
+}
+.petrolPercentage .iconjiayouzhan {
+    font-size: 46rpx;
+    color:#18a8ea
+}
+.petrolPercentage .cu-progress {
+    margin: 0 10rpx;
+}
+.carImg {
+    width: 300rpx;
+    height: 160rpx;
+    float: right;
+}
+.carImg image {
+    width: 100%;
+    height: 100%;
+}
+
+/* 分时计价 */
+.appointDescribe {
+    width: 90%;
+    background: #fff;
+    display: column;
+    justify-content: center;
+    padding: 5rpx 20rpx;
+}
+.priceTitle {
+    width: 100%;
+    height: 60rpx;
+    line-height: 60rpx;
+    font-weight: bold;
+    border-bottom: 1px solid #e2e2e2;
+    font-size: 32rpx;
+    color:#000;
+    margin: 20rpx 0;
+}
+.priceContent {
+    font-size: 30rpx;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20rpx;
+    font-weight: bold;
+}
+.priceAddition  {
+    font-size: 26rpx;
+    color: #888888;
+    margin-top: 10rpx;
+    margin-bottom: 30rpx;
+}
+.priceRegular {
+    font-size: 26rpx;
+    color: #888888;
+    margin-bottom: 20rpx;
+}
+.regularTitle {
+    width: 100%;
+    font-size: 30rpx;
+}
+.appointBtn {
+    width:90%;
+    margin-top: 50rpx;
+}
+.appointBtn button {
+    color:#fff;
+    font-size: 38rpx;
+    background: #2cc9a9;
+}
+
+.action {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border: #18a8ea 1px slid;
+    margin: 35rpx 0;
+}
+.action .cu-btn {
+    width: 100%;
+    margin: 10rpx 0;
+}

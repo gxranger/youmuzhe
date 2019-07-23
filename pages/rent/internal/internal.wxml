@@ -1,0 +1,185 @@
+<view class="container">
+        <view class="topWrap">
+                <view class="internalTitle">
+                        <text class="text-black text-bold">车辆内饰</text>
+                        <text style="color: #888888">请选择对应车辆部位进行确认</text>
+                </view>
+                <view class="carImg">
+                        <image src="https://www.youmuzhe.net/image/car1.png" />
+                </view>
+                <view class="carInfo">
+                    福特福睿斯 白色 | 1.5T自动 | 三厢五座
+                </view>
+                <view class="carPetrol flex justify-around">
+                        <view class="carNum text-black text-bold">贵A2WZ72</view>
+                        <view class="progressWrap flex">
+                                <icon class="iconfont iconjiayouzhan" />
+                                <view class="cu-progress round sm striped active">
+                                        <view class="bg-blue" style="width: {{loading? petrolPercet:''}}"></view>
+                                </view>
+                                <text>60L</text>
+                        </view>
+                        <view class="kilometerNum">
+                            <icon class="iconfont iconlicheng_f" />
+                            <text>600KM</text>
+                        </view>
+                </view>
+        </view>
+
+        <!-- 车辆内饰 -->
+        <view class="mainWrap">
+            <view class="TitleWrap">
+                 <text class="text-black text-bold">车辆内饰</text>
+                 <text>如车内无损则填写完好，如有损坏请拍照上传</text>
+            </view>
+            
+            <view class="contentWrap">
+
+            <block wx:for="{{internalData.checkList.internal}}" wx:key="index" wx:for-item="internalItem" wx:for-index="idx">
+                <block wx:if="{{internalItem.internalId<3}}">
+                    <picker data-name="internal" bindchange="bindChange_select" data-current="{{idx}}" range="{{picker}}">
+                        <view class="picker">
+                                <view class="itemContent">
+                                    <view>{{internalItem.internalName}}</view>
+                                    <view>
+                                        <text>{{picker[internalItem.status]}}</text>
+                                        <icon class="iconfont iconjiantou" />         
+                                    </view>
+                                </view>
+                        </view>
+                    </picker>
+                    <view class="photoWrap" hidden="{{internalItem.status==0}}">
+                        <view class="cu-form-group">
+                            <view class="grid col-4 grid-square flex-sub">
+                                <view class="bg-img" wx:for="{{imgList}}" wx:key="{{index}}" bindtap="ViewImage" data-url="{{imgList[index]}}">
+                                    <image src='{{imgList[index]}}' mode='aspectFill'></image>
+                                    <view class="cu-tag bg-red" catchtap="DelImg" data-index="{{index}}">
+                                        <text class="cuIcon-close"></text>
+                                    </view>
+                                </view>
+                                <view class="solids" bindtap="ChooseImage" wx:if="{{imgList.length<2}}">
+                                    <text class="cuIcon-cameraadd"></text>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </block>
+                
+                <block wx:else>
+                    <picker data-name="internal" data-name="internal"  bindchange="bindChange_select" data-current="{{idx}}" range="{{padNum}}">
+                        <view class="picker">
+                            <view class="itemContent">
+                                <view>{{internalItem.internalName}}</view>
+                                <view>
+                                        <text>{{padNum[internalItem.status]}} </text>
+                                        <icon class="iconfont iconjiantou" />         
+                                </view>
+                            </view>
+                        </view>
+                    </picker>
+                   
+                    <view class="photoWrap" hidden="{{internalItem.status==0}}">
+                        <view class="cu-form-group">
+                            <view class="grid col-4 grid-square flex-sub">
+                                
+                                <view class="bg-img" wx:for="{{imgList}}" wx:key="{{index}}" bindtap="ViewImage" data-url="{{imgList[index]}}">
+                                    <image src='{{imgList[index]}}' mode='aspectFill'></image>
+                                    <view class="cu-tag bg-red" catchtap="DelImg" data-index="{{index}}">
+                                        <text class="cuIcon-close"></text>
+                                    </view>
+                                </view>
+                                <view class="solids" bindtap="ChooseImage" wx:if="{{imgList.length<2}}">
+                                    <text class="cuIcon-cameraadd"></text>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </block>
+            
+            </block>
+
+
+
+            </view>
+        </view>
+
+         <!-- 车辆物件 -->
+         <view class="mainWrap">
+                <view class="TitleWrap">
+                     <text class="text-black text-bold">车辆物件</text>
+                     <text>如车内无损则填写完好，如有损坏请拍照上传</text>
+                </view>
+                
+                <view class="contentWrap">
+    
+                <block wx:for="{{internalData.checkList.goods}}" wx:key="index" wx:for-item="goodsItem" wx:for-index="idx">
+                    <block wx:if="{{goodsItem.goodsId==1}}">
+                        <picker bindchange="bindChange_select" data-current="{{idx}}" data-name="goods" range="{{keyNum}}">
+                            <view class="picker">
+                                    <view class="itemContent">
+                                        <view>{{goodsItem.goodsName}}</view>
+                                        <view>
+                                            <text>{{keyNum[goodsItem.status]}}</text>
+                                            <icon class="iconfont iconjiantou" />         
+                                        </view>
+                                    </view>
+                            </view>
+                        </picker>
+                        <view class="photoWrap" hidden="{{goodsItem.status==0}}">
+                            <view class="cu-form-group">
+                                <view class="grid col-4 grid-square flex-sub">
+                                    <view class="bg-img" wx:for="{{imgList}}" wx:key="{{index}}" bindtap="ViewImage" data-url="{{imgList[index]}}">
+                                        <image src='{{imgList[index]}}' mode='aspectFill'></image>
+                                        <view class="cu-tag bg-red" catchtap="DelImg" data-index="{{index}}">
+                                            <text class="cuIcon-close"></text>
+                                        </view>
+                                    </view>
+                                    <view class="solids" bindtap="ChooseImage" wx:if="{{imgList.length<2}}">
+                                        <text class="cuIcon-cameraadd"></text>
+                                    </view>
+                                </view>
+                            </view>
+                        </view>
+                    </block>
+                    
+                    <block wx:else>
+                        <picker  bindchange="bindChange_select" data-name="goods" data-current="{{idx}}" range="{{picker}}">
+                            <view class="picker">
+                                <view class="itemContent">
+                                    <view>{{goodsItem.goodsName}}</view>
+                                    <view>
+                                            <text>{{picker[goodsItem.status]}} </text>
+                                            <icon class="iconfont iconjiantou" />         
+                                    </view>
+                                </view>
+                            </view>
+                        </picker>
+                       
+                        <view class="photoWrap" hidden="{{goodsItem.status==0}}">
+                            <view class="cu-form-group">
+                                <view class="grid col-4 grid-square flex-sub">
+                                    
+                                    <view class="bg-img" wx:for="{{imgList}}" wx:key="{{index}}" bindtap="ViewImage" data-url="{{imgList[index]}}">
+                                        <image src='{{imgList[index]}}' mode='aspectFill'></image>
+                                        <view class="cu-tag bg-red" catchtap="DelImg" data-index="{{index}}">
+                                            <text class="cuIcon-close"></text>
+                                        </view>
+                                    </view>
+                                    <view class="solids" bindtap="ChooseImage" wx:if="{{imgList.length<2}}">
+                                        <text class="cuIcon-cameraadd"></text>
+                                    </view>
+                                </view>
+                            </view>
+                        </view>
+                    </block>
+                
+                </block>
+    
+                </view>
+            </view>
+
+            <view class="submit">
+                    <button class="bg-blue lg">验车完成</button>
+            </view>
+            
+</view>

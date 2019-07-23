@@ -1,0 +1,54 @@
+<view class="evaluateWrap">
+    <view class="detailStarWrap">
+            <view class="detailStar">
+                <view class="detailStarTitle text-black">服务态度</view>
+                <view class="detailStarIcon">
+                    <block wx:for="{{stars.service.arr}}" wx:key="index">
+                        <icon class="iconfont iconxing {{stars.service.arr[index]?'starActive':''}}" data-index="{{index}}" data-name="service" bindtap="chooseStar" />
+                    </block>
+                    <text>{{serviceDesc}}</text>
+                </view>
+            </view>
+
+            <view class="detailStar">
+                <view class="detailStarTitle text-black">车辆清洁</view>
+                <view class="detailStarIcon">
+                        <block wx:for="{{stars.clear.arr}}" wx:key="index">
+                            <icon class="iconfont iconxing {{stars.clear.arr[index]?'starActive':''}}" data-index="{{index}}" data-name="clear" bindtap="chooseStar" />
+                        </block>
+                        <text>{{clearDesc}}</text>
+                </view>
+            </view>
+
+            <view class="detailStar">
+                <view class="detailStarTitle text-black">车辆状况</view>
+                <view class="detailStarIcon">
+                        <block wx:for="{{stars.carStatus.arr}}" wx:key="index">
+                            <icon class="iconfont iconxing {{stars.carStatus.arr[index]?'starActive':''}}" data-index="{{index}}" data-name="carStatus" bindtap="chooseStar" />
+                        </block>
+                        <text>{{carStatusDesc}}</text>
+                </view>
+            </view>  
+    </view>
+    <view class="wholeStarWrap">
+        <view class="wholeStarIcon">
+            <block wx:for="{{average.arr}}" wx:key="{{index}}">
+                    <icon class="iconfont iconxing {{average.arr[index]?'starActive':''}}" />
+            </block>
+            
+            <!-- <icon class="iconfont iconxing" /> 
+            <icon class="iconfont iconxing" /> 
+            <icon class="iconfont iconxing" /> 
+            <icon class="iconfont iconxing" /> -->
+        </view>
+        <view class="wholeStarTitle text-blue text-bold">总体评价</view>
+    </view>
+    <view class="inputAreaWrap">
+          
+               <textarea maxlength="-1" disabled="{{modalName!=null}}" bindinput="textareaAInput" placeholder="不满意车辆状况？请您写下哪里不满意，帮助我们改进！（写够15字评价，就是好同志哦~）"></textarea>
+            <view class="text-blue">您的反馈是我们前进的动力，我们将根据反馈努力改进</view>
+    </view>
+    <view class="submit">
+        <button class="bg-blue">提交</button>
+    </view>
+</view>

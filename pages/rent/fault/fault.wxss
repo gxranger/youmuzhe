@@ -1,0 +1,90 @@
+.faultWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.faultTitle {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #888888;
+  font-size: 30rpx;
+  margin: 20rpx 0;
+}
+.faultTitle text:first-child {
+  font-size: 36rpx;
+}
+.faultTitle text {
+  height: 60rpx;
+}
+.faultImg {
+  width: 90%;
+  height: 380rpx;
+  margin-bottom: 20rpx;
+}
+.faultImg image {
+  width: 100%;
+  height: 100%;
+}
+.faultDetailWrap {
+  width: 90%;
+}
+.faultDetailTitle {
+  font-size: 36rpx;
+  margin-bottom: 15rpx;
+}
+.faultDetailTitle .iconguzhang {
+  font-size: 40rpx;
+  margin-right: 10rpx;
+  color: #000;
+}
+.faultDetailContent {
+  width: 100%;
+  /* border:red solid 1px; */
+  display: flex;
+}
+.faultDetail {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.faultDetail .iconokActive {
+  color: #18A8EA!important;
+}
+.faultDetail view {
+  width: 50%;
+  margin:10rpx 0;
+  display: flex;
+  align-items: center;
+}
+.faultDetail view .iconok {
+  color: #c0c0c0;
+  font-size: 36rpx;
+}
+.faultDetail view text {
+  font-size: 30rpx;
+  position: relative;
+  left: 10rpx;
+}
+.submitFaultBtn {
+  width: 90%;
+  margin:30rpx 0;
+}
+.action {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border: #18a8ea 1px slid;
+  margin: 35rpx 0;
+}
+.action .cu-btn {
+  width: 100%;
+  margin: 10rpx 0;
+}
+.cu-dialog textarea {
+  width: 100%;
+  padding: 15rpx;
+  font-size: 30rpx;
+  border: 1px solid #e2e2e2;
+}

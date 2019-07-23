@@ -1,13 +1,73 @@
 {
   "pages": [
+    "pages/hotel/detail/detail",
+    "pages/hotel/album/album",
+    "pages/hotel/order/order",
+    "pages/hotel/index/index",
     "pages/index/index",
+    "pages/rent/index/index",
+    "pages/hotel/calender/calender",
+    "pages/position/position",
+    "pages/rent/fault/fault",
+    "pages/rent/stop/stop",
+    "pages/rent/evaluate/evaluate",
+    "pages/rent/pay/pay",
+    "pages/rent/returnCar/returnCar",
+    "pages/rent/internal/internal",
+    "pages/rent/makeCar/makeCar",
+    "pages/rent/appearance/appearance",
+    "pages/rent/mode/mode",
+    "pages/rent/qualify/qualify",
+    "pages/rent/appoint/appoint",
+    "pages/rent/network/network",
     "pages/logs/logs"
+    
   ],
-  "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "black"
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于查找附近网点信息"
+    }
+  },
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#18a8ea",
+    "navigationBarTitleText": "首页",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "color":"#888888",
+    "selectedColor":"#18a8ea",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "tabBar/index.png",
+      "selectedIconPath": "tabBar/index1.png"
+    },
+    {
+      "pagePath": "pages/rent/index/index",
+      "text": "租车",
+      "iconPath": "tabBar/car.png",
+      "selectedIconPath": "tabBar/car1.png"
+    },
+    {
+      "pagePath": "pages/hotel/index/index",
+      "text": "酒店",
+      "iconPath": "tabBar/hotel.png",
+      "selectedIconPath": "tabBar/hotel1.png"
+    },
+    {
+      "pagePath": "pages/index/index",
+      "text": "攻略",
+      "iconPath": "tabBar/strategy.png",
+      "selectedIconPath": "tabBar/strategy1.png"
+    },
+    {
+      "pagePath": "pages/index/index",
+      "text": "我的",
+      "iconPath": "tabBar/user.png",
+      "selectedIconPath": "tabBar/user1.png"
+    }
+    ]
   },
   "sitemapLocation": "sitemap.json"
 }

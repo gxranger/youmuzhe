@@ -1,0 +1,136 @@
+
+
+        <view class="bg-white padding">
+                <view class="cu-steps">
+                    <view class="cu-item {{index>num?'':'text-blue'}}" wx:for="{{numList}}" wx:key>
+                    <text class="num" data-index="{{index + 1}}"></text> {{item.name}}
+                    </view>
+                </view>
+                <view class="mainContent">
+                       
+                        <!-- 证件认证 -->
+                        <view class="uploadCert" hidden="{{!stepDisplay[0]}}">
+                                 <!--证件类型下拉框 -->
+                        <view class='selectWrap'>
+                                <text class="text-black text-bold">证件类型</text>
+                                <view class='selectContent' bindtap='bindShowMsg'>
+                                <text>{{tihuoWay}}</text>
+                                <icon class="iconfont iconsanjiao_xia {{select?'iconReverse':''}}" />
+                                </view>
+                                <!-- 下拉需要显示的列表 -->
+                                <view class="select_box {{select?'animation-slide-bottom':''}} "  hidden="{{!select}}">
+                                <block wx:for="{{authTypeList}}" wx:key="index">
+                                <view class="select_one {{index+1 ==selectId?'selectActive':''}}" bindtap="mySelect" data-sub="{{authTypeList[index].subSting}}" data-name="{{authTypeList[index].name}}"  data-id="{{authTypeList[index].id}}">{{authTypeList[index].name}}</view>
+                                </block>
+                                </view>
+                        </view>
+
+                        <view class="photoWrap">
+                                <view class="photoLeft">
+                                        <view>
+                                                <icon class="iconfont iconsaoma" />
+                                                <text>上传{{subSting}}正面</text>
+                                        </view>
+                                        <view>
+                                                <icon class="iconfont iconsaoma" />
+                                                <text>上传{{subSting}}反面</text>
+                                        </view>
+                                </view>
+                                <view class="photoRight">
+                                        <icon class="iconfont iconxiangji" />
+                                        <text>手持{{subSting}}拍摄</text>
+                                </view>
+                        </view>
+    
+                            <view class="cardNumberInfo">
+                                <text class="text-black text-bold">核对身份信息</text>
+                                <view class="info">
+                                    <view>证件姓名</view>
+                                    <input  maxlength="6" />
+                                </view>
+                                <view class="info">
+                                    <view>证件号码</view>
+                                    <input  maxlength="18" />
+                                </view>
+                            </view>
+                        </view>
+
+                        <!-- 人脸认证 -->
+                        <view class="verifyPerson" hidden="{{!stepDisplay[1]}}">
+                                <view class="verifyPersonTitle">
+                                        <view class="iconLeft">
+                                                        <image src="https://www.youmuzhe.net/image/jt.png"></image>
+                                        </view>
+                                        <view class="titleContent">点击扫描区进行面部识别</view>
+                                        <view class="iconRight">
+                                                        <image src="https://www.youmuzhe.net/image/jt.png"></image>
+                                        </view>
+                                </view>
+                                <view class="personImg">
+                                        <image src="https://www.youmuzhe.net/image/person.png"></image>
+                                </view>
+                                <view class="verifyPersonTitle">
+                                                <view class="iconLeft">
+                                                                <image src="https://www.youmuzhe.net/image/jt.png"></image>
+                                                </view>
+                                                <view class="titleContent">面部识别拍摄肖像要求</view>
+                                                <view class="iconRight">
+                                                                <image src="https://www.youmuzhe.net/image/jt.png"></image>
+                                                </view>
+                                </view>
+                                <view class="photoContent">
+                                        认证时，请本人操作，将镜头对准你的脸，并按提示做出动作。
+                                </view>
+                        </view>
+
+                        <!-- 驾驶证认证 -->
+                        <view class="uploadCert" hidden="{{!stepDisplay[2]}}">
+                               <view class='selectWrap'>
+                                       <view class='selectContent' bindtap='bindShowMsg'>
+                                       <text class="text-black text-bold">机动车驾驶证</text>
+                                       </view>
+                               </view>
+       
+                               <view class="photoWrap">
+                                       <view class="photoLeft">
+                                               <view>
+                                                       <icon class="iconfont iconsaoma" />
+                                                       <text>上传驾驶证正面</text>
+                                               </view>
+                                               <view>
+                                                       <icon class="iconfont iconsaoma" />
+                                                       <text>上传驾驶证反面</text>
+                                               </view>
+                                       </view>
+                                       <view class="photoRight">
+                                               <icon class="iconfont iconxiangji" />
+                                               <text>手持驾驶证拍摄</text>
+                                       </view>
+                               </view>
+           
+                                   <view class="cardNumberInfo">
+                                       <view class="info">
+                                           <view>档案编号</view>
+                                           <input  maxlength="18" />
+                                       </view>
+                                   </view>
+                               </view>
+
+                        <!-- 缴纳保证金 -->
+                        <view class="payWrap" hidden="{{!stepDisplay[3]}}">
+                                <view class="payTitle">需支付的金额 (元)</view>
+                                <view class="payNum">￥35.98</view>
+                        </view>
+                        
+                </view>   
+        
+    </view>
+    <view class="actionBtn">
+                <button wx:if="{{stepDisplay[0]||stepDisplay[1]||stepDisplay[2]}}" class="cu-btn bg-green shadow" bindtap="numSteps">下一步</button>
+            <!-- <button  class="cu-btn bg-green shadow" bindtap="numSteps">下一步</button> -->
+            <button wx:if="{{stepDisplay[3]}}"  class="cu-btn bg-blue shadow" bindtap="makeCarInto" >支付</button>
+    </view>  
+
+       
+      
+     

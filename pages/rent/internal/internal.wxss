@@ -1,0 +1,114 @@
+.topWrap {
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    background: #fff;
+   
+}
+.internalTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25rpx;
+}
+.internalTitle text:first-child {
+    font-size: 32rpx;
+}
+.carImg {
+    width: 336rpx;
+    height: 180rpx;
+    margin: 70rpx 0;
+}
+.carImg image {
+    width: 100%;
+    height: 100%;
+}
+.carInfo {
+    font-size: 30rpx;
+    height: 80rpx;
+}
+.carPetrol {
+    width: 100%;
+    align-items: baseline;
+    margin-bottom: 30rpx;
+}
+.carNum {
+    width: 20%;
+    font-size: 28rpx;
+}
+.carPetrol .progressWrap {
+    /* border: 1px solid yellowgreen; */
+    width: 30%;
+    align-items: baseline;
+}
+.iconjiayouzhan,.iconlicheng_f {
+    color: #18A8EA;
+}
+.iconjiayouzhan {
+    font-size: 38rpx;
+}
+.iconlicheng_f {
+    font-size: 36rpx;
+}
+.progressWrap text {
+    color: #888888;
+    font-size: 28rpx;
+}
+.mainWrap {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20rpx 0;
+}
+.mainWrap text:first-child {
+    font-size: 32rpx;
+    margin-right: 20rpx;
+}
+.TitleWrap {
+    /* border:blue 1px solid; */
+    color: #888888;
+    font-size: 26rpx;
+    width: 100%;
+    padding: 20rpx 25rpx;
+    border-bottom: 1px #e2e2e2 solid;
+}
+.contentWrap {
+    margin-top: 20rpx;
+    width: 93%;
+}
+.itemContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 28rpx;
+    padding: 15rpx 0;
+}
+.itemContent view {
+    display: flex;
+    align-items: center;
+    /* border: #18A8EA 1px solid; */
+    color: #888888;
+}
+.itemContent view text:first-child {
+    font-size: 28rpx;
+}
+.iconjiantou {
+    display: flex;
+    align-items: center;
+}
+.photoWrap {
+    margin: 15rpx 0;
+}
+.photoWrap .cu-form-group {
+    padding: 0;
+}
+.submit {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 50rpx 0;
+}
+.submit button {
+    width: 93%;
+}

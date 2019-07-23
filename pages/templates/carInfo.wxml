@@ -1,0 +1,11 @@
+<template name="carInfoTemplate">
+    <view class="carInfoWrap">
+        <view class="carImg">
+            <image src="{{carInfo.carImg}}" />
+        </view>
+        <view class="carInfo">
+            {{carInfo.carName}} {{carInfo.carColor}} | {{carInfo.carDisplacement}} | {{carInfo.carSeat}} 
+        </view>
+        <view class="carNum"> {{carInfo.carNum}}</view>
+    </view>
+</template>

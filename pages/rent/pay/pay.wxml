@@ -1,0 +1,91 @@
+<wxs module="filters" src="../../../utils/filters.wxs"></wxs>
+<view class="boxWrapper">
+        <!-- carInfo模板引入 -->
+      <import src="../../templates/carInfo.wxml"/>
+      <template is="carInfoTemplate" data="{{carInfo}}" />
+
+      <view class="mileageInfo">
+        <view>
+          <text class="text-black text-bold">{{carInfo.makeTime}}分钟</text>
+          <text>时长</text>
+        </view>
+        <view>
+          <text class="text-black text-bold">{{carInfo.mileage}}KM</text>
+          <text>里程</text>
+        </view>
+      </view>
+
+      <view class="payDetail">
+        <view class="payDetailTitle text-black text-bold">费用详情</view>
+        <view class="payDetailContent">
+          <view class="timeCharge">
+            <text>时长计费</text>
+            <text>{{filters.toFix(carInfo.timeCharge)}}元</text>
+          </view>
+          <view class="mileageCharge">
+            <text>里程计费</text>
+            <text>{{filters.toFix(carInfo.mileageCharge)}}元</text>
+          </view>
+          <view class="discount">
+            <view>活动套餐</view>
+            <view class="discountStatus">
+                <view>可参与</view>
+                <icon class="iconfont iconjiantou" /> 
+            </view> 
+          </view>
+          <view class="discount" bindtap="showModal" data-target="discountModal">
+            <view>优惠券</view>
+            <view class="discountStatus">
+                <view>{{carInfo.discountInfo}}</view>
+                <icon class="iconfont iconjiantou" />  
+            </view>
+          </view>
+        </view>
+        <view class="total">
+          <text class="text-black text-bold">合计：{{filters.toFix(carInfo.timeCharge+carInfo.mileageCharge)}}元</text>
+        </view>
+      </view>
+
+      <view class="payBtn">
+          <button class="bg-blue lg">支付</button>
+      </view>
+
+      <!-- 底部优惠券弹窗 -->
+      
+      <!-- <view class="cu-modal bottom-modal show"> -->
+        <view class="cu-modal bottom-modal {{modalName=='discountModal'?'show':''}}">
+          <view class="cu-dialog">
+            <view class="cu-bar bg-white">
+              <view class="action text-green" bindtap="hideModal">返回</view>
+            </view>
+            <view class="discountWrap">
+             
+              <block wx:for="{{discountList}}" wx:key="index">
+                <view class="discountItem" >
+                  <view class="discountInfo">
+                      <view class="price">
+                          <text>￥</text>
+                          <text class="text-bold">{{discountList[index].money}}</text>
+                      </view>
+                      <view class="discountName">
+                        {{discountList[index].type}}
+                      </view>
+                  </view>
+                  <view class="discountDetail">
+                    <view class="desc">
+                        {{discountList[index].desc}}
+                    </view>
+                    <view class="foot">
+                      <view>有效期至{{discountList[index].deadline}}</view>
+                      <view class="bg-blue footBtn {{discountList[index].isMake?'displayHidden':''}}"  data-id="{{index}}" bindtap="makeDiscount">使用</view>
+                      <icon class="iconfont iconyishiyong" hidden="{{!discountList[index].isMake}}" /> 
+                    </view>
+                  </view>
+                </view>
+              </block>
+
+            </view>
+          </view>
+        </view>
+      
+</view>

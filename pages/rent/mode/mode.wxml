@@ -1,0 +1,33 @@
+<!--pages/rent/index/mode.wxml-->
+<view class="container">
+        <view class="carModeWrap">
+                <block wx:for="{{carModeList}}" wx:key="index">
+                    <view bindtap="appointInto" class="carModeItem">
+                            <view class="carDescribe">
+                                <view class="carDescribeLeft">
+                                    <text class="carTitle">{{carModeList[index].carName}}</text>
+                                    <text class="carNumber">{{carModeList[index].carNumber}}</text>
+                                    <text class="carCapacity">{{carModeList[index].capacity}} | {{carModeList[index].seat}}</text>
+                                    <view class="petrolPercentage">
+                                            <icon class="iconfont iconjiayouzhan" />
+                                            <view class="cu-progress round sm striped active">
+                                                <view class="bg-blue" style="width: {{loading? carModeList[index].petrolPercet:''}} "></view>
+                                            </view>
+                                            <text>{{carModeList[index].mileage}}</text>
+                                    </view>
+                                </view>
+                                <view class="carDescribeRight">
+                                    <view class="carImg">
+                                            <image src="{{carModeList[index].carImg}}"/>
+                                    </view>
+                                </view>
+                            </view>
+                            
+                            <view class="priceMode">0.5元 / 公里 + 0.1元 / 分钟</view>
+                    </view>
+                </block>
+
+        </view>
+</view>
+
+

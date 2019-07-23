@@ -1,0 +1,138 @@
+page {
+    background: #F2F2F2;
+}
+.cu-item .cu-avatar {
+    width: 180rpx;
+    height: 150rpx;
+}
+.cu-form-group .cuIcon-right {
+    color: #8B99A3;
+    font-size: 34rpx;
+    position: relative;
+    left: 5rpx;
+}
+.cu-form-group input:first-child {
+    border:solid red 1px;
+}
+.content .text-gray {
+    flex-direction: column;
+    color:#888888;
+}
+.content .text-gray text {
+    margin: 5rpx 0;
+}
+.roomDesc {
+    flex-direction: column;
+    color: #888888;
+    font-size: 28rpx;
+    padding: 20rpx 40rpx;
+}
+.roomDesc text {
+    margin: 8rpx 0;
+}
+.roomActionBtn {
+    width: 100%;
+    height: 100rpx;
+    line-height: 100rpx;
+    background: #fff;
+    position: absolute;
+    bottom: 0;
+}
+.roomActionBtn view {
+    padding-left: 45rpx;
+}
+.roomActionBtn button,.roomActionBtn view  {
+    width: 50%;
+    line-height: 100rpx;
+    border-radius: 0;
+    font-size: 30rpx;
+}
+
+/* 优惠券弹窗 */
+.discountWrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20rpx 0;
+}
+.discountItem {
+    width: 90%;
+    height: 200rpx;
+    margin: 15rpx 0;
+    /* border:1px red solid; */
+    background-image: url("https://www.youmuzhe.net/image/discount.png");
+    background-color: none;
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size:cover;
+    box-shadow: 25rpx 0 20rpx #c7c7c7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.discountInfo {
+    width: 34%;
+    color: #fff;
+}
+
+.discountInfo .price {
+    font-size: 74rpx;
+}
+.discountInfo .discountName {
+    font-size: 30rpx;
+}
+.discountDetail  {
+    width: 66%;
+    padding: 0 15rpx;
+     
+}
+.discountDetail {
+    display: flex;
+    flex-direction: column;
+}
+.desc {
+    text-align: left;
+    font-size: 26rpx;
+    border-bottom: #e2e2e2 1px solid;
+    margin-top: 20rpx;
+    padding-bottom: 15rpx;
+}
+.foot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 53rpx;
+    /* border:1px blue solid; */
+}
+.foot view:first-child {
+    width: 63%;
+    color: #888888;
+    font-size: 22rpx;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.foot view {
+    width: 20%;
+    height: 40rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22rpx;
+    border-radius: 8rpx;
+}
+.displayHidden {
+    visibility:hidden;
+}
+.foot .iconyishiyong {
+    position: relative;
+    bottom: 30rpx;
+    z-index: 9000;
+    font-size: 95rpx;
+    background: -webkit-linear-gradient(90deg,  #93d9e8 , #18A7E9); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(90deg,  #93d9e8 , #18A7E9); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(90deg,  #93d9e8 , #18A7E9); /* Firefox 3.6 - 15 */
+    background: linear-gradient(90deg,  #93d9e8 , #18A7E9); /* 标准的语法（必须放在最后） */
+    -webkit-background-clip: text;
+    color: transparent;
+}

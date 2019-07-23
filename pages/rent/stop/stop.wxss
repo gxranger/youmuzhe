@@ -1,0 +1,36 @@
+@import "../../templates/carInfo.wxss";
+.boxWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.stopTitle {
+    width: 90%;
+    display: flex;
+    font-size: 36rpx;
+    margin-top: 120rpx;
+}
+.stopTitle .icon-tingche {
+    font-size: 44rpx;
+    margin-right: 15rpx;
+}
+.stopDetailWrap {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20rpx 0;
+}
+.stopDetail {
+    width: 50%;
+    font-size: 28rpx;
+    color: #888888;
+}
+.stopDetail .iconxuanze {
+    font-size: 32rpx;
+    margin-right: 10rpx;
+    color: #888888;
+}
+.stopLockBtn {
+    width:90%;
+    margin: 50rpx 0;
+}

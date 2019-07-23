@@ -1,0 +1,73 @@
+<view class="container">
+        <view class="carModeWrap">
+                <block wx:for="{{carModeList}}" wx:key="index">
+                    <view class="carModeItem">
+                            <view class="carDescribe">
+                                <view class="carDescribeLeft">
+                                    <text class="carTitle">{{carModeList[index].carName}}</text>
+                                    <text class="carNumber">{{carModeList[index].carNumber}}</text>
+                                    <text class="carCapacity">{{carModeList[index].capacity}} | {{carModeList[index].seat}}</text>
+                                    <view class="petrolPercentage">
+                                            <icon class="iconfont iconjiayouzhan" />
+                                            <view class="cu-progress round sm striped active">
+                                                <view class="bg-blue" style="width: {{loading? carModeList[index].petrolPercet:''}} "></view>
+                                            </view>
+                                            <text>{{carModeList[index].mileage}}</text>
+                                    </view>
+                                </view>
+                                <view class="carDescribeRight">
+                                    <view class="carImg">
+                                            <image src="{{carModeList[index].carImg}}"/>
+                                    </view>
+                                </view>
+                            </view>
+                    </view>
+                </block>
+
+                <view class="appointDescribe">
+                    <view class="priceTitle">分时计价</view>
+                    <view class="priceContent">
+                        <text>时长费</text>
+                        <text>0.1元/分钟</text>
+                    </view>
+                    <view class="priceContent">
+                        <text>里程费</text>
+                        <text>0.5元/公里</text>
+                    </view>
+                    <view class="priceAddition">时长价、里程价可能根据时间情况动态上下浮动，以下单实际价格为准。</view>
+                    <view class="priceTitle">计价规则</view>
+                    <view class="priceRegular">
+                        <view class="regularTitle">规则一</view>
+                        <text>按照时长加里程计费：0.5元/分钟+0.1/公里，如时长在6小时内，不计里程，租金费用超过120元，则按120元算。</text>
+                    </view>
+                    <view class="priceRegular">
+                        <view class="regularTitle">规则二</view>
+                        <text>按照时长加里程计费：0.5元/分钟+0.1/公里，如时长在6小时外，24小时内，不计里程，租金费用超过180元，则租金费用按180元算。</text>
+                    </view>
+            </view>
+            <view class="appointBtn" bindtap="confirmAppoint" data-target="DialogModal"><button>确认预订</button></view>
+           
+        </view>
+
+        <!-- 弹窗 -->
+              <view class="cu-modal {{modalName=='DialogModal'?'show':''}}">
+                <view class="cu-dialog bg-white">
+                <view class="text-left text-xl padding">
+                    <text class="text-black text-bold">您尚未完成用车资格认证</text>
+                </view>
+                  <view class="text-left padding">
+                    仅需四步，轻松用车
+                  </view>
+                  <view class="cu-bar bg-white justify-end">
+                    <view class="action">
+                    <button class="cu-btn bg-green lg" bindtap="qualifyInto">前往认证</button>
+                      <button class="cu-btn line-green text-green lg" bindtap="hideModal">暂不用车</button>
+                    </view>
+                  </view>
+                </view>
+              </view>
+
+        
+        
+        
+</view>

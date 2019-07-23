@@ -1,0 +1,55 @@
+<view class="boxWrapper">
+        <!-- carInfo模板引入 -->
+      <import src="../../templates/carInfo.wxml"/>
+      <template is="carInfoTemplate" data="{{carInfo}}" />
+
+      <view class="stopTitle">
+          <icon class="iconfont icon-tingche text-blue" />
+          <text class="text-blue">锁车前请确认以下事项</text>
+      </view>
+      <view class="stopDetailWrap">
+        <view class="stopDetail">
+          <view>
+            <icon class="iconfont iconxuanze" />
+            <text>车辆停在网点</text>
+          </view>
+          <view>
+            <icon class="iconfont iconxuanze" />
+            <text>车门/车窗关闭</text>
+          </view>
+          <view>
+            <icon class="iconfont iconxuanze" />
+            <text>钥匙放回原处</text>
+          </view>
+          <view>
+            <icon class="iconfont iconxuanze" />
+            <text>档位归N</text>
+          </view>
+        </view>
+        <view class="stopDetail">
+            <view>
+              <icon class="iconfont iconxuanze" />
+              <text>车辆熄火</text>
+            </view>
+            <view>
+              <icon class="iconfont iconxuanze" />
+              <text>车灯关闭</text>
+            </view>
+            <view>
+              <icon class="iconfont iconxuanze" />
+              <text>手刹拉起</text>
+            </view>
+            <view>
+              <icon class="iconfont iconxuanze" />
+              <text>带好随身物品</text>
+            </view>
+          </view>
+      </view>
+      <view class="stopLockBtn" bindtap="payInto">
+        <button class="bg-blue">
+          <icon class="iconfont iconsuoding" />
+          <text>锁车·停止计费</text>
+        </button>
+      </view>
+      
+</view>

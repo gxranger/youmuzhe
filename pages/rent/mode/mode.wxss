@@ -1,0 +1,79 @@
+/* pages/rent/index/mode.wxss */
+
+.carModeWrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.carModeItem {
+    width:90%;
+    background: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20rpx 0;
+    box-shadow: 0 10rpx 25rpx #d1d1d1;
+    padding: 25rpx;
+}
+.topMediaContent {
+    display: flex;
+}
+.carDescribe {
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 35rpx;
+    border-bottom:#e2e2e2 solid 1px; 
+}
+.carDescribeLeft {
+    width:50%;
+    display: flex;
+    flex-direction: column;
+}
+.carDescribe text {
+    height: 45rpx;
+}
+.carTitle {
+    font-size: 32rpx;
+    color:#000;
+}
+.carNumber {
+    font-size: 28rpx;
+    color:#888888;
+}
+.carCapacity {
+    font-size: 26rpx;
+    color: #888888;
+}
+.petrolPercentage {
+    width: 100%;
+    /* border:solid 1px red; */
+    height: 50rpx;
+    display: flex;
+    align-items: baseline;
+}
+.petrolPercentage text {
+    color: #888888;
+    font-size: 24rpx;
+}
+.petrolPercentage .iconjiayouzhan {
+    font-size: 46rpx;
+    color:#18a8ea
+}
+.petrolPercentage .cu-progress {
+    margin: 0 10rpx;
+}
+.carImg {
+    width: 300rpx;
+    height: 160rpx;
+    float: right;
+}
+.carImg image {
+    width: 100%;
+    height: 100%;
+}
+.priceMode {
+    margin-top: 20rpx;
+    color: #000;
+    font-size: 30rpx;
+}

@@ -1,0 +1,206 @@
+@import "../../../colorui/animation.wxss";
+
+.steps-bottom.cu-steps .cu-item .num::before {
+    content: "\e668";
+    font-family: 'iconfont';
+  }
+
+.actionBtn {
+    width: 100%;
+    height: 100rpx;
+    margin: 30rpx 0;
+    display: flex;
+    justify-content: center;
+}
+.actionBtn .cu-btn {
+    width: 90%;
+    height: 80rpx;
+    font-size: 38rpx;
+}
+
+
+
+/* 证件下拉框 */
+.mainContent {
+    width: 100%;
+    margin-top: 20rpx;
+}
+.uploadCert,.verifyPerson,.payWrap {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.selectWrap {
+    width: 90%;
+    background-color: #fff;
+    font-size: 30rpx;
+    margin: 10rpx 0;
+}
+  
+.selectWrap .selectContent {
+    width: 500rpx;
+    height: 60rpx;
+    display: flex;
+    align-items: center;
+    padding: 0 10rpx;
+}
+.selectContent .iconsanjiao_xia{
+    font-size: 30rpx;
+    display: flex;
+    align-items: center;
+    margin-left: 15rpx;
+}
+.iconReverse {
+    transform:rotate(180deg);
+}
+.select_box {
+    background-color: #fff;
+    position: absolute;
+    width: 500rpx;
+    z-index: 2000;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 0 20rpx #d1d1d1;
+   }
+   .select_one {
+    height: 60rpx;
+    line-height: 60rpx;
+   }
+   .selectActive {
+    color:#18a8ea;
+   }
+
+   /* 照片上传 */
+.photoWrap {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    font-size: 28rpx;
+}
+.photoLeft {
+    width: 50%;
+    height: 380rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 15rpx;
+}
+.photoLeft view {
+    width: 100%;
+    height: 180rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10rpx;
+    padding: 0 5rpx;
+    border: 1px solid #888888; 
+}
+.photoLeft view icon {
+    position: relative;
+    bottom: 20rpx;
+    font-size: 78rpx;
+}
+.photoRight {
+width: 50%;
+height: 380rpx;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+border-radius: 10rpx;
+padding: 0 5rpx;
+border: 1px solid #888888;
+/* border: 1px solid red;  */
+}
+.photoRight icon {
+    font-size: 88rpx;
+    position: relative;
+    bottom: 20rpx;
+}
+.cardNumberInfo {
+    width: 90%;
+    margin-top: 20rpx;
+}
+.info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 30rpx;
+    color: #888888;
+    margin: 15rpx 0;
+}
+.cardNumberInfo view view {
+    width: 20%;
+    height: 65rpx;
+    line-height: 65rpx;
+}
+.cardNumberInfo view input {
+    width: 75%;
+    height: 65rpx;
+    border: 1px solid #888888;
+    border-radius: 10rpx;
+    font-size: 30rpx;
+}
+
+/* 面部识别 */
+.verifyPersonTitle {
+    width: 90%;
+    height: 60rpx;
+    display: flex;
+    justify-content: space-between;
+    margin: 20rpx 0;
+}
+.iconLeft,.iconRight{
+    width: 20%;
+    height: 60rpx;
+    display: flex;
+    align-items: center;
+}
+.iconLeft {
+    justify-content: flex-end;
+}
+.iconLeft image,.iconRight image {
+    width: 80%;
+    height: 25rpx;
+}
+.titleContent {
+    width: 55%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28rpx;
+    /* border: blue 1px solid; */
+}
+.iconRight image {
+    transform: scale(-1,1);
+}
+.personImg {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    /* border: blue 1px solid; */
+    margin-bottom: 30rpx;
+}
+.personImg image {
+    width: 100%;
+    height: 420rpx;
+}
+.photoContent {
+    width: 90%;
+    font-size:28rpx;
+    text-align: center;
+}
+
+/* 缴纳保证金 */
+.payWrap {
+    margin-top: 60rpx;
+}
+.payTitle {
+    font-size: 30rpx;
+}
+.payNum {
+    font-weight: bold;
+    font-size: 48rpx;
+    color: #000;
+}

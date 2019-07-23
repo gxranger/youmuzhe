@@ -1,0 +1,46 @@
+<view class="boxWrapper">
+        <!-- carInfo模板引入 -->
+      <import src="../../templates/carInfo.wxml"/>
+      <template is="carInfoTemplate" data="{{carInfo}}" />
+
+      <view class="lockBtn">
+          <button>
+                <icon class="iconfont iconweisuoding" />
+              开锁
+            </button>
+          <button>
+                <icon class="iconfont iconsuoding" />
+              上锁
+            </button>
+      </view>
+      <view class="returnCarBtn">
+            <button class="bg-blue lg" hidden="{{isFree}}" bindtap="appearanceInto">
+                <icon class="iconfont iconjianhuoguihuan" />
+                还车结账
+            </button>
+            <button bindtap="showModel" hidden="{{!isFree}}" data-target="FreeModal" class="bg-green">
+                    <icon class="iconfont iconmianfei" />
+                    5分钟内免费还车  {{countDownMinute}}:{{countDownSecond}}
+            </button>
+      </view>
+
+       <!-- 免费还车弹窗 -->
+       <view class="cu-modal {{modalName=='FreeModal'?'show':''}}">
+            <view class="cu-dialog bg-white">
+            <view class="text-left text-xl padding flex align-end">
+                <icon class="iconfont icon-tingche text-black" />
+                <text class="text-black text-bold">免费还车</text>
+            </view>
+              <view class="text-left padding">
+                打开车门5分钟之内，使用过程中如遇到问题，可免费还车，在此期间内不享受保险服务
+              </view>
+              <view class="cu-bar bg-white justify-end">
+                <view class="action">
+                <button class="cu-btn bg-green lg" bindtap="faultInto">免费还车</button>
+                  <button class="cu-btn line-green text-green lg" bindtap="hideModal">继续用车</button>
+                </view>
+              </view>
+            </view>
+          </view>
+      
+</view>

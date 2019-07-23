@@ -1,21 +1,138 @@
 /**index.wxss**/
-.userinfo {
+@import "../templates/topContent.wxss";
+
+.iconWrap {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin: 10rpx 0;
+}
+.iconWrap view {
+  width:40%;
+  height: 120rpx;
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: #888888;
+  font-size: 32rpx;
+}
+.iconWrap image  {
+  width: 80rpx;
+  height: 65rpx;
+  margin-bottom: 10rpx;
 }
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+/* 特价酒店 */
+.specialHotelWrap {
+  width: 100%;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 20rpx 0;
+  margin: 20rpx 0;
+}
+.specialHotelList {
+  margin-top: 60rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.specialHotelItem {
+  width: 45%;
+  height: 250rpx;
+  margin: 10rpx 0;
+  border-bottom-right-radius: 15rpx;
+  border-bottom-left-radius: 15rpx;
+}
+.specialHotelItem image {
+  width: 100%;
+  height: 100%;
+  border-radius: 15rpx;
+}
+.specialHotelItem view {
+  width: 100%;
+  height: 50rpx;
+  line-height: 50rpx;
+  background: rgba(0, 0, 0, .5);
+  font-size: 24rpx;
+  text-align: center;
+  position: relative;
+  bottom: 23%;
+  border-bottom-right-radius: 15rpx;
+  border-bottom-left-radius: 15rpx;
+  color: #fff;
 }
 
-.userinfo-nickname {
-  color: #aaa;
+/* 热门酒店 */
+.hotHotelWrap {
+  padding: 20rpx 0;
+  margin:20rpx 0;
+  background: #fff;
+}
+.hotHotelWrap .more {
+  height: 50rpx;
+  display: flex;
+  align-items: center;
+  font-size: 26rpx;
+  float: right;
+  position: absolute;
+  right: 30rpx;
+  color: #888888;
+}
+.hotHotelList {
+  margin-top: 60rpx;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 20rpx 0;
+}
+.hotHotelItem {
+  width: 93%;
+  height: 50%;
+  margin-bottom:20rpx; 
+}
+.hotHotelImg {
+  height: 300rpx;
+  margin-bottom: 15rpx;
+}
+.hotHotelImg image {
+  width: 100%;
+  height: 100%;
+  border-radius: 15rpx;
+}
+.hotHotelTitle {
+  color:#000;
+  font-size: 36rpx;
+}
+.hotelIcontWrap {
+  width: 80%;
+  display: flex;
+  justify-content:space-between;
+  align-items: baseline;
+  font-size: 22rpx;
+  color: #888888;
+  margin-bottom: 8rpx;
+}
+.priceWrap {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.priceLeft text {
+  color:#f3502d;
+}
+.priceRight {
+  font-size: 26rpx;
+  color:#888888;
+}
+.priceRight text {
+  margin-left: 30rpx;
 }
 
-.usermotto {
-  margin-top: 200px;
-}
+
+
+
+
+

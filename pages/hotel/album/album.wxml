@@ -1,0 +1,12 @@
+<scroll-view scroll-x class="bg-white nav">
+        <view class="flex text-center">
+          <view class="cu-item flex-sub {{index==TabCur?'text-blue cur':''}}" wx:for="{{albumImgList}}" wx:key bindtap="tabSelect" data-id="{{index}}">
+            {{albumImgList[index].name}}{{albumImgList[index].src.length}}
+          </view>
+        </view>
+</scroll-view>
+<view class="albumContentWrap flex">
+    <view class="albumItem" wx:for="{{curList}}" wx:key bindtap="previewImg" data-curImg="{{curList[index]}}">
+        <image src="{{curList[index]}}" />
+    </view>
+</view>

@@ -1,0 +1,61 @@
+@import "../../templates/carInfo.wxss";
+.boxWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.lockBtn {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin-top:400rpx;
+    margin-bottom: 30rpx;
+}
+.lockBtn button {
+    width: 48%;
+    height: 75rpx;
+    line-height: 75rpx;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    background: none;
+    border: 1px solid #888888;
+    border-radius: 5rpx;
+    font-size: 36rpx;
+}
+.lockBtn .iconweisuoding,.lockBtn .iconsuoding {
+    font-size: 34rpx;
+    position: relative;
+    right: 20rpx;
+}
+.lockBtn .iconweisuoding {
+    color: #18A8EA;
+}
+.lockBtn .iconsuoding {
+    color: #EA3118;
+}
+.returnCarBtn button {
+    height: 90rpx;
+    line-height: 90rpx;
+    font-size: 38rpx;
+}
+.returnCarBtn .iconfont {
+    font-size: 36rpx;
+}
+.returnCarBtn {
+    width: 90%;
+}
+.action {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border: #18a8ea 1px slid;
+    margin: 35rpx 0;
+}
+.action .cu-btn {
+    width: 100%;
+    margin: 10rpx 0;
+}
+.cu-modal .icon-tingche {
+    font-size: 40rpx;
+}

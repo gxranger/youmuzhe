@@ -1,0 +1,148 @@
+/* 顶部定位&搜索框 */
+
+.networkTop {
+    padding: 15rpx 0;
+    display: flex;
+    justify-content: center;
+    background: #fff;
+    margin-bottom: 1rpx;
+}
+.cityPosition {
+    width: 35%;
+    height: 70rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #888888;
+    font-size: 32rpx;
+}
+.cityPosition icon {
+    height: 70rpx;
+    line-height: 70rpx;
+    position: relative;
+    right: 15rpx;
+    font-size: 36rpx;
+}
+.networkSearch {
+    width:65%;
+}
+.SearchWrapper {
+    width: 90%;
+    display: flex;
+    justify-content:flex-end; 
+    align-content: center;
+  }
+.SearchInput {
+    width: 100%;
+    height: 70rpx;
+    line-height: 70rpx;
+    display: flex;
+    align-items: center;
+    border-radius: 10rpx;
+    background: #e8e8e8;
+    color:#a4a4a4;
+    font-size: 26rpx;
+    padding-left:20rpx; 
+  }
+.SearchWrapper .iconchaxun {
+    height: 70rpx;
+    font-size: 38rpx;
+    color:#999999;
+  }
+
+  /* 联动导航 */
+.networkMain {
+    display: flex;
+  }
+.networkLeft {
+    width: 35%;
+    height: 950rpx;
+    background:#f2f2f2;
+    border:1px solid red;
+  }
+.networkRightItem {
+    background: #fff;
+    padding: 20rpx;
+    border-bottom:1px solid #e2e2e2;
+}
+.networkInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 15rpx;
+}
+.networkName {
+    font-weight: bold;
+    font-size: 30rpx;
+    color: #000;
+}
+.networkDistance {
+    font-size: 20rpx;
+    color: #888888;
+}
+.networkAddress {
+    width: 93%;
+    font-size: 26rpx;
+    margin-bottom: 10rpx;
+    color: #888888;
+}
+.networkCarNumber {
+    height: 40rpx;
+    display: flex;
+    align-items: center;
+    /* border:1px solid salmon; */
+}
+.networkCarNumber .icon-tingche {
+    display: flex;
+    align-items: center;
+    height: 40rpx;
+    color: #16a8ec;
+    font-size: 38rpx;
+    margin-right: 15rpx;
+}
+.networkCarNumber text {
+    font-size: 32rpx;
+    color: #888888;
+}
+
+.VerticalNav.nav {
+    width: 35%;
+    white-space: initial;
+  }
+  
+  .VerticalNav.nav .cu-item {
+    height: 90rpx;
+    line-height: 90rpx;
+    font-size: 24rpx;
+    width: 100%;
+    text-align: center;
+    background-color: #f2f2f2;
+    margin: 0;
+    border: none;
+    position: relative;
+  }
+  
+  .VerticalNav.nav .cu-item.cur {
+    background-color: #fff;
+  }
+  .VerticalNav.nav .cu-item.cur::after {
+    /* border:1px solid salmon; */
+    content: "";
+    width: 8rpx;
+    height: 30rpx;
+    border-radius: 10rpx 0 0 10rpx;
+    position: absolute;
+    background-color: currentColor;
+    top: 0;
+    right: 0rpx;
+    bottom: 0;
+    margin: auto;
+  }
+  .VerticalBox{
+    display: flex;
+  }
+  .VerticalMain{
+    width: 65%;
+    background-color: #f1f1f1;
+    /* border:1px solid rgb(23, 189, 255); */
+  }

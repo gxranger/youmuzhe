@@ -1,0 +1,52 @@
+<view class="appearanceWrap">
+    <view class="appearanceBtnWrap">
+            <view class="appearanceTitle">
+                    <text class="text-black text-bold">车辆外观</text>
+                    <text>请选择对应车辆部位进行拍摄</text>
+                </view>
+                <view class="appearanceTopBtn flex">
+                    <button class="{{isPhoto[0]?'text-blue line-blue':'text-gray line-gray'}}" bindtap="photo" data-id="0" data-name="zhsj">左后视镜</button>
+                    <button class="{{isPhoto[1]?'text-blue line-blue':'text-gray line-gray'}}" bindtap="photo" data-id="1"  data-name="qbxg">前保险杠</button>
+                    <button class="{{isPhoto[2]?'text-blue line-blue':'text-gray line-gray'}}" bindtap="photo" data-id="2"  data-name="yhsj">右后视镜</button>
+                </view>
+                <view class="appearanceMain flex">
+                    <view class="btnLeft">
+                        <button class="{{isPhoto[3]?'text-blue line-blue':'text-gray line-gray'}}" bindtap="photo" data-id="3"  data-name="zqc">左前侧</button>
+                        <button class="{{isPhoto[4]?'text-blue line-blue':'text-gray line-gray'}}" bindtap="photo" data-id="4"  data-name="zql">左前轮</button>
+                        <button class="{{isPhoto[5]?'text-blue line-blue':'text-gray line-gray'}}" bindtap="photo" data-id="5"  data-name="zcm">左车门</button>
+                        <button class="{{isPhoto[6]?'text-blue line-blue':'text-gray line-gray'}}" bindtap="photo" data-id="6"  data-name="zhl">左后轮</button>
+                        <button class="{{isPhoto[7]?'text-blue line-blue':'text-gray line-gray'}}" bindtap="photo" data-id="7"  data-name="zhc">左后侧</button>
+                    </view>
+                    <view class="carImg">
+                        <image src="https://www.youmuzhe.net/image/checkout.png" />
+                    </view>
+                    <view class="btnRight">
+                        <button class="{{isPhoto[8]?'text-blue line-blue':'text-gray line-gray'}}" bindtap="photo" data-id="8"  data-name="yqc">右前侧</button>
+                        <button class="{{isPhoto[9]?'text-blue line-blue':'text-gray line-gray'}}" bindtap="photo" data-id="9"  data-name="yql">右前轮</button>
+                        <button class="{{isPhoto[10]?'text-blue line-blue':'text-gray line-gray'}}" bindtap="photo" data-id="10"  data-name="ycm">右车门</button>
+                        <button class="{{isPhoto[11]?'text-blue line-blue':'text-gray line-gray'}}" bindtap="photo" data-id="11"  data-name="yhl">右后轮</button>
+                        <button class="{{isPhoto[12]?'text-blue line-blue':'text-gray line-gray'}}" bindtap="photo" data-id="12"  data-name="yhc">右后侧</button>
+                    </view>
+                </view>
+                <view class="flex">
+                    <button class="{{isPhoto[13]?'text-blue line-blue':'text-gray line-gray'}}" bindtap="photo" data-id="13"  data-name="hbxg">后备箱盖</button>
+                    <button class="{{isPhoto[14]?'text-blue line-blue':'text-gray line-gray'}}" bindtap="photo" data-id="14"  data-name="hbaoxiangang">后保险杠</button>
+                </view>
+    </view>
+    <view wx:if="{{from_page_name=='makecar'}}" class="completeBtn" bindtap="returnMakeCar">
+            <button class="bg-blue lg">检查完成</button>
+    </view>
+    <view wx:if="{{from_page_name=='returncar'}}" class="completeBtn" bindtap="internalInto">
+        <button class="bg-blue lg">下一步</button>
+    </view>
+    <view class="cu-modal {{isLength?'show':''}}">
+            <view class="cu-dialog bg-white padding-top padding-left padding-right">
+            <view class="text-left padding-bottom">
+                    请上传15张车辆完整部位照片
+            </view>
+              <view class="cu-bar bg-white margin-top solid-top">
+                <view class="action margin-0 flex-sub text-blue solid-left" bindtap="hideModal">我知道了</view>
+              </view>
+            </view>
+    </view>
+</view>

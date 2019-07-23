@@ -1,0 +1,50 @@
+.appearanceWrap {
+    width: 100%;
+    padding: 10rpx;
+    background: #fff;
+}
+.appearanceBtnWrap button {
+    background: none;
+    font-size: 28rpx;
+}
+.appearanceTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 30rpx;
+    margin: 35rpx 0;
+    color: #888888;
+}
+.appearanceTitle text:first-child {
+    font-size: 36rpx;
+}
+.appearanceTopBtn {
+    width: 100%;
+    padding: 0 80rpx;
+    margin-top: 50rpx;
+}
+.appearanceMain {
+    padding: 0 5rpx;
+}
+.btnLeft,.btnRight {
+    width: 20%;
+    /* border:blueviolet 1px solid; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 55rpx 0;
+}
+.btnLeft button,.btnRight button {
+    margin:0;
+}
+.carImg {
+    width: 60%;
+    height: 700rpx;
+}
+.carImg image {
+    width: 100%;
+    height: 100%;
+}
+.completeBtn {
+    margin: 75rpx 0;
+}
