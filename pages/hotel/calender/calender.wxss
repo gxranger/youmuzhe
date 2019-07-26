@@ -1,4 +1,15 @@
 /* pages/dateSelect/dateSelect.wxss */
+view,
+scroll-view,
+swiper,
+button,
+input,
+textarea,
+label,
+navigator,
+image {
+	box-sizing: content-box;
+}
 .date-day{
   display: flex;
   padding:5px;

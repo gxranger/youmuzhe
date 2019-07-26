@@ -84,9 +84,6 @@
 .addressWrap view {
   margin: 10rpx 0;
 }
-.iconReverse {
-  transform: scale(-1,1);
-}
 .iconfanhui1 {
   color: #15cad5;
   font-size: 38rpx;

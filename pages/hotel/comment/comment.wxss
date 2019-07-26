@@ -1,0 +1,88 @@
+.commentWrap {
+    flex-direction: column;
+}
+.hotelScore,.commentTabContent {
+    width: 95%;
+}
+.avreageScore {
+    width: 20%;
+    text-align: center;
+    font-size: 38rpx;
+    font-weight: bold;
+}
+.detailScore {
+    width: 80%;
+    flex-wrap: wrap;
+}
+.scoreItem {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    font-size: 28rpx;
+    margin: 10rpx 0;
+}
+.scoreItem view:first-child{
+    width: 25%;
+}
+.scoreItem view {
+    width: 25%;
+    /* border:greenyellow 1px solid; */
+}
+.itemProgress {
+   width: 50%!important;
+   margin-right: 8rpx;
+}
+.conmentTabTitle {
+    width: 100%;
+}
+.commentTag  view {
+    width: 160rpx;
+    height: 50rpx;
+    line-height: 50rpx;
+    border-radius: 30rpx;
+    font-size: 24rpx;
+    text-align: center;
+}
+.commentList {
+    width: 100%;
+    flex-direction: column;
+}
+.commentItem {
+    width: 100%;
+    flex-direction: column;
+    border-bottom:#e2e2e2 1px solid;
+
+}
+.commentImg {
+    width: 85rpx;
+    height: 85rpx;
+    margin-right: 15rpx;
+}
+.userName {
+    font-size: 28rpx;
+}
+.starGroup {
+    width: 180rpx;
+    height: 50rpx;
+}
+.starGroup .cuIcon-favorfill {
+    line-height: 70rpx;
+    font-size: 28rpx;
+}
+.commentTopInfo {
+    margin-bottom: 10rpx;
+}
+.commentWord {
+    font-size: 28rpx;
+}
+.commentImgGroup {
+    width: 100%;
+    margin: 15rpx 0;
+}
+.commentImgGroup view {
+    width: 220rpx;
+    height: 170rpx;
+}
+.commentBottomInfo {
+    color: #888888;
+}

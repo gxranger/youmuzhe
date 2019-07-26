@@ -1,0 +1,94 @@
+/* pages/hotel/index.wxss */
+@import "../../templates/topContent.wxss";
+.hotelListWrap {
+    width: 100%;
+    flex-direction: column;
+}
+.listTab {
+    width: 100%;
+    height: 80rpx;
+    color: #888888;
+    font-size: 28rpx;
+    box-shadow: 0 5rpx 8rpx #e2e2e2;
+}
+.listTabFixed {
+    position:fixed;
+    width:100%;
+    height:100rpx; 
+    top:0rpx;
+    z-index: 2000;
+}
+.tabContent {
+    width: 95%;
+}
+.listFilter {
+    width: 60%;
+}
+.position {
+    line-height: 80rpx;
+}
+.iconGroup {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10rpx;
+}
+.iconGroup .cuIcon-usefullfill {
+    margin-top: -2rpx;
+    font-size: 14rpx;
+}
+.listContent {
+    width: 100%;
+    flex-direction: column;
+}
+.listLtem {
+    width: 100%;
+    margin: 8rpx 0;
+    padding:20rpx;
+}
+.itemLeft {
+    width: 35%;
+}
+.itemLeft view {
+    width: 240rpx;
+    height: 240rpx;
+}
+.itemRight {
+    width: 65%;
+    padding-left: 10rpx;
+}
+.titleInfo {
+    width: 100%;
+    flex-direction: column;
+}
+.hotelName {
+    font-size: 32rpx;
+    margin-bottom: 15rpx;
+}
+.hotelComment,.distance {
+    margin-bottom: 8rpx;
+    font-size: 26rpx;
+}
+.distance,.hotelTag {
+    margin: 5rpx 0;
+}
+.hotelTag {
+    width: 100%;
+}
+.hotelTag view {
+    padding: 0 10rpx;
+    height: 35rpx;
+    line-height: 35rpx;
+    margin-right: 10rpx;
+    font-size: 18rpx;
+    text-align: center;
+    border: #18A8EA 1px solid;
+}
+.price {
+    width: 100%;
+    font-size: 28rpx;
+    color: #F5503F;
+    align-items: baseline;
+}
+.price .text-bold {
+    font-size: 42rpx;
+}

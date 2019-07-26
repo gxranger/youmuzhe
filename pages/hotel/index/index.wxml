@@ -1,11 +1,10 @@
 
-   
     <!-- topContent模板引入 -->
     <import src="../../templates/topContent.wxml"/>
     <template is="searchTemplate" data="{{searchInfo}}" />
     <template is="swiperTemplate" data="{{imgList,currentSwiper}}" />
 
-    <view class="hotelWrap">
+    <view class="hotelWrap margin-bottom">
     <view class="researchHotelWrap">   
         <view class="destinationWrap">
             <view>目的地</view>
@@ -16,23 +15,24 @@
         </view>
             <view class="dateSelectWrap flex" bindtap="calenderInto">
                     <view class="dateSelectDate">
-                        <view>入住</view>
+                        <view>{{inDateWeek}} 入住</view>
                         <view class="dateInfo text-bold">{{checkInDate}}</view>
                     </view>
                     <view class="hotelNum flex align-center justify-center">
-                        <view>共{{hotelNum}}晚</view>
+                        <view class="text-blue">共{{hotelNum}}晚</view>
                     </view>
                     <view class="dateSelectDate flex align-end">
-                        <view>离店</view>
+                        <view>{{outDateWeek}} 离店</view>
                         <view class="dateInfo text-bold">{{checkOutDate}}</view>
                     </view>
+                    
             </view>
-        <view class="bandSearchWrap flex justify-between align-center">
+        <view class="bandSearchWrap flex justify-between align-center" bindtap="showModal" data-target="ChooseModal">
             <text>价格/星级</text>
             <icon class="iconfont iconjiantou" />
         </view>
         <view class="searchHotelBtn">
-            <button class="bg-blue cu-btn bg-gradual-blue shadow-blur round">查询酒店</button>
+            <button class="bg-blue cu-btn bg-gradual-blue shadow-blur round" bindtap="listInto">查询酒店</button>
         </view>
     </view>
     <view class="rowBannerWrap">
@@ -45,7 +45,7 @@
             </swiper-item>
         </swiper>
     </view>
-    <view class="recommendHotelWrap">
+    <view class="recommendHotelWrap margin-bottom">
         <view class="recommendHotelTitle">
             <view class="title">
                     <view class="columnBlue"></view>
@@ -70,7 +70,48 @@
             </swiper>
         </view>
     </view>
-    <view class="hotHotelWrap">
-
+    <view class="hotHotelWrap flex margin-bottom">
+        <view class="title">
+            <view class="columnBlue"></view>
+            <text>爆款活动</text>
+            <view class="new">HOT</view>
+        </view>
+        <view class="hotContent shadow flex justify-center">
+            <view class="hotLeft">
+                <image class="full-img" src="https://www.youmuzhe.net/image/left.png" />
+            </view>
+            <view class="hotRight flex">
+                <view><image class="full-img" src="https://www.youmuzhe.net/image/right.png" /></view>
+                <view><image class="full-img" src="https://www.youmuzhe.net/image/right2.png" /></view>
+            </view>
+        </view>
     </view>
 </view>
+<view class="cu-modal bottom-modal {{modalName=='ChooseModal'?'show':''}}">
+    <view class="cu-dialog bg-white">
+      <view class="closeAction flex justify-end">
+        <icon class="cuIcon-roundclosefill" bindtap="hideModal" />
+      </view>
+      <view class="cu-bar padding-left">
+            <text class="text-bold">价格</text>
+      </view>
+      <view class="flex justify-start">
+           <view class="priceWrap flex">
+                <input type="number" maxlength="3" bindinput="startNumber" value="{{startPrice}}" /><view class="text-bold">——</view> <input type="number" bindinput="endNumber" maxlength="3"  value="{{endPrice}}" />
+           </view>
+      </view>
+        <view class="cu-bar padding-left">
+            <text class="text-bold">星级（复选）</text>
+        </view>
+      <view class="grid col-3">
+        <view wx:for="{{checkbox}}" class="padding-xs" wx:key="{{index}}">
+          <button class="cu-btn lg block {{item.checked?'bg-blue':'line-gray'}}" bindtap="ChooseCheckbox" data-value="{{item.value}}" > {{item.name}}
+          </button>
+        </view>
+      </view>
+      <view class="submitBtn margin-top margin-bottom flex">
+        <button class="bg-green" bindtap="restBtn">重置</button>
+        <button class="bg-blue" bindtap="submitBtn">提交</button>
+      </view>
+    </view>
+  </view>

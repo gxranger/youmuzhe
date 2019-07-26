@@ -12,7 +12,7 @@
     background: #fff;
     position:absolute;
     top: 380rpx;
-    z-index: 9000;
+    z-index: 1000;
     box-shadow: 0 0 20rpx #d1d1d1;
 }
 .destinationWrap,.dateSelectWrap,.bandSearchWrap {
@@ -27,6 +27,9 @@
 .destinationSelect {
     height: 80rpx;
     font-size: 30rpx;
+}
+.iconjiantou {
+    color: #d8d8d8;
 }
 .researchHotelWrap .iconjiantou {
     font-size: 30rpx;
@@ -45,8 +48,9 @@
     color: #888888;
 }
 .hotelNum view {
-    width: 90%;
+    width: 100%;
     height: 50rpx;
+    border:1px #18A8EA solid;
     line-height: 50rpx;
     text-align: center;
     border-radius: 40rpx;
@@ -113,7 +117,7 @@
     position: absolute;
     right: 0rpx;
     top: 20rpx;
-    z-index: 9000;
+    z-index: 1000;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -129,7 +133,63 @@
     position: absolute;
     bottom: 35rpx;
     left: 10rpx;
-    z-index: 9000;
+    z-index: 1000;
     font-size: 38rpx;
     color: #fff;
+}
+.grid .cu-btn {
+    font-size: 22rpx;
+    padding: 0;
+}
+.closeAction .cuIcon-roundclosefill {
+    position: relative;
+    right: 20rpx;
+    top: 10rpx;
+    font-size: 46rpx;
+    color: #888888;
+}
+.priceWrap input {
+    width: 30%;
+    height: 60rpx;
+    font-size: 30rpx;
+    border: #bdbdbd 1px solid;
+    margin: 0 15rpx;
+    text-align: center;
+}
+.priceWrap view {
+    line-height: 60rpx;
+    color: #bdbdbd;
+}
+.submitBtn button {
+    width: 280rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+}
+.hotHotelWrap {
+    width: 100%;
+    flex-direction: column;
+}
+.hotContent {
+    height: 260rpx;
+    margin-top: 65rpx;
+}
+.hotLeft,.hotRight {
+    width: 340rpx;
+}
+.hotLeft {
+    height: 260rpx;
+    border-right: #e2e2e2 1px solid;
+    margin-right:10rpx; 
+    padding-right: 10rpx;
+}
+.hotRight {
+    height: 260rpx;
+    flex-direction: column;
+}
+.hotRight view:first-child {
+    border-bottom: #e2e2e2 1px solid;
+}
+.hotRight view {
+    width: 340rpx;
+    height: 130rpx;
 }

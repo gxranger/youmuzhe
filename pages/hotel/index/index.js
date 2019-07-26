@@ -1,7 +1,6 @@
 var Moment = require("../../../utils/moment.js");
 
-//获取应用实例
-const app = getApp()
+import { dateStr } from "../../../utils/util";
 
 Page({
     data: {
@@ -20,6 +19,8 @@ Page({
       ],
       checkInDate:"",
       checkOutDate:"",
+      inDateWeek:"",
+      outDateWeek:"",
       hotelNum:1,
       cardCur:0,
       cardList: [{
@@ -64,8 +65,58 @@ Page({
         type: 'image',
         url: 'https://www.youmuzhe.net/image/recommendhotel.jpg'
       }],
+      startPrice:0,
+      endPrice:500,
+      checkbox: [{
+        value: 0,
+        name: '不限',
+        checked: true
+      }, {
+        value: 1,
+        name: '二星级或以下/经济',
+        checked: false
+      }, {
+        value: 2,
+        name: '三星级/舒适',
+        checked: false
+      }, {
+        value: 3,
+        name: '四星级/高档',
+        checked: false
+      }, {
+        value: 4,
+        name: '五星级/豪华',
+        checked: false
+      }],
+      checkedCount: 0,
     },
-
+    showModal(e) {
+      this.setData({
+        modalName: e.currentTarget.dataset.target
+      })
+    },
+    hideModal(e) {
+      this.setData({
+        modalName: null
+      })
+    },
+    ChooseCheckbox(e) {
+      let items = this.data.checkbox;
+      let values = e.currentTarget.dataset.value;
+      if (values == 0) {
+        for (let i= 1; i < items.length; i++) {
+          items[i].checked = false;
+        }
+        items[0].checked = true;
+      } else {
+        items[values].checked = !items[values].checked;
+        this.data.checkedCount = this.data.checkedCount + (items[values].checked ? 1 : -1);
+        items[0].checked = this.data.checkedCount == 0;
+      }
+      this.setData({
+        checkbox: items
+      })
+    },
     // 卡片式幻灯片
     cardSwiper(e) {
       this.setData({
@@ -79,6 +130,7 @@ Page({
         })
     },
 
+
    /**
    * 生命周期函数--监听页面加载
    */
@@ -88,7 +140,9 @@ Page({
       key: 'ROOM_SOURCE_DATE',
       data: {
         checkInDate: Moment(new Date()).format('YYYY-MM-DD'),
-        checkOutDate: Moment(new Date()).add(1, 'day').format('YYYY-MM-DD')
+        checkOutDate: Moment(new Date()).add(1, 'day').format('YYYY-MM-DD'),
+        inDateWeek:Moment(new Date()).format('EE'),
+        outDateWeek:Moment(new Date()).add(1, 'day').format('EE')
       }
     });
   },
@@ -98,10 +152,12 @@ Page({
   onShow: function () {
     let getDate = wx.getStorageSync("ROOM_SOURCE_DATE");
     this.setData({
-      checkInDate: getDate.checkInDate,
-      checkOutDate: getDate.checkOutDate
+      checkInDate: dateStr(getDate.checkInDate),
+      checkOutDate: dateStr(getDate.checkOutDate),
+      inDateWeek:getDate.inDateWeek,
+      outDateWeek:getDate.outDateWeek
     });
-    this.num_data(getDate.checkInDate,getDate.checkOutDate)
+    this.num_data(getDate.checkInDate,getDate.checkOutDate);
   },
   // 选择入住和离店时间
   calenderInto(){
@@ -153,5 +209,62 @@ Page({
                 this.setData({swiperError: 0})
             }
         }
+    },
+
+    // 起始价格区间input监听
+    startNumber(e) {
+      if(e.detail.value<0||e.detail.value==""){
+        wx.showToast({
+          image: '../../../images/fail.png',
+          title: '起始价不合法',
+        })
+      }else{
+        this.setData({
+          startPrice:e.detail.value
+        })
+      }
+    },
+    endNumber(e) {
+      if(e.detail.value<=0||e.detail.value==""){
+        wx.showToast({
+          image: '../../../images/fail.png',
+          title: '起始价不合法',
+        })
+      }else{
+        this.setData({
+          endPrice:e.detail.value
+        })
+      }
+    },
+
+    // 重置按钮
+    restBtn() {
+      this.data.checkbox[0].checked=true;
+      for(let i=1;i<this.data.checkbox.length;i++){
+        this.data.checkbox[i].checked=false;
+      }
+      this.setData({
+        startPrice:0,
+        endPrice:500,
+        checkbox:this.data.checkbox
+      })
+    },
+    // 提交按钮
+    submitBtn() {
+      if(this.data.startPrice>this.data.endPrice){
+        wx.showToast({
+          image: '../../../images/fail.png',
+          title: '不能低于起始价',
+        })
+      }else if(!this.data.checkbox[1].checked){
+        
+      }
+    },
+    listInto(){
+      wx.navigateTo({
+        url: '../list/list'
+      })
     }
+
+    
 })

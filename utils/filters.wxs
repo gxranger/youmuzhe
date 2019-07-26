@@ -5,10 +5,8 @@ var filters = {
         return value.toFixed(2) // 此处2为保留两位小数，保留几位小数，这里写几
 
     }
-
 }
 
 module.exports = {
-    toFix: filters.toFix,
-    toNumber: filters.toNumber,
+    toFix: filters.toFix
 }

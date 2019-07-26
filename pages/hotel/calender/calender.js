@@ -11,6 +11,8 @@ Page({
     weekStr: ['日', '一', '二', '三', '四', '五', '六'],
     checkInDate: Moment(new Date()).format('YYYY-MM-DD'),
     checkOutDate: Moment(new Date()).add(1, 'day').format('YYYY-MM-DD'),
+    inDateWeek:Moment(new Date()).format('EE'),
+    outDateWeek:Moment(new Date()).add(1, 'day').format('EE'),
     markcheckInDate: false, //标记开始时间是否已经选择
     markcheckOutDate: false,   //标记结束时间是否已经选择
     sFtv: [
@@ -292,12 +294,11 @@ Page({
 
     var tempMonth = month;
     var tempDay = day;
-
     if (month < 10) tempMonth = '0' + month
     if (day < 10) tempDay = '0' + day
 
     var date = year + '-' + tempMonth + '-' + tempDay;
-    console.log(tempDay);
+    var curweek = Moment(date).format('EE');
     //如果点击选择的日期A小于入住时间，则重新渲染入住时间为A
     if ((this.data.markcheckInDate && Moment(date).before(this.data.checkInDate) || this.data.checkInDate === date)) {
       this.setData({
@@ -310,12 +311,14 @@ Page({
     if (!this.data.markcheckInDate) {
       this.setData({
         checkInDate: date,
+        inDateWeek:curweek,
         markcheckInDate: true,
         dateList: DATE_LIST.concat()
       });
     } else if (!this.data.markcheckOutDate) {
       this.setData({
         checkOutDate: date,
+        outDateWeek:curweek,
         markcheckOutDate: true,
       });
       //设缓存，返回页面时，可在onShow时获取缓存起来的日期
@@ -323,7 +326,9 @@ Page({
         key: 'ROOM_SOURCE_DATE',
         data: {
           checkInDate: this.data.checkInDate,
-          checkOutDate: this.data.checkOutDate
+          checkOutDate: this.data.checkOutDate,
+          inDateWeek:this.data.inDateWeek,
+          outDateWeek:this.data.outDateWeek
         }
       });
       wx.navigateBack({

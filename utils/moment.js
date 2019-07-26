@@ -17,6 +17,18 @@ var Moment = function (date) {
  * "yyyy-MM-dd EE hh:mm:ss" ==> 2009-03-10 周二 08:09:04       
  * "yyyy-MM-dd EEE hh:mm:ss" ==> 2009-03-10 星期二 08:09:04  
  */
+function ascii2native(val){
+	var character=val.split("\\u");
+	var native1=character[0];
+	for(var i=1;i<character.length;i++){
+		var code=character[i];
+		native1+=String.fromCharCode(parseInt("0x"+code.substring(0,4)));
+		if(code.length>4){
+			native1+=code.substring(4,code.length);
+		}
+	}
+	return native1;
+}
 Moment.prototype.format = function (format) {
   var date = this.date;
   /*
@@ -36,18 +48,18 @@ Moment.prototype.format = function (format) {
     "S": date.getMilliseconds() //毫秒 
   };
   var week = {
-    "0": "/u65e5",
-    "1": "/u4e00",
-    "2": "/u4e8c",
-    "3": "/u4e09",
-    "4": "/u56db",
-    "5": "/u4e94",
-    "6": "/u516d"
+    "0": "\u65e5",
+    "1": "\u4e00",
+    "2": "\u4e8c",
+    "3": "\u4e09",
+    "4": "\u56db",
+    "5": "\u4e94",
+    "6": "\u516d"
   };
   if (/(y+|Y+)/.test(format))
     format = format.replace(RegExp.$1, (date.getFullYear() + "").substr(4 - RegExp.$1.length));
   if (/(E+)/.test(format))
-    format = format.replace(RegExp.$1, ((RegExp.$1.length > 1) ? (RegExp.$1.length > 2 ? "/u661f/u671f" : "/u5468") : "") + week[date.getDay() + ""]);
+    format = format.replace(RegExp.$1, ((RegExp.$1.length > 1) ? (RegExp.$1.length > 2 ? "\u661f\u671f" : ascii2native("\u5468")) : "") + week[date.getDay() + ""]);
   for (var k in o) {
     if (new RegExp("(" + k + ")").test(format))
       format = format.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));

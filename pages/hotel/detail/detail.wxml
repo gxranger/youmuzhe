@@ -1,100 +1,210 @@
 <view class="detailWrap flex">
-    <view class="shadow-warp bg-white">
+    <view class="bg-white">
         <view class="detailSwiperWrap">
                 <swiper class="screen-swiper square-dot" indicator-dots="true" circular="true">
                         <swiper-item wx:for="{{swiperList}}" wx:key>
+                        <view class="albumBtn flex justify-center align-center" bindtap="albumInto">
+                            <icon class="iconfont iconxianpaizhao text-white" />
+                            <text class="text-white">相册</text>
+                        </view>
                         <image src="{{item.url}}" mode="aspectFill" wx:if="{{item.type=='image'}}"></image>
                         <video src="{{item.url}}" autoplay loop muted show-play-btn="{{false}}" controls="{{false}}" objectFit="cover" wx:if="{{item.type=='video'}}"></video>
                         </swiper-item>
                 </swiper>
         </view>
-        <view class="hotelInfoWrap flex justify-between">
-            <view class="hotelTitle flex">
-                <text class="text-bold text-black">贵阳凯宾斯基大酒店</text>
-                <text>Kempinski Hotel Guiyang | 五档豪华</text>
+       
+        <view class="hotelTitle flex align-center padding-bottom">
+            <view class="hotelTitleWord">
+                <view class="titleWord text-bold text-black">贵阳凯宾斯基大酒店</view>
+                <view class="enTitle">Kempinski Hotel Guiyang | 五档豪华</view>
             </view>
-            <view class="hotelStars flex align-end">
-                <view class="iconGroup">
-                    <icon class="iconfont iconfive-star text-blue" />
-                    <icon class="iconfont iconfive-star text-blue" />
-                    <icon class="iconfont iconfive-star text-blue" />
-                    <icon class="iconfont iconfive-star text-blue" />
-                    <icon class="iconfont iconfive-star text-blue" />
-                </view>
-                <view class="iconNumber">4.3分</view>
+            <view class="shareBtnGroup flex justify-around">
+                    <view class="bg-gradual-red flex justify-center align-center margin-right">
+                        <icon class="iconfont icontianjiashoucang text-white" />
+                    </view>
+                    <view class="bg-gradual-blue flex justify-center align-center">
+                        <icon class="iconfont iconfenxiang text-white" />
+                    </view> 
             </view>
         </view>
-        <view class="infoDeatail">
-            <scroll-view scroll-x class="bg-white nav text-center">
-                <view class="cu-item {{index==TabCur?'text-blue':''}}" wx:for="{{hotelInfo}}" wx:key bindtap="tabSelect" data-id="{{index}}">
-                    {{hotelInfo[index].name}}
+        <view class="contactWrap">
+            <view class="contactItem flex justify-between" bindtap="commentInto">
+                <view class="starTitle flex align-center text-blue">
+                    <text class="text-bold">4.3分</text>
+                    <text class="margin-left">“设施齐全”  “交通方便”</text>
                 </view>
-            </scroll-view>
+                <view class="contactRight flex align-center">
+                    <text class="text-blue">185条点评</text>
+                    <icon class="cuIcon-right" />
+                </view>
+            </view>
+
+            <view class="contactItem margin-top flex justify-between" bindtap="facilityInto">
+                    <view class="contactTitle flex">
+                        <view class="contactIntroduce flex justify-between">
+                            <text>2016年开业</text>
+                            <text>2018年装修</text>
+                        </view>
+                        <view class="contactIconGroup flex ">
+                            <view>
+                                <icon class="iconfont icontingchechang text-green" />
+                                <text>免费停车</text>
+                            </view>
+                            <view>
+                                <icon class="iconfont iconxingli text-green" />
+                                <text>行李寄存</text>
+                            </view>
+                            <view>
+                                <icon class="iconfont iconhuasa text-green" />
+                                <text>热水洗浴</text>
+                            </view>
+                        </view>
+                    </view>
+                    <view class="contactRight flex align-center">
+                        <text class="text-blue">详情/设施</text>
+                        <icon class="cuIcon-right" />
+                    </view>
+                </view>
+                <view class="dateSelect flex justify-between" bindtap="calenderInto">
+                    <view class="flex align-center">
+                        <text class="text-blue">{{checkInDate}}</text>
+                        <text>{{inDateWeek}}</text>
+                        <text class="margin-left margin-right">——</text>
+                        <text class="text-blue">{{checkOutDate}}</text>
+                        <text>{{outDateWeek}}</text>
+                    </view>
+                    <view class="contactRight flex align-center">
+                        <text class="text-blue">共{{hotelNum}}晚</text>
+                        <icon class="cuIcon-right" />
+                    </view>
+                </view>
+                <view class="tagSelect flex justify-around">
+                    <view class="bg-blue">双床</view>
+                    <view class="bg-ghostWhite">大床</view>
+                    <view class="bg-ghostWhite">含早餐</view>
+                    <view class="bg-ghostWhite">有窗</view>
+                    <view class="bg-ghostWhite">到店付款</view>
+                </view>
+                <view class="hotelRoomItem margin-top padding-bottom margin-bottom flex">
+                    <view class="itemLeft flex">
+                        <view class="roomImg">
+                            <image src="https://www.youmuzhe.net/image/hotelCase2.jpg" />
+                        </view>
+                        <view class="roomInfo flex">
+                            <text class="text-bold">高级大床房</text>
+                            <text>不含早餐 | 8-10m² | 大床 | 有窗</text>
+                            <text class="text-green">限时取消 立即确认</text>
+                        </view>
+                    </view>
+                    <view class="itemRight flex align-center justify-center">
+                        <button class="bg-blue" bindtap="showModal" data-target="appointModal">预定</button>
+                        <text class="text-orange text-bold">￥688</text>
+                    </view>
+                </view>
+
+                <view class="hotelRoomItem margin-top padding-bottom margin-bottom flex">
+                        <view class="itemLeft flex">
+                            <view class="roomImg">
+                                <image src="https://www.youmuzhe.net/image/hotelCase2.jpg" />
+                            </view>
+                            <view class="roomInfo flex">
+                                <text class="text-bold">高级大床房</text>
+                                <text>不含早餐 | 8-10m² | 大床 | 有窗</text>
+                                <text class="text-green">限时取消 立即确认</text>
+                            </view>
+                        </view>
+                        <view class="itemRight flex align-center justify-center">
+                            <button class="bg-blue" bindtap="showModal" data-target="appointModal">预定</button>
+                            <text class="text-orange text-bold">￥688</text>
+                        </view>
+                    </view>
         </view>
     </view>
-    <view class="infoDeatailContent">
-        <view class="hotelIntroduce" hidden="{{!isShow[0]}}">
-          <view class="topInfo flex justify-around">
-              <view>装修时间：<text class="text-black text-bold">{{hotelInfo[0].renovation}}年</text></view>
-              <view>开业时间：<text class="text-black text-bold">{{hotelInfo[0].open}}年</text></view>
-              <view>酒店规模：<text class="text-black text-bold">{{hotelInfo[0].scale}}</text></view>
-          </view> 
-          <view class="introduceContent solids-bottom padding-top padding-bottom">
-                {{hotelInfo[0].content}}
-          </view>
-          <view class="footInfo flex padding-bottom">
-              <view>
-                <icon class="iconfont icondizhi text-blue" />
-                <text class="text-blue">{{hotelInfo[0].address.name}}</text>
-              </view>
-              <view>
-                    <icon class="iconfont icondianhua text-blue" />
-                    <text class="text-blue">{{hotelInfo[0].call}}</text>
-              </view>
-          </view>
+</view>
+<view class="roomPanel cu-modal bottom-modal {{modalName=='appointModal'?'show':''}}">
+    <view class="cu-dialog">
+        <view class="cu-bar bg-white">
+        <view class="action">高级大床房</view>
+        <view class="action text-blue" bindtap="hideModal">
+            <icon class="cuIcon-roundclosefill" />
         </view>
-        <view class="hotelFacility flex justify-center" hidden="{{!isShow[1]}}">
-            <view>
-                <icon class="iconfont iconwifi" />
-                <text>无线上网</text>
+        </view>
+        <view class="appointContent padding-bottom flex align-center">
+            <view class="roomSwiper margin-bottom">
+                <swiper class="screen-swiper square-dot" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500">
+                    <swiper-item wx:for="{{swiperList}}" wx:key>
+                    <image src="{{item.url}}" mode="aspectFill" wx:if="{{item.type=='image'}}"></image>
+                    <video src="{{item.url}}" autoplay loop muted show-play-btn="{{false}}" controls="{{false}}" objectFit="cover" wx:if="{{item.type=='video'}}"></video>
+                    </swiper-item>
+                </swiper>
             </view>
-            <view>
-                <icon class="iconfont icontingchechang" />
-                <text>免费停车</text>
-            </view>
-            <view>
-                <icon class="iconfont iconxingli" />
-                <text>行李寄存</text>
-            </view>
-            <view>
-                <icon class="iconfont iconhuasa" />
-                <text>热水洗浴</text>
-            </view>
-            <view>
-                <icon class="iconfont iconcomputer_icon" />
-                <text>有线上网</text>
-            </view>
-            <view>
-                <icon class="iconfont icondianchuifeng" />
-                <text>电吹风</text>
-            </view>
-            <view>
-                <icon class="iconfont iconxishuyongpin" />
-                <text>洗漱用具</text>
-            </view>
-            <view>
-                <icon class="iconfont iconnaozhong" />
-                <text>叫醒服务</text>
-            </view>
-            <view>
-                <icon class="iconfont iconxiyiji" />
-                <text>洗衣服务</text>
-            </view>
-            <view>
-                <icon class="iconfont iconzaocan" />
-                <text>免费早餐</text>
+            <view class="roomScale flex align-start">
+                <view class="scaleTitle margin-bottom text-bold">基础设施</view>
+                <view class="scaleContent flex margin-bottom">
+                    <view>
+                        <text>面积</text>
+                        <text>25m²</text>
+                    </view>
+                    <view>
+                        <text>早餐</text>
+                        <text>无早餐</text>
+                    </view>
+                    <view>
+                        <text>楼层</text>
+                        <text>16-18层</text>
+                    </view>
+                    <view>
+                        <text>窗户</text>
+                        <text>有窗</text>
+                    </view>
+                    <view>
+                        <text>住客</text>
+                        <text>2人</text>
+                    </view>
+                    <view>
+                        <text>空调</text>
+                        <text>有空调</text>
+                    </view>
+                    <view>
+                        <text>床型</text>
+                        <text>2米大床一张</text>
+                    </view>
+                    <view>
+                        <text>上网</text>
+                        <text>无线WiFi/有线宽带</text>
+                    </view>
+                </view>
+                <view class="roomFacility flex">
+                    <view>
+                        <text>浴室配套</text>
+                        <text>洗漱用品、24小时热水、电热水器、独立沐浴间、吹风机、拖鞋</text>
+                    </view>
+                    <view>
+                        <text>媒体设备</text>
+                        <text>电话、液晶电视、有线频道</text>
+                    </view>
+                    <view>
+                        <text>休闲娱乐</text>
+                        <text>麻将桌</text>
+                    </view>
+                    <view>
+                        <text>生活用品</text>
+                        <text>免费瓶装水、电热水壶</text>
+                    </view>
+                    <view>
+                        <text>便利设施</text>
+                        <text>自动窗帘、遮光窗帘、书桌、沙发、衣橱/衣柜、空调、暖气、客房免费wifi</text>
+                    </view>
+                </view>
             </view>
         </view>
-        <view class="hotelAppoint" hidden="{{!isShow[2]}}">入店时间14：00以后，离店时间12：00以前，不允许携带宠物。</view>
+        <view class="appointBtnGroup flex align-center">
+            <view class="text-blue">
+                每晚<text>￥688</text>
+            </view>
+            <view>
+                <button class="bg-blue" bindtap="orderInto">立即预定</button>
+            </view>
+        </view>
     </view>
 </view>

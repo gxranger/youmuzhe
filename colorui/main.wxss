@@ -15,6 +15,7 @@ page {
 	/* 标准色 */
 	--red: #e54d42;
 	--orange: #f37b1d;
+	--orangered: #FF5021;
 	--yellow: #fbbd08;
 	--olive: #8dc63f;
 	--green: #39b54a;
@@ -3467,6 +3468,11 @@ scroll-view.cu-steps .cu-item {
 	color: var(--white);
 }
 
+.bg-ghostWhite {
+	background-color: var(--ghostWhite);
+	color: var(--black);
+}
+
 .bg-purple {
 	background-color: var(--purple);
 	color: var(--white);
@@ -3860,6 +3866,11 @@ scroll-view.cu-steps .cu-item {
 .line-orange,
 .lines-orange {
 	color: var(--orange);
+}
+.text-orangered,
+.line-orangered,
+.lines-orangered{
+	color:var(--orangered);
 }
 
 .text-yellow,

@@ -1,0 +1,41 @@
+.facilityWrap {
+    flex-direction: column;
+}
+.infoDeatail {
+    width: 100%;
+}
+.infoDeatailContent {
+    width: 95%;
+    margin-top: 15rpx;
+    padding: 10rpx;
+    /* border:red 1px solid; */
+}
+.topInfo view{
+    width: 33%;
+    color: #888888;
+    font-size: 24rpx;
+}
+.introduceContent {
+    font-size: 28rpx;
+    line-height: 35rpx;
+}
+.footInfo view {
+    margin-right: 60rpx;
+    font-size: 28rpx;
+}
+.footInfo .iconfont {
+    font-size: 28rpx;
+    margin-right: 5rpx;
+}
+.hotelFacility {
+    flex-wrap: wrap;
+}
+.hotelFacility view {
+    width: 20%;
+    font-size: 24rpx;
+    margin-bottom: 10rpx;
+}
+.hotelFacility .iconfont {
+    font-size: 24rpx;
+    margin-right: 3rpx;
+}

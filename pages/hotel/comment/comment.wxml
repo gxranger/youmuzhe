@@ -1,0 +1,113 @@
+<view class="commentWrap flex align-center">
+    <view class="hotelScore margin-top margin-bottom flex align-center">
+        <view class="avreageScore text-blue">
+            <text>4.6</text>
+            <text>分</text>
+        </view>
+        <view class="detailScore flex">
+            <view class="scoreItem">
+                <view>位置</view>
+                <view class="itemProgress">
+                    <progress percent="80" activeColor="#18A8EA" />
+                </view>
+                <view>4.5</view>
+            </view>
+            <view class="scoreItem">
+                <view>卫生</view>
+                <view class="itemProgress">
+                    <progress percent="80" activeColor="#18A8EA" />
+                </view>
+                <view>4.5</view>
+            </view>
+            <view class="scoreItem">
+                <view>设施</view>
+                <view class="itemProgress">
+                    <progress percent="80" activeColor="#18A8EA" />
+                </view>
+                <view>4.5</view>
+            </view>
+            <view class="scoreItem">
+                <view>服务</view>
+                <view class="itemProgress">
+                    <progress percent="80" activeColor="#18A8EA" />
+                </view>
+                <view>4.5</view>
+            </view>
+        </view>
+    </view>
+    <view class="conmentTabTitle">
+        <scroll-view scroll-x class="bg-white nav shadow">
+            <view class="flex text-center">
+                <view class="cu-item flex-sub {{index==TabCur?'text-blue cur':''}}" wx:for="{{commentTab}}" wx:key bindtap="tabSelect" data-id="{{index}}">
+                {{commentTab[index]}}
+                </view>
+            </view>
+        </scroll-view>
+    </view>
+    <view class="commentTabContent margin-top">
+        <view class="commentTag flex justify-around">
+            <view class="bg-blue">性价比高(5)</view>
+            <view class="bg-ghostWhite">交通方便(13)</view>
+            <view class="bg-ghostWhite">环境不错(8)</view>
+            <view class="bg-ghostWhite">服务周到(3)</view>
+        </view>
+        <view class="commentList flex align-center">
+            <view class="commentItem margin-top padding-bottom flex">
+                <view class="commentTopInfo flex">
+                    <view class="commentImg">
+                        <image class="full-img round" src="https://www.youmuzhe.net/image/tx.jpg" />
+                    </view>
+                    <view>
+                        <view class="userName text-bold">用户昵称</view>
+                        <view class="starGroup flex justify-between align-center">
+                            <icon class="cuIcon-favorfill text-orange" />
+                            <icon class="cuIcon-favorfill text-orange" />
+                            <icon class="cuIcon-favorfill text-orange" />
+                            <icon class="cuIcon-favorfill text-orange" />
+                            <icon class="cuIcon-favorfill text-gray" />
+                        </view>
+                    </view>
+                </view>
+                <view class="commentContent margin-bottom">
+                    <view class="commentWord">
+                        34层俯瞰贵阳半城，小雨绵绵中空气湿润舒服，相比北京雾霜，贵阳是天堂般的存在。大床软硬度很舒服，卫生间很大，服务606相应很及时。中餐厅菜品一般般，中规中矩，有张22人台，当晚一行人喝到酒酣耳热时8瓶茅台下肚，还是贵州的茅台顺滑适口不醉人啊！
+                    </view>
+                </view>
+                <view class="commentBottomInfo">
+                    2019-07-25 发表 | 全景豪华房
+                </view>
+            </view>
+
+            <view class="commentItem margin-top padding-bottom flex">
+                    <view class="commentTopInfo flex">
+                        <view class="commentImg">
+                            <image class="full-img round" src="https://www.youmuzhe.net/image/tx.jpg" />
+                        </view>
+                        <view>
+                            <view class="userName text-bold">用户昵称</view>
+                            <view class="starGroup flex justify-between align-center">
+                                <icon class="cuIcon-favorfill text-orange" />
+                                <icon class="cuIcon-favorfill text-orange" />
+                                <icon class="cuIcon-favorfill text-orange" />
+                                <icon class="cuIcon-favorfill text-orange" />
+                                <icon class="cuIcon-favorfill text-gray" />
+                            </view>
+                        </view>
+                    </view>
+                    <view class="commentContent">
+                        <view class="commentWord">
+                            酒店环境很好，出行订的家庭房，酒店免费升级为亲子房，宝贝很开心，房间全是小朋友玩具，也准备了小朋友的拖鞋，牙刷，关键酒店干净，非常开心的体验，以后会介绍朋友入住，以后出行首选！
+                        </view>
+                        <view class="commentImgGroup flex justify-between">
+                            <view><image class="full-img" src="https://www.youmuzhe.net/image/hotelCase1.jpg" /></view>
+                            <view><image class="full-img" src="https://www.youmuzhe.net/image/hotelCase2.jpg" /></view>
+                            <view><image class="full-img" src="https://www.youmuzhe.net/image/hotelCase7.jpg" /></view> 
+                        </view>
+                    </view>
+                    <view class="commentBottomInfo">
+                        2019-07-25 发表 | 全景豪华房
+                    </view>
+                </view>
+        </view>
+    </view>
+</view>
