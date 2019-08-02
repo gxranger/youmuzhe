@@ -91,6 +91,7 @@
     width: 90%;
     height: 200rpx;
     margin: 15rpx 0;
+    position: relative;
     /* border:1px red solid; */
     background-image: url("https://www.youmuzhe.net/image/discount.png");
     background-color: none;

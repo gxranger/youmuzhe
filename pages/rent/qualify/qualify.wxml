@@ -1,6 +1,4 @@
-
-
-        <view class="bg-white padding">
+ <view class="bg-white padding">
                 <view class="cu-steps">
                     <view class="cu-item {{index>num?'':'text-blue'}}" wx:for="{{numList}}" wx:key>
                     <text class="num" data-index="{{index + 1}}"></text> {{item.name}}
@@ -126,8 +124,8 @@
         
     </view>
     <view class="actionBtn">
-                <button wx:if="{{stepDisplay[0]||stepDisplay[1]||stepDisplay[2]}}" class="cu-btn bg-green shadow" bindtap="numSteps">下一步</button>
-            <!-- <button  class="cu-btn bg-green shadow" bindtap="numSteps">下一步</button> -->
+                <button wx:if="{{stepDisplay[0]||stepDisplay[1]||(stepDisplay[2]&&from_page_name!='user')}}" class="cu-btn bg-green shadow" bindtap="numSteps">下一步</button>
+                <button wx:if="{{from_page_name=='user'&&stepDisplay[2]}}" class="cu-btn bg-blue shadow" bindtap="completeBtn">完成认证</button>
             <button wx:if="{{stepDisplay[3]}}"  class="cu-btn bg-blue shadow" bindtap="makeCarInto" >支付</button>
     </view>  
 

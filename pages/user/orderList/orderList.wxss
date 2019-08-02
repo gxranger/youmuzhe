@@ -1,0 +1,48 @@
+page {
+    background: #F2F2F2;
+}
+.orderNavWrap {
+    width: 100%;
+}
+
+.carOrderItem {
+    width: 100%;
+    padding: 0 20rpx;
+    color: #888888;
+}
+.carOrderStatus {
+    height: 80rpx;
+    border-bottom:1px solid #e2e2e2; 
+}
+.infoLeft {
+    width: 60%;
+    height: 200rpx;
+}
+/* .infoLeft view {
+    margin: 5rpx 0;
+} */
+.infoLeft .iconfont {
+    font-size: 28rpx;
+    margin-right: 10rpx;
+}
+.infoRight {
+    width: 40%;
+    height: 150rpx;
+}
+.hotelRight {
+    width: 40%;
+    height: 200rpx;
+}
+.infoBottom {
+    height: 100rpx;
+    border-top:1px solid #e2e2e2; 
+}
+.infoBottom view {
+    padding: 0 20rpx;
+    height: 50rpx;
+    line-height: 50rpx;
+    text-align: center;
+    border-radius: 10rpx;
+    margin-left: 40rpx;
+    border: 1px solid;
+}

@@ -1,0 +1,28 @@
+<view class="travelWrap padding-left flex align-center shadow bg-white">
+    <view class="userImg margin-right">
+        <image src="https://www.youmuzhe.net/image/tx.jpg" class="full-img round" />
+    </view>
+    <view class="userInfo">
+        <view>用户昵称</view>
+        <view class="margin-top-xs">4篇游记 106浏览</view>
+    </view>
+</view>
+<view class="travelListWrap margin-bottom padding-left padding-right">
+    <view class="travelItem margin-top-sm shadow bg-white padding-bottom" wx:for="{{travelList}}" wx:key wx:for-item="item">
+        <view class="travelImg" style="background-image: url({{item.imgSrc}});"></view>
+        <view class="travelInfo margin-top-sm padding-left-sm padding-right-sm">
+            <view class="text-bold text-lg">{{item.title}}</view>
+            <view class="travelDesc margin-top-xs text-df flex justify-between align-end text-gray">
+                <view>发布于{{item.date}}{{scrollBottom}}rpx</view>
+                <view class="flex basis-sm justify-around">
+                    <view><icon class="iconfont iconyueduliang" /> {{item.view}}</view>
+                    <view><icon class="iconfont icondianzan" /> {{item.zan}}</view>
+                    <view><icon class="iconfont iconpinglun" /> {{item.comment}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="addBtn">
+        <button class="addTravel bg-gradual-blue shadow"><icon class="iconfont iconedit text-bold" />写游记</button>
+</view>

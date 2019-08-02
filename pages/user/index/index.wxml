@@ -1,0 +1,72 @@
+<scroll-view scroll-y class="scrollPage">
+    <view class="UCenter-bg">
+      <image bindtap="personInfoInto" src="https://www.youmuzhe.net/image/tx.jpg" class="userImg"></image>
+      <view class="margin-top-sm">
+        <view>用户昵称</view>
+        <view class="qualify line-white text-blue">未认证</view>
+      </view>
+      <image src="https://www.youmuzhe.net/image/wave.gif" mode="scaleToFill" class="gif-wave"></image>
+    </view>
+    <view class="userLevel padding flex text-center text-grey bg-white shadow-warp">
+      <view class="flex flex-sub flex-direction solid-right">
+        <view class="text-xxl text-orange">2000.00</view>
+        <view class="iconInfo">
+          <icon class="iconfont iconbzj" />押金</view>
+      </view>
+      <view class="flex flex-sub flex-direction solid-right">
+        <view class="text-xl text-blue" style="font-size: 38rpx;">白金</view>
+        <view class="iconInfo">
+            <icon class="iconfont iconhuiyuan" /> 会员</view>
+      </view>
+      <view class="flex flex-sub flex-direction">
+        <view class="text-xxl text-green">300</view>
+        <view class="iconInfo">
+                <icon class="iconfont iconjifen" />  积分</view>
+      </view>
+    </view>
+    <view class="cu-list menu card-menu margin-top-sm margin-bottom-xl shadow-lg radius">
+      <view class="cu-item arrow" bindtap="messageInto">
+        <view class="content">
+          <icon class="iconfont iconxiaoxi text-green" />
+          <text class="text-grey">消息中心</text>
+        </view>
+      </view>
+      <view class="cu-item arrow" bindtap="couponInto">
+        <view class="content">
+          <icon class="iconfont iconyouhuijuan text-red" />
+          <text class="text-grey">我的优惠券</text>
+        </view>
+      </view>
+      <view class="cu-item arrow" bindtap="collectionInto">
+        <view class="content">
+         <icon class="iconfont iconshoucang text-orange" />
+         <text class="text-grey">我的收藏</text>
+        </view>
+      </view>
+      <view class="cu-item arrow" bindtap="orderListInto">
+        <view class="content">
+            <icon class="iconfont icondingdan text-cyan" />
+          <text class="text-grey">我的订单</text>
+        </view>
+      </view>
+      <view class="cu-item arrow" bindtap="commentInto">
+        <view class="content">
+          <icon class="iconfont iconpinglun-copy text-green" />
+          <text class="text-grey">我的评论</text>
+        </view>
+      </view>
+      <view class="cu-item arrow" bindtap="travelInto">
+        <view class="content">
+         <icon class="iconfont iconyouxi text-red" />
+          <text class="text-grey">我的游记</text>
+        </view>
+      </view>
+      <view class="cu-item arrow" bindtap="aboutInto">
+            <view class="content">
+                <icon class="iconfont iconshezhi text-blue" />
+                <text class="text-grey">帮助中心</text>
+            </view>
+       </view>
+    </view>
+    <view class="cu-tabbar-height"></view>
+  </scroll-view>

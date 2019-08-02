@@ -1,6 +1,20 @@
 {
   "pages": [
+    "pages/user/about/about",
+    "pages/user/carDetail/carDetail",
+    "pages/user/hotelDetail/hotelDetail",
+    "pages/user/orderList/orderList",
+    "pages/user/editor/editor",
+    "pages/user/travel/travel",
     "pages/index/index",
+    "pages/user/coupon/coupon",
+    "pages/user/index/index",
+    "pages/user/message/message",
+    "pages/user/feedback/feedback",
+    "pages/user/collection/collection",
+    "pages/user/comment/comment",
+    "pages/user/personInfo/personInfo",
+    "pages/rent/qualify/qualify",
     "pages/hotel/list/list",
     "pages/position/position",
     "pages/hotel/comment/comment",
@@ -20,7 +34,6 @@
     "pages/rent/makeCar/makeCar",
     "pages/rent/appearance/appearance",
     "pages/rent/mode/mode",
-    "pages/rent/qualify/qualify",
     "pages/rent/appoint/appoint",
     "pages/rent/network/network",
     "pages/logs/logs"
@@ -65,7 +78,7 @@
       "selectedIconPath": "tabBar/strategy1.png"
     },
     {
-      "pagePath": "pages/index/index",
+      "pagePath": "pages/user/index/index",
       "text": "我的",
       "iconPath": "tabBar/user.png",
       "selectedIconPath": "tabBar/user1.png"

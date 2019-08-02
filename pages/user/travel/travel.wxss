@@ -1,0 +1,49 @@
+.travelWrap {
+    height: 150rpx;
+}
+.userImg {
+    width: 90rpx;
+    height: 90rpx;
+}
+.userInfo view:first-child {
+    font-size: 34rpx;
+    color: #000;
+}
+.userInfo view {
+    font-size: 28rpx;
+    color: #888888;
+}
+.travelItem {
+    border-bottom-left-radius: 10rpx;
+    border-bottom-right-radius: 10rpx;
+}
+.travelImg {
+    height: 360rpx;
+    background-color: #ebeaea;
+    background-position: center;
+    background-repeat:no-repeat;
+    background-size:cover;
+    border-top-left-radius: 10rpx;
+    border-top-right-radius: 10rpx;
+}
+.travelDesc .iconfont {
+    font-size: 32rpx;
+}
+.addBtn {
+    width: 100%;
+    position:fixed;
+    height:80rpx; 
+    bottom:130rpx;
+    z-index: 2000;
+}
+.addTravel {
+    width: 260rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    font-size: 36rpx;
+    border-radius: 50rpx;
+}
+.addTravel .iconfont {
+    margin-right: 10rpx;
+    font-size: 38rpx;
+}

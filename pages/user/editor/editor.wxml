@@ -1,0 +1,64 @@
+
+        <view class="addImg text-grey text-xl flex justify-center align-center" style="background-image: url({{coverSrc}});" bindtap="coverSubmit">
+                {{coverSrc?"":"添加封面"}}
+        </view>
+        <view class="travelInfo flex justify-between flex-wrap text-grey">
+            <view>
+                <icon class="iconfont iconchuxingtianshu" />
+                <text>出发时间</text>
+                <picker mode="date" value="{{date}}" start="2015-09-01" end="2020-09-01" bindchange="DateChange">
+                    <text class="margin-left-sm text-black">{{date}}</text>
+                </picker>
+                
+            </view>
+            <view>
+                <icon class="iconfont iconshijian" />
+                <text>行程天数</text>
+                <picker bindchange="PickerChange" value="{{index}}" range="{{picker}}">
+                    <text class="margin-left-sm text-black"> {{index?picker[index]:'请选择天数'}}</text>
+                </picker>
+               
+            </view>
+            <view>
+                <icon class="iconfont iconyaoqinghaoyou" />
+                <text>和谁出行</text>
+                <picker bindchange="WithChange" value="{{pnum}}" range="{{withWho}}">
+                        <text class="margin-left-sm text-black"> {{pnum?withWho[pnum]:'请选择同行'}}</text>
+                </picker>
+            </view>
+            <view>
+                <icon class="iconfont iconmenu-cwgl-normal" />
+                <text>人均消费</text>
+                <picker bindchange="ConsumerChange" value="{{mnum}}" range="{{consumer}}">
+                        <text class="margin-left-sm text-black"> {{mnum?consumer[mnum]:'请选择费用'}}</text>
+                </picker>
+            </view>
+        </view>
+        <view class="travelTitle">
+                <input class="text-black padding-left" placeholder-class="text-black" placeholder="请输入游记标题" value="{{title}}" bindinput="titleArea" />
+        </view>
+
+
+    <editor
+    id="editor"
+    class="ql-container  padding"
+    placeholder="{{placeholder}}"
+    showImgSize
+    showImgToolbar
+    showImgResize
+    bindinput="contentArea"
+    bindstatuschange="onStatusChange"
+    bindready="onEditorReady">
+    </editor>
+
+    <view class="actionBtn bg-white padding-left-sm padding-right-sm flex justify-between align-center">
+            <view class="flex justify-around align-center">
+                <icon class="iconfont icontupian text-grey" bindtap="insertImage" />
+                <icon class="iconfont iconbiaoti {{formats.header === 2 ? 'text-blue' : 'text-grey'}}" bindtap="format" data-name="header" data-value="{{2}}" />
+                <icon class="iconfont iconjuzhong {{formats.align === 'center' ? 'text-blue' : 'text-grey'}}" bindtap="format" data-name="align" data-value="center" />
+            </view>
+            <view class="flex basis-sm">
+                <button class="bg-grey" bindtap="clearContent">重置</button>
+                <button class="bg-blue" bindtap="submitContent">发布</button>
+            </view>
+        </view>

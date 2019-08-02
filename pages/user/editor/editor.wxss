@@ -1,0 +1,57 @@
+.addImg {
+    height: 280rpx;
+    background-color: #F8F8F8;
+    background-position: center;
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+.travelInfo {
+    padding: 0 20rpx;
+}
+.travelInfo view {
+    width: 48%;
+    height: 80rpx;
+    line-height: 80rpx;
+    font-size: 30rpx;
+    display: flex;
+}
+.travelInfo .iconfont {
+    font-size: 30rpx;
+    margin-right: 10rpx;
+}
+.travelInfo .iconmenu-cwgl-normal {
+    font-size: 36rpx;
+}
+.travelTitle,.travelInfo {
+    border-bottom: #F8F8F8 2px solid;
+}
+.travelTitle input {
+    height: 100rpx;
+    font-size: 40rpx;
+}
+.ql-container {
+    height: 60%;
+    font-size: 36rpx;
+    padding-bottom: 120rpx;
+}
+.actionBtn {
+    height: 120rpx;
+    width: 100%;
+    position:fixed;
+    bottom:0;
+    z-index: 2000;
+    box-shadow: 0 -5rpx 10rpx #e2e2e2;
+}
+.actionBtn view:first-child {
+    width: 300rpx;
+    height: 80rpx;
+}
+.actionBtn .iconfont {
+    font-size: 50rpx;
+}
+.actionBtn button {
+    width: 120rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    font-size: 28rpx;
+}

@@ -1,0 +1,99 @@
+<view class="flex flex-direction">
+    <view class="carInfo bg-white flex flex-direction text-grey">
+        <view class="orderNum padding flex justify-between align-center">
+            <text class="text-grey">订单编号：1560884203000200000000</text>
+            <text class="text-blue">待取车</text>
+        </view>
+        <view class="carInfoWrap padding-left-sm padding flex align-center">
+            <view class="carLeft margin-right-sm">
+                <image class="full-img" src="https://www.youmuzhe.net/image/car1.png" />
+            </view>
+            <view class="carRight flex flex-direction justify-between">
+                <view class="text-black">福特福睿斯</view>
+                <view>贵A2WZ72</view>
+                <view>白色 | 1.5T自动 | 三厢5座</view>
+            </view>
+        </view>
+        <view class="ticketInfo flex">
+            <view class="solid-right">寻找车辆</view>
+            <view>取消订单</view>
+        </view>
+        <view class="ticketInfo flex" hidden="true">
+            <view class="solid-right">开发票</view>
+            <view>服务评价</view>
+        </view>
+    </view>
+    <view class="makeCarInfo bg-white margin-top-sm flex flex-direction text-grey">
+        <view class="makeCarTime flex justify-around align-center padding">
+            <view class="dateInfo flex flex-direction justify-between">
+                <text class="text-black">07月23日</text>
+                <text class="text-gray text-df">周三 15:14</text>
+            </view>
+            <view class="makerCarNum flex flex-direction  justify-center align-center">
+                <text class="text-blue margin-bottom-xs" hidden="true">2小时</text>
+                <view class="rowWrap flex align-center">
+                    <view class="lneRound"></view>
+                    <view class="lineRow"></view>
+                    <view class="lneRound"></view>
+                </view>
+            </view>
+            <view class="dateInfo flex flex-direction justify-center">
+                <text class="text-gray text-df">待定</text>
+            </view>
+            <view class="dateInfo flex flex-direction justify-between" hidden="true">
+                    <text class="text-black">07月23日</text>
+                    <text class="text-gray text-df">周三 17:30</text>
+            </view>
+        </view>
+        <view class="makeCarNetwork flex flex-direction align-center">
+            <view class="networkInfo solid-bottom flex justify-between align-center">
+                <view class="flex align-start">
+                    <icon class="iconfont iconfanhui1 text-green" />
+                    <view class="flex flex-direction">
+                        <text class="text-black">贵阳</text>
+                        <text>凯宾斯基大酒店</text>
+                    </view>
+                </view>
+                <icon class="cuIcon-right" />
+            </view>
+            <view class="networkInfo flex justify-between align-center">
+                <view class="flex">
+                    <icon class="iconfont iconfanhui1 iconReverse text-blue" />
+                    <view class="flex flex-direction">
+                        <text class="text-black">贵阳</text>
+                        <text>凯宾斯基大酒店</text>
+                    </view>
+                </view>
+                <icon class="cuIcon-right" />
+            </view>
+        </view>
+    </view>
+    <view class="priceInfo bg-white margin-top-sm" hidden="true">
+        <view class="priceItem flex align-center justify-between padding-left padding-right">
+            <view>车辆租赁时长费</view>
+            <view>
+                <text class="text-sm text-gray margin-right">20 X 3</text>
+                <text>60元</text>
+            </view>
+        </view>
+        <view class="priceItem flex align-center justify-between padding-left padding-right">
+                <view>保险服务费</view>
+                <view>
+                    <text class="text-sm text-gray margin-right">10 X 1</text>
+                    <text>10元</text>
+                </view>
+        </view>
+        <view class="priceItem flex align-center justify-between padding-left padding-right">
+                <view>优惠券抵扣</view>
+                <view>
+                    <text>- 20元</text>
+                </view>
+        </view>
+        <view class="priceItem text-lg text-black text-bold solid-top margin-top-sm flex align-center justify-between padding">
+                <view>费用合计</view>
+                <view>
+                    <text>50元</text>
+                </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,18 @@
+<view class="cu-list menu card-menu" style="border-radius: 0;">
+        <view class="cu-item {{modalName=='move-box-'+ index?'move-cur':''}}" wx:for="{{messageList}}" wx:key bindtouchstart="ListTouchStart" bindtouchmove="ListTouchMove" bindtouchend="ListTouchEnd" data-target="move-box-{{index}}">
+          <view class="content">
+            <view class="text-grey text-bold">{{messageList[index].title}}</view>
+            <view class="text-gray text-sm">
+                {{messageList[index].content}}
+            </view>
+          </view>
+          <view class="action text-right margin-left margin-right">
+            <view class="text-grey text-xs"> {{messageList[index].date}}</view>
+            <view class="cu-tag round {{messageList[index].status?'bg-grey':'bg-red'}} sm">{{messageList[index].status?'已读':'未读'}}</view>
+          </view>
+          <view class="move">
+            <view class="bg-grey" bindtap="read" data-id="{{index}}">已读</view>
+            <view class="bg-red" bindtap="delete">删除</view>
+          </view>
+        </view>
+</view>

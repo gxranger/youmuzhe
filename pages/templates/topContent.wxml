@@ -13,7 +13,7 @@
     <view class='swiperWarp'>
         <swiper bindanimationfinish="changeGoodsSwip" class='swiper' current='{{currentSwiper}}' autoplay bindchange='swiperChange'>
             <block wx:for="{{imgList}}" wx:key="index">
-            <navigator url="{{imgList[index].derectUrl}}">
+            <navigator url="{{imgList[index].derectUrl}}" hover-class="none">
             <swiper-item>
             <image src='{{imgList[index].fileUrl}}' class='img'></image>
             </swiper-item>

@@ -1,0 +1,144 @@
+<view class="orderNavWrap bg-white shadow">
+    <scroll-view scroll-x class="nav text-left margin-left">
+            <view class="cu-item {{index==TabCur?'text-blue cur':''}}" wx:for="{{navContent}}" wx:key bindtap="tabSelect" data-id="{{index}}">
+                {{navContent[index]}}
+            </view>
+    </scroll-view>
+</view>
+<view class="flex flex-direction align-center" hidden="{{!(TabCur==0)&&!(TabCur==1)}}">
+    <view class="carOrderItem bg-white margin-top-xs flex flex-direction text-df">
+        <view class="carOrderStatus margin-bottom-xs flex justify-between align-center">
+            <text >订单编号：1560884203000200000000</text>
+            <text class="text-blue">已完成</text>
+        </view>
+        <view class="carOrderInfo flex justify-between align-center">
+            <view class="infoLeft">
+                <view>
+                    <icon class="iconfont iconshijian1 text-olive" />
+                    <text>2019-06-18 14：30</text>
+                </view>
+                <view>
+                    <icon class="iconfont iconfanhui1 text-green" />
+                    <text>贵阳市南明区喜来登大酒店</text>
+                </view>
+                <view>
+                    <icon class="iconfont iconfanhui1 iconReverse text-blue" />
+                    <text>铜仁市思南县白鹭洲大酒店</text>
+                </view>
+                <view>
+                    <icon class="iconfont icon-tingche text-orangered" />
+                    <text>福特福睿斯 白色 1.5T 三厢5座</text>
+                </view>
+            </view>
+            <view class="infoRight ">
+                <image class="full-img" src="https://www.youmuzhe.net/image/car1.png" />
+            </view>
+        </view>
+        <view class="infoBottom margin-top-sm flex justify-end align-center">
+            <view class="line-blue">评价</view>
+            <view class="line-grey">删除</view>
+        </view>
+    </view>
+    
+    <view class="carOrderItem bg-white margin-top-xs flex flex-direction text-df">
+            <view class="carOrderStatus margin-bottom-xs flex justify-between align-center">
+                <text >订单编号：1560884203000200000000</text>
+                <text class="text-blue">预定成功</text>
+            </view>
+            <view class="flex justify-between align-center">
+                <view class="infoLeft">
+                    <view>
+                        <icon class="iconfont iconshijian1 text-olive" />
+                        <text>2019-06-18 14：30</text>
+                    </view>
+                    <view>
+                        <icon class="iconfont iconfanhui1 text-green" />
+                        <text>贵阳市南明区喜来登大酒店</text>
+                    </view>
+                    <view>
+                        <icon class="iconfont iconfanhui1 iconReverse text-blue" />
+                        <text>铜仁市思南县白鹭洲大酒店</text>
+                    </view>
+                    <view>
+                        <icon class="iconfont icon-tingche text-orangered" />
+                        <text>福特福睿斯 白色 1.5T 三厢5座</text>
+                    </view>
+                </view>
+                <view class="infoRight ">
+                    <image class="full-img" src="https://www.youmuzhe.net/image/car1.png" />
+                </view>
+            </view>
+            <view class="infoBottom margin-top-sm flex justify-end align-center">
+                <view class="line-cyan">取消</view>
+            </view>
+        </view>
+</view>
+
+<view class="flex flex-direction align-center" hidden="{{!(TabCur==0)&&!(TabCur==2)}}">
+        <view class="carOrderItem bg-white margin-top-xs flex flex-direction text-df">
+            <view class="carOrderStatus margin-bottom-xs flex justify-between align-center">
+                <text >订单编号：1560884203000200000000</text>
+                <text class="text-blue">已完成</text>
+            </view>
+            <view class="carOrderInfo flex justify-between align-center">
+                <view class="infoLeft flex flex-direction justify-between">
+                    <view>
+                        <icon class="iconfont iconjiudian1 text-olive" />
+                        <text>贵阳百灵国际公寓</text>
+                    </view>
+                    <view>
+                        <icon class="iconfont iconfangxing text-green" />
+                        <text>标准公寓</text>
+                    </view>
+                    <view>
+                        <icon class="iconfont iconriliriqi2 iconReverse text-blue" />
+                        <text>07月08日-07月09日</text>
+                    </view>
+                    <view>
+                        <icon class="iconfont iconqian text-orangered" />
+                        <text>￥138.00</text>
+                    </view>
+                </view>
+                <view class="hotelRight">
+                    <image  class="full-img radius" src="https://www.youmuzhe.net/image/3.jpg" />
+                </view>
+            </view>
+            <view class="infoBottom margin-top-sm flex justify-end align-center">
+                <view class="line-blue">评价</view>
+                <view class="line-grey">删除</view>
+            </view>
+        </view>
+        
+        <view class="carOrderItem bg-white margin-top-xs flex flex-direction text-df">
+                <view class="carOrderStatus margin-bottom-xs flex justify-between align-center">
+                    <text >订单编号：1560884203000200000000</text>
+                    <text class="text-blue">预定成功</text>
+                </view>
+                <view class="flex justify-between align-center">
+                    <view class="infoLeft flex flex-direction justify-between">
+                        <view>
+                            <icon class="iconfont iconjiudian1 text-olive" />
+                            <text>贵阳百灵国际公寓</text>
+                        </view>
+                        <view>
+                            <icon class="iconfont iconfangxing text-green" />
+                            <text>标准公寓</text>
+                        </view>
+                        <view>
+                            <icon class="iconfont iconriliriqi2 iconReverse text-blue" />
+                            <text>07月08日-07月09日</text>
+                        </view>
+                        <view>
+                            <icon class="iconfont iconqian text-orangered" />
+                            <text>￥138.00</text>
+                        </view>
+                    </view>
+                    <view class="hotelRight">
+                        <image class="full-img radius" src="https://www.youmuzhe.net/image/3.jpg" />
+                    </view>
+                </view>
+                <view class="infoBottom margin-top-sm flex justify-end align-center">
+                    <view class="line-cyan">取消</view>
+                </view>
+            </view>
+    </view>

@@ -1,0 +1,31 @@
+<scroll-view scroll-x class="bg-white nav text-left margin-left margin-bottom-xs">
+    <view class="cu-item {{index==TabCur?'text-blue cur':''}}" wx:for="{{navContent}}" wx:key bindtap="tabSelect" data-id="{{index}}">
+     {{navContent[index]}}
+    </view>
+</scroll-view>
+
+<view class="flex flex-direction align-center">
+             
+    <block wx:for="{{discountList}}" wx:key="index">
+        <view class="discountItem" >
+          <view class="discountInfo flex flex-direction align-center">
+              <view class="price">
+                  <text>￥</text>
+                  <text class="text-bold">{{discountList[index].money}}</text>
+              </view>
+              <view class="discountName">
+                {{discountList[index].type}}
+              </view>
+          </view>
+          <view class="discountDetail">
+            <view class="desc">
+                {{discountList[index].desc}}
+            </view>
+            <view class="foot">
+              <view>有效期至{{discountList[index].deadline}}</view>
+              <icon class="iconfont iconyishiyong" hidden="{{!discountList[index].isMake}}" /> 
+            </view>
+          </view>
+        </view>
+      </block>
+  </view>

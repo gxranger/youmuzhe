@@ -23,12 +23,30 @@ Page({
       ],
       selectId:1,
       num: 0,
-      scroll: 0
+      scroll: 0,
+      from_page_name:null,
+      isUser:false,
     },
+    
+    /**
+     * 生命周期函数--监听页面加载
+     */
+    onLoad: function (options) {
+      this.setData({
+        from_page_name:options.from_page_name
+      })
+      if(this.data.from_page_name=="user"){
+        this.data.numList.pop();
+        this.setData({
+          numList:this.data.numList
+        })
+      }
+    },
+
     numSteps(e) {
       let stepArr = [false];
       this.data.stepDisplay[0] = false;
-      for(let i = 0; i< 3; i++){
+      for(let i = 0; i< this.data.numList.length; i++){
         stepArr.push(i == this.data.num);
       };
       this.setData({
@@ -42,11 +60,11 @@ Page({
          select:!this.data.select
         })
       },
-      makeCarInto() {
-        wx.navigateTo({
-          url: '../makeCar/makeCar'
-        })
-      },
+    makeCarInto() {
+      wx.navigateTo({
+        url: '../makeCar/makeCar'
+      })
+    },
     mySelect(e) {
         var name = e.currentTarget.dataset.name;
         var id = e.currentTarget.dataset.id;
@@ -58,6 +76,10 @@ Page({
         selectId:id,
         subSting:sname
         })
+    },
+
+    completeBtn() {
+      console.log(1212121)
     }
      
   })

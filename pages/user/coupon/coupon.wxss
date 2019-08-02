@@ -1,0 +1,63 @@
+.discountItem {
+    width: 90%;
+    height: 230rpx;
+    margin: 15rpx 0;
+    background-image: url("https://www.youmuzhe.net/image/discount.png");
+    background-color: none;
+    background-repeat:no-repeat;
+    background-size:cover;
+    box-shadow: 23rpx 0 20rpx #c7c7c7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.discountInfo {
+    width: 34%;
+    color: #fff;
+}
+
+.discountInfo .price {
+    font-size: 76rpx;
+}
+.discountInfo .discountName {
+    font-size: 34rpx;
+}
+.discountDetail  {
+    width: 66%;
+    padding: 0 15rpx;
+}
+.discountDetail {
+    display: flex;
+    flex-direction: column;
+}
+.desc {
+    text-align: left;
+    font-size: 28rpx;
+    border-bottom: #e2e2e2 1px solid;
+    margin-top: 20rpx;
+    padding-bottom: 15rpx;
+}
+.foot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 53rpx;
+    /* border:1px blue solid; */
+}
+.foot view:first-child {
+    width: 63%;
+    color: #888888;
+    font-size: 26rpx;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.foot view {
+    width: 20%;
+    height: 40rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22rpx;
+    border-radius: 8rpx;
+}
