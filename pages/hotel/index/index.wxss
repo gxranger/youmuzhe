@@ -11,9 +11,12 @@
     padding: 25rpx;
     background: #fff;
     position:absolute;
-    top: 380rpx;
+    left: 50%;
+    top: 620rpx;
     z-index: 1000;
     box-shadow: 0 0 20rpx #d1d1d1;
+    
+    transform: translate(-50%, -50%);
 }
 .destinationWrap,.dateSelectWrap,.bandSearchWrap {
     width:100%;
@@ -24,8 +27,9 @@
     color: #888888;
     font-size: 28rpx;
 }
-.destinationSelect {
+.destinationSelect,.bandSearchWrap {
     height: 80rpx;
+    line-height: 80rpx;
     font-size: 30rpx;
 }
 .iconjiantou {

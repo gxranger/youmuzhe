@@ -1,0 +1,66 @@
+<view class="flex flex-direction">
+    <view class="carInfo bg-white flex flex-direction text-grey">
+        <view class="orderNum padding flex justify-between align-center">
+            <text class="text-grey">订单编号：1560884203000200000000</text>
+            <text class="text-blue">待确认</text>
+        </view>
+        <view class="carInfoWrap padding-left-sm padding flex align-center">
+            <view class="carLeft margin-right-sm radius"></view>
+            <view class="carRight flex flex-direction justify-between">
+                <view class="text-black text-bold">贵阳凯宾斯基大酒店</view>
+                <view>标准大床房</view>
+                <view>无线wifi  | 无早餐 | 有窗</view>
+            </view>
+        </view>
+        <view class="ticketInfo flex">
+            <view class="solid-right" bindtap="toMap">地图导航</view>
+            <view>取消订单</view>
+        </view>
+        <view class="ticketInfo flex" hidden="true">
+            <view class="solid-right">开发票</view>
+            <view>服务评价</view>
+        </view>
+    </view>
+    <view class="makeCarTime bg-white margin-top-sm flex justify-around align-center padding">
+        <view class="dateInfo flex flex-direction justify-between">
+            <text class="text-gray text-df">入住</text>
+            <text class="text-black">07月23日</text>
+        </view>
+        <view class="makerCarNum flex flex-direction  justify-center align-center">
+            <text class="text-blue margin-bottom-xs">共1晚</text>
+            <view class="rowWrap flex align-center">
+                <view class="lneRound"></view>
+                <view class="lineRow"></view>
+                <view class="lneRound"></view>
+            </view>
+        </view>
+        <view class="dateInfo flex flex-direction justify-between">
+                <text class="text-gray text-df">离店</text>
+                <text class="text-black">07月24日</text>
+        </view>
+    </view>
+
+    <view class="userInfo text-df padding-top bg-white margin-top-sm flex flex-direction align-center">
+        <view class="flex justify-between">
+            <text>入住人</text>
+            <text>用户姓名</text>
+        </view>
+        <view class="flex justify-between">
+            <text>房间数</text>
+            <text>1间</text>
+        </view>
+        <view class="flex justify-between">
+            <text>预计到店时间</text>
+            <text>2019-07-23 18:15</text>
+        </view>
+    </view>
+   
+    <view class="priceInfo bg-white margin-top-sm flex justify-center">
+        <view class="priceItem text-lg text-black text-bold flex align-center justify-between">
+                <view>费用合计</view>
+                <view>
+                    <text>50元</text>
+                </view>
+        </view>
+    </view>
+</view>

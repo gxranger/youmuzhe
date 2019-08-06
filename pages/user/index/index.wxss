@@ -67,15 +67,20 @@
       align-items: center;
   }
 
-  .cu-item .content {
+  .cu-item {
       height: 60rpx;
-      line-height: 60rpx;
+  }
+  .cu-item .content {
+    display: flex;
+    align-items: center;
   }
   .cu-item .content .iconfont {
+      display: flex;
+    align-items: center;
       font-size: 32rpx;
-      margin-right: 10rpx;
+      width: 50rpx;
   }
-  .cu-item .content .iconxiaoxi,.cu-item .content .iconshoucang,.cu-item .content .iconyouhuijuan {
+  .cu-item .content .iconxiaoxi,.cu-item .content .iconshoucang,.cu-item .content .iconyouhuijuan,.iconxiaoxi {
       font-size: 36rpx;
   }
   .cu-item .content .iconshoucang {

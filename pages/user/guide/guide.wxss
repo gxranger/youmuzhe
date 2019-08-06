@@ -1,0 +1,10 @@
+@import "../../../colorui/animation.wxss";
+.cu-list {
+    width: 100%;
+}
+
+.cu-item {
+    height: 80rpx;
+    line-height: 80rpx;
+    border-bottom: #f8f8f8 1px solid;
+}

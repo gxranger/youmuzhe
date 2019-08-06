@@ -1,0 +1,51 @@
+<view class="bg-white shadow">
+    <scroll-view scroll-x class="nav text-left margin-left">
+            <view class="cu-item {{index==TabCur?'text-blue cur':''}}" wx:for="{{navContent}}" wx:key bindtap="tabSelect" data-id="{{index}}">
+                {{navContent[index]}}
+            </view>
+    </scroll-view>
+</view>
+<view class="collectionList">
+    <view class="listLtem flex" wx:for="{{hotelList}}" wx:for-item="hotel" wx:key>
+        <view class="collectionImg" style="background-image: url({{hotel.imgSrc}})">
+            <view class="collectionTag"></view>
+            <text class="tagText text-white">酒店</text>
+        </view>
+        <view class="itemRight flex">
+            <view class="titleInfo flex">
+                <view class="hotelName text-bold">{{hotel.name}}</view>
+                <view class="hotelComment flex">
+                    <text class="text-blue">{{hotel.score}}分</text>
+                    <text class="text-blue margin-left margin-right">“{{hotel.evaluateTag}}”</text>
+                    <text class="text-grey">{{hotel.commentLen}}人点评</text>
+                </view>
+                <view class="distance text-darkGray">
+                    四星级 · {{hotel.position.district}}地区
+                </view>
+                <view class="price flex justify-start margin-top-sm">
+                        <text>￥</text>
+                        <text class="text-bold">{{hotel.price}}</text>
+                        <text>起</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="listLtem flex">
+        <view class="collectionImg" style="background-image: url(https://www.youmuzhe.net/image/travel.jpg)">
+            <view class="collectionTag"></view>
+            <text class="tagText text-white">攻略</text>
+        </view>
+        <view class="itemRight flex flex-direction justify-between">
+            <view class="titleInfo flex">
+                <view class="hotelName text-bold">贵州梵净山：去新晋世界自然遗产里避暑纳凉</view>
+                <view class="text-df text-darkGray" style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">
+                    百花绽放，绿草盈盈，清明节小长假悄然来临，自然喜不自胜
+                </view>
+            </view>
+            <view class="flex justify-between margin-top-sm text-grey">
+                <text>发布于2019-04-03</text>
+                <text>阅读103</text>
+            </view>
+        </view>
+    </view>
+</view>

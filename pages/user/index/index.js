@@ -129,5 +129,22 @@ Page({
       url: '../travel/travel'
     })
   },
+  depositInto() {
+    wx.navigateTo({
+      url: '../deposit/deposit'
+    })
+  },
+  memberAction() {
+    wx.showToast({
+      image: '../../../images/fail.png',
+      title: '敬请期待',
+    })
+  },
+  integralAction() {
+    wx.showToast({
+      image: '../../../images/fail.png',
+      title: '敬请期待',
+    })
+  }
 
 })

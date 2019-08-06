@@ -41,7 +41,7 @@ Page({
         押金退还
         在用户归还充电宝到机柜之后,系统会结束订单,并扣除充电费用,剩下的押金余额会原路退回,退款时间为0-2小时之内`,
         isTrue:false
-        }]
+        },]
     },
  
    /**
@@ -56,32 +56,16 @@ Page({
   onShow: function () {
    
   },
+
+    // 展开折叠选择  
+    changeToggle:function(e){
+      let index = e.currentTarget.dataset.index;
+      this.data.arrdata[index].isTrue = !this.data.arrdata[index].isTrue;
+      this.setData({
+        arrdata: this.data.arrdata
+      })
+    },
   
-  feedbackInto() {
-    wx.navigateTo({
-      url: '../feedback/feedback'
-    })
-  },
-  showModel(e) {
-    this.setData({
-      modalName: e.currentTarget.dataset.target
-    })
-  },
-  hideModal(e) {
-    this.setData({
-      modalName: null
-    })
-  },
-  guideInto() {
-    wx.navigateTo({
-      url: '../guide/guide'
-    })
-  },
-  contact() {
-    wx.makePhoneCall({
-      phoneNumber: '15685117492' //仅为示例，并非真实的电话号码
-    })
-  }
 
     
 })

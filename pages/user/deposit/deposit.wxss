@@ -1,0 +1,17 @@
+page {
+    background: #f8f8f8;
+}
+.moneyWrap {
+    height: 400rpx;
+}
+.carImg {
+    width: 350rpx;
+    height: 180rpx;
+}
+.depositBtn {
+    margin-top: 60rpx;
+}
+.depositBtn button {
+    width: 90%;
+    font-size: 34rpx;
+}

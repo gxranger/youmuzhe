@@ -1,5 +1,5 @@
 <view class="orderNavWrap bg-white shadow">
-    <scroll-view scroll-x class="nav text-left margin-left">
+    <scroll-view scroll-x class="nav text-left">
             <view class="cu-item {{index==TabCur?'text-blue cur':''}}" wx:for="{{navContent}}" wx:key bindtap="tabSelect" data-id="{{index}}">
                 {{navContent[index]}}
             </view>
@@ -11,7 +11,7 @@
             <text >订单编号：1560884203000200000000</text>
             <text class="text-blue">已完成</text>
         </view>
-        <view class="carOrderInfo flex justify-between align-center">
+        <view class="flex justify-between align-center">
             <view class="infoLeft">
                 <view>
                     <icon class="iconfont iconshijian1 text-olive" />
@@ -30,17 +30,17 @@
                     <text>福特福睿斯 白色 1.5T 三厢5座</text>
                 </view>
             </view>
-            <view class="infoRight ">
+            <view class="infoRight">
                 <image class="full-img" src="https://www.youmuzhe.net/image/car1.png" />
             </view>
         </view>
-        <view class="infoBottom margin-top-sm flex justify-end align-center">
+        <view class="infoBottom flex justify-end align-center">
             <view class="line-blue">评价</view>
             <view class="line-grey">删除</view>
         </view>
     </view>
     
-    <view class="carOrderItem bg-white margin-top-xs flex flex-direction text-df">
+   <view class="carOrderItem bg-white margin-top-xs flex flex-direction text-df">
             <view class="carOrderStatus margin-bottom-xs flex justify-between align-center">
                 <text >订单编号：1560884203000200000000</text>
                 <text class="text-blue">预定成功</text>
@@ -68,7 +68,7 @@
                     <image class="full-img" src="https://www.youmuzhe.net/image/car1.png" />
                 </view>
             </view>
-            <view class="infoBottom margin-top-sm flex justify-end align-center">
+            <view class="infoBottom flex justify-end align-center">
                 <view class="line-cyan">取消</view>
             </view>
         </view>
@@ -80,7 +80,7 @@
                 <text >订单编号：1560884203000200000000</text>
                 <text class="text-blue">已完成</text>
             </view>
-            <view class="carOrderInfo flex justify-between align-center">
+            <view class="flex justify-between align-center">
                 <view class="infoLeft flex flex-direction justify-between">
                     <view>
                         <icon class="iconfont iconjiudian1 text-olive" />

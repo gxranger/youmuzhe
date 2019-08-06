@@ -23,7 +23,11 @@ Page({
   onShow: function () {
    
   },
-
+  editorInto() {
+    wx.navigateTo({
+      url: '../editor/editor'
+    })
+  }
   
 
     

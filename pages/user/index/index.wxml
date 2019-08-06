@@ -8,18 +8,18 @@
       <image src="https://www.youmuzhe.net/image/wave.gif" mode="scaleToFill" class="gif-wave"></image>
     </view>
     <view class="userLevel padding flex text-center text-grey bg-white shadow-warp">
-      <view class="flex flex-sub flex-direction solid-right">
-        <view class="text-xxl text-orange">2000.00</view>
+      <view class="flex flex-sub flex-direction solid-right" bindtap="depositInto">
+        <view class="text-xxl text-orange">0</view>
         <view class="iconInfo">
           <icon class="iconfont iconbzj" />押金</view>
       </view>
-      <view class="flex flex-sub flex-direction solid-right">
-        <view class="text-xl text-blue" style="font-size: 38rpx;">白金</view>
+      <view class="flex flex-sub flex-direction solid-right" bindtap="memberAction">
+        <view class="text-xl text-blue" style="font-size: 38rpx;">普卡</view>
         <view class="iconInfo">
             <icon class="iconfont iconhuiyuan" /> 会员</view>
       </view>
-      <view class="flex flex-sub flex-direction">
-        <view class="text-xxl text-green">300</view>
+      <view class="flex flex-sub flex-direction" bindtap="integralAction">
+        <view class="text-xxl text-green">0</view>
         <view class="iconInfo">
                 <icon class="iconfont iconjifen" />  积分</view>
       </view>
@@ -31,6 +31,12 @@
           <text class="text-grey">消息中心</text>
         </view>
       </view>
+      <view class="cu-item arrow">
+          <view class="content">
+            <icon class="iconfont iconweizhang text-olive" />
+            <text class="text-grey">违章处理</text>
+          </view>
+        </view>
       <view class="cu-item arrow" bindtap="couponInto">
         <view class="content">
           <icon class="iconfont iconyouhuijuan text-red" />
@@ -49,15 +55,9 @@
           <text class="text-grey">我的订单</text>
         </view>
       </view>
-      <view class="cu-item arrow" bindtap="commentInto">
-        <view class="content">
-          <icon class="iconfont iconpinglun-copy text-green" />
-          <text class="text-grey">我的评论</text>
-        </view>
-      </view>
       <view class="cu-item arrow" bindtap="travelInto">
         <view class="content">
-         <icon class="iconfont iconyouxi text-red" />
+         <icon class="iconfont iconyouxi text-orangered" />
           <text class="text-grey">我的游记</text>
         </view>
       </view>

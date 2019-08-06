@@ -1,0 +1,66 @@
+.listLtem {
+    width: 100%;
+    padding:20rpx;
+    border-bottom:#e2e2e2 1px solid;
+}
+.collectionImg {
+    width: 35%;
+    height: 200rpx;
+    position: relative;
+    background-color: #ebeaea;
+    background-position: center;
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+.collectionTag {
+    height: 0;
+    width: 100rpx;
+    border-top: 45rpx solid #18A8EA;
+    border-right: 37rpx solid transparent;
+}
+.tagText {
+    position: absolute;
+    top: 5rpx;
+    left: 12rpx;
+    font-size: 24rpx;
+}
+.itemRight {
+    width: 65%;
+    padding-left: 10rpx;
+}
+.titleInfo {
+    width: 100%;
+    flex-direction: column;
+}
+.hotelName {
+    font-size: 32rpx;
+    margin-bottom: 15rpx;
+}
+.hotelComment,.distance {
+    margin-bottom: 8rpx;
+    font-size: 26rpx;
+}
+.distance,.hotelTag {
+    margin: 5rpx 0;
+}
+.hotelTag {
+    width: 100%;
+}
+.hotelTag view {
+    padding: 0 10rpx;
+    height: 35rpx;
+    line-height: 35rpx;
+    margin-right: 10rpx;
+    font-size: 18rpx;
+    text-align: center;
+    border: #18A8EA 1px solid;
+}
+.price {
+    width: 100%;
+    font-size: 28rpx;
+    color: #F5503F;
+    align-items: baseline;
+}
+.price .text-bold {
+    font-size: 36rpx;
+}

@@ -9,7 +9,7 @@
                 <image class="full-img" src="https://www.youmuzhe.net/image/car1.png" />
             </view>
             <view class="carRight flex flex-direction justify-between">
-                <view class="text-black">福特福睿斯</view>
+                <view class="text-black text-bold">福特福睿斯</view>
                 <view>贵A2WZ72</view>
                 <view>白色 | 1.5T自动 | 三厢5座</view>
             </view>

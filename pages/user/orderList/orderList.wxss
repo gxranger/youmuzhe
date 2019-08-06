@@ -16,7 +16,6 @@ page {
 }
 .infoLeft {
     width: 60%;
-    height: 200rpx;
 }
 /* .infoLeft view {
     margin: 5rpx 0;
@@ -35,7 +34,8 @@ page {
 }
 .infoBottom {
     height: 100rpx;
-    border-top:1px solid #e2e2e2; 
+    margin-top: 30rpx;
+    border-top:1px solid #e2e2e2;
 }
 .infoBottom view {
     padding: 0 20rpx;

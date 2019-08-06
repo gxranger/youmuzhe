@@ -1,22 +1,60 @@
 <view class="cu-list menu card-menu margin-bottom-xl shadow-lg radius">
-    <view class="cu-item arrow">
+    <view class="cu-item arrow" bindtap="guideInto">
         <view class="content">
             <text class="text-grey">使用指南</text>
         </view>
     </view>
-    <view class="cu-item arrow">
+    <view class="cu-item arrow" bindtap="feedbackInto">
       <view class="content">
         <text class="text-grey">意见反馈</text>
       </view>
     </view>
-    <view class="cu-item arrow">
+    <view class="cu-item arrow" bindtap="showModel" data-target="PrivateModal">
       <view class="content">
        <text class="text-grey">隐私申明</text>
       </view>
     </view>
-    <view class="cu-item arrow">
+    <view class="cu-item arrow" bindtap="showModel" data-target="AboutModal">
         <view class="content">
             <text class="text-grey">关于我们</text>
         </view>
     </view>
   </view>
+  <view class="contact flex justify-center text-grey" bindtap="contact">
+    <icon class="iconfont iconkefu" />
+    <text>联系客服</text>
+  </view>
+
+   <!-- 隐私申明弹窗 -->
+   <view class="cu-modal {{modalName=='PrivateModal'?'show':''}}">
+    <view class="cu-dialog bg-white">
+    <view class="text-left text-xl padding">
+        <text class="text-black text-bold">隐私声明</text>
+    </view>
+      <scroll-view scroll-y class="private text-left padding-left padding-right">
+          隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明隐私声明
+      </scroll-view>
+      <view class="cu-bar bg-white justify-end">
+        <view class="action">
+        <button class="cu-btn bg-blue lg" bindtap="hideModal">我知道啦</button>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 关于我们弹窗 -->
+  <view class="cu-modal {{modalName=='AboutModal'?'show':''}}">
+      <view class="cu-dialog bg-white">
+      <view class="text-left text-xl padding">
+          <text class="text-black text-bold">关于我们</text>
+      </view>
+        <scroll-view scroll-y class="private text-left padding-left padding-right">
+            关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们
+        </scroll-view>
+        <view class="cu-bar bg-white justify-end">
+          <view class="action">
+          <button class="cu-btn bg-blue lg" bindtap="hideModal">我知道啦</button>
+          </view>
+        </view>
+      </view>
+    </view>

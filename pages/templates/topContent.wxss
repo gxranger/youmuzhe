@@ -76,13 +76,14 @@
   align-items: center;
 }
 .addressWrap {
-  border-bottom: #e8e8e8 1px solid; 
-  padding-bottom: 5rpx;
   width: 85%;
-  height: 110rpx;
 }
 .addressWrap view {
   margin: 10rpx 0;
+}
+.rentPositionInfo {
+  height: 45rpx;
+  border-bottom: #d1d1d1 solid 1px;
 }
 .iconfanhui1 {
   color: #15cad5;
@@ -90,16 +91,6 @@
 }
 .carTitle {
   font-size: 36rpx;
-}
-.carleft {
-  float: left;
-  color: #bdbdbd;
-  font-size: 28rpx;
-}
-.carRight {
-  float: right;
-  color: #bdbdbd;
-  font-size: 28rpx;
 }
 .selectCarBtn {
   width: 100%;

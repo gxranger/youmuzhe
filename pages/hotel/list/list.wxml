@@ -48,9 +48,6 @@
                                     <text class="text-blue margin-left margin-right">“{{hotel.evaluateTag}}”</text>
                                     <text class="text-grey">{{hotel.commentLen}}人点评</text>
                                 </view>
-                                <view class="distance text-darkGray">
-                                    距离您直线4.2公里 · {{hotel.position.district}}地区
-                                </view>
                                 <view class="hotelTag flex">
                                     <view class="text-blue" wx:for="{{hotel.hotelTag}}" wx:key >
                                         {{hotel.hotelTag[index]}}

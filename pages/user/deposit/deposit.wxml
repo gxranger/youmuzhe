@@ -1,0 +1,10 @@
+<view class="moneyWrap bg-white flex flex-direction align-center justify-center">
+  <view class="carImg margin-bottom-lg">
+    <image src="https://www.youmuzhe.net/image/car1.png" class="full-img" />
+  </view>
+    <text class="text-df margin-bottom-xs">需支付金额(元)</text>
+    <text class="text-blue text-bold text-xxl">998.00</text>
+</view>
+<view class="depositBtn">
+    <button class="bg-blue">缴纳保证金</button>
+</view>

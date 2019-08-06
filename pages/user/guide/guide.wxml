@@ -1,0 +1,13 @@
+<view class="cu-list menu margin-bottom-xl shadow-lg">
+    <block wx:for="{{arrdata}}" wx:key>
+        <view class="cu-item" data-index="{{index}}" bindtap='changeToggle'>
+            <view class="content">
+                <text class="text-black">{{arrdata[index].name}}</text>
+            </view>
+            <icon class="{{arrdata[index].isTrue?'cuIcon-fold':'cuIcon-unfold'}} text-grey text-df" />
+        </view>
+        <view class="padding text-grey text-df {{arrdata[index].isTrue?'animation-slide-bottom':''}}" hidden="{{!arrdata[index].isTrue}}"  >
+            {{arrdata[index].content}}
+        </view>
+    </block>
+</view>

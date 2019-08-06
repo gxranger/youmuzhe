@@ -1,0 +1,89 @@
+page {
+    background: #f8f8f8;
+}
+.carInfo,.priceInfo {
+    font-size: 30rpx;
+}
+.orderNum {
+    height: 90rpx;
+    border-bottom: 1px solid #f2f2f2;
+}
+.carInfoWrap {
+    height: 180rpx;
+    border-bottom: 1px solid #f2f2f2;
+}
+.carLeft {
+    width: 30%;
+    height: 150rpx;
+    background-image: url(https://www.youmuzhe.net/image/h1.jpg);
+    background-color: #ebeaea;
+    background-position: center;
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+.carRight {
+    width: 70%;
+    height: 150rpx;
+}
+.ticketInfo {
+    height: 80rpx;
+}
+.ticketInfo view {
+    width: 50%;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+    font-size: 30rpx;
+}
+.makeCarTime {
+    height: 150rpx;
+    border-bottom: #f2f2f2 1px solid;
+}
+.dateInfo,.makerCarNum {
+    height: 95rpx;
+}
+.dateInfo {
+    width:30%;
+    text-align: center;
+}
+.makerCarNum  {
+    width: 40%;
+    position: relative;
+}
+.rowWrap {
+    width: 100%;
+}
+.lneRound {
+    width: 10rpx;
+    height: 10rpx;
+    background: #f2f2f2;
+    border-radius: 50%;
+}
+.lineRow {
+    width: 100%;
+    height: 2px;
+    background: #f2f2f2;
+}
+.networkInfo {
+    width: 95%;
+    height: 120rpx;
+}
+.networkInfo .iconfont {
+    font-size: 38rpx;
+    margin-right: 20rpx;
+}
+.networkInfo .cuIcon-right {
+    font-size: 40rpx;
+}
+.priceItem {
+    width: 92%;
+    height: 80rpx;
+}
+.otherWtap {
+    height: 65rpx;
+}
+.userInfo view {
+    width: 90%;
+    height: 60rpx;
+    /* border:1px solid red; */
+}
