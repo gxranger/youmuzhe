@@ -85,7 +85,6 @@
     float: right;
     position: absolute;
     right: 30rpx;
-    color: #888888;
   }
 .new {
     position: relative;
@@ -101,12 +100,13 @@
     background: #F12C20;
 }
 .recommendHotelSwiper {
-    width: 680rpx;
-    padding: 20rpx;
+    width: 700rpx;
+    padding: 20rpx 0;
     margin-top: 50rpx;
     /* border: orange 1px solid;  */
 }
 .recommendHotelSwiper .screen-swiper {
+    min-height: 340rpx;
     border-radius: 20rpx;
     box-shadow: 0 0 20rpx #888888;
 }

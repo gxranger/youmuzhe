@@ -4,18 +4,21 @@
       <import src="../../templates/carInfo.wxml"/>
       <template is="carInfoTemplate" data="{{carInfo}}" />
 
-        <view class="itemCheck" bindtap="confirmContract">
-            <icon class="iconfont iconxuanzhong {{isContract?'iconActive':''}}" />
-            <text>我已阅读并同意</text>
-            <text class="contract">《租车合同》</text>
+        <view class="itemCheck flex justify-between align-end" >
+            <view>
+              <icon bindtap="confirmContract" class="iconfont iconxuanzhong {{isContract?'iconActive':''}}" />
+              <text>我已阅读并同意</text>
+              <text class="text-blue">《租车合同》</text>
+            </view>
+            <text class="text-blue" bindtap="showModel" data-target="makeCarModal">用车说明 >></text>
         </view>
         
         <view class="bottomBtn">
-            <button class="lightBtn bg-green">
+            <button class="lightBtn bg-green " disabled="{{!isContract}}">
                 <icon class="iconfont iconyuanguangdeng" />
                灯光寻车
             </button>
-            <button class="unlockBtn" bindtap="showModel" data-target="makeCarModal">
+            <button class="unlockBtn bg-blue" bindtap="checkOutCar" disabled="{{!isContract}}">
                 <icon class="iconfont iconweisuoding" />
                 开锁用车
             </button>
@@ -27,16 +30,15 @@
           <view class="cu-dialog bg-white">
           <view class="text-left text-xl padding flex justify-between">
               <view>
-                      <icon class="iconfont iconjianchaxiang" />
-                      <text class="text-black text-bold">车辆外观检查</text>
+                <text class="text-black text-bold">人脸识别</text>
               </view>
           </view>
             <view class="text-left padding">
-                 请在开锁前完成车辆外观检查
+                 完成人脸识别后即可开锁用车
             </view>
             <view class="cu-bar bg-white justify-end">
-              <view class="action" bindtap="checkOutCar">
-              <button class="cu-btn bg-blue lg">前去验车</button>
+              <view class="action">
+              <button class="cu-btn bg-blue lg">立即识别</button>
               </view>
             </view>
           </view>

@@ -13,7 +13,7 @@
         <view class="travelInfo margin-top-sm padding-left-sm padding-right-sm">
             <view class="text-bold text-lg">{{item.title}}</view>
             <view class="travelDesc margin-top-xs text-df flex justify-between align-end text-gray">
-                <view>发布于{{item.date}}{{scrollBottom}}rpx</view>
+                <view>发布于{{item.date}}</view>
                 <view class="flex basis-sm justify-around">
                     <view><icon class="iconfont iconyueduliang" /> {{item.view}}</view>
                     <view><icon class="iconfont icondianzan" /> {{item.zan}}</view>

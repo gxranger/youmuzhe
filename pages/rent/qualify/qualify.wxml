@@ -53,36 +53,8 @@
                             </view>
                         </view>
 
-                        <!-- 人脸认证 -->
-                        <view class="verifyPerson" hidden="{{!stepDisplay[1]}}">
-                                <view class="verifyPersonTitle">
-                                        <view class="iconLeft">
-                                                        <image src="https://www.youmuzhe.net/image/jt.png"></image>
-                                        </view>
-                                        <view class="titleContent">点击扫描区进行面部识别</view>
-                                        <view class="iconRight">
-                                                        <image src="https://www.youmuzhe.net/image/jt.png"></image>
-                                        </view>
-                                </view>
-                                <view class="personImg">
-                                        <image src="https://www.youmuzhe.net/image/person.png"></image>
-                                </view>
-                                <view class="verifyPersonTitle">
-                                                <view class="iconLeft">
-                                                                <image src="https://www.youmuzhe.net/image/jt.png"></image>
-                                                </view>
-                                                <view class="titleContent">面部识别拍摄肖像要求</view>
-                                                <view class="iconRight">
-                                                                <image src="https://www.youmuzhe.net/image/jt.png"></image>
-                                                </view>
-                                </view>
-                                <view class="photoContent">
-                                        认证时，请本人操作，将镜头对准你的脸，并按提示做出动作。
-                                </view>
-                        </view>
-
                         <!-- 驾驶证认证 -->
-                        <view class="uploadCert" hidden="{{!stepDisplay[2]}}">
+                        <view class="uploadCert" hidden="{{!stepDisplay[1]}}">
                                <view class='selectWrap'>
                                        <view class='selectContent' bindtap='bindShowMsg'>
                                        <text class="text-black text-bold">机动车驾驶证</text>
@@ -113,20 +85,13 @@
                                        </view>
                                    </view>
                                </view>
-
-                        <!-- 缴纳保证金 -->
-                        <view class="payWrap" hidden="{{!stepDisplay[3]}}">
-                                <view class="payTitle">需支付的金额 (元)</view>
-                                <view class="payNum">￥35.98</view>
-                        </view>
                         
                 </view>   
         
     </view>
     <view class="actionBtn">
-                <button wx:if="{{stepDisplay[0]||stepDisplay[1]||(stepDisplay[2]&&from_page_name!='user')}}" class="cu-btn bg-green shadow" bindtap="numSteps">下一步</button>
-                <button wx:if="{{from_page_name=='user'&&stepDisplay[2]}}" class="cu-btn bg-blue shadow" bindtap="completeBtn">完成认证</button>
-            <button wx:if="{{stepDisplay[3]}}"  class="cu-btn bg-blue shadow" bindtap="makeCarInto" >支付</button>
+                <button wx:if="{{stepDisplay[0]}}" class="cu-btn bg-green shadow" bindtap="numSteps">下一步</button>
+                <button wx:if="{{stepDisplay[1]}}" class="cu-btn bg-blue shadow" bindtap="completeBtn">完成认证</button>
     </view>  
 
        

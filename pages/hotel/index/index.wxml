@@ -52,8 +52,8 @@
                     <text>推荐酒店</text>
                     <view class="new">NEW</view>
             </view>
-            <view class="more">
-                    查看更多>
+            <view class="more text-blue">
+                    查看更多>>
             </view>
         </view>
         <view class="recommendHotelSwiper">

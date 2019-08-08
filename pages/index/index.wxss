@@ -28,17 +28,14 @@
   background: #fff;
   display: flex;
   flex-direction: column;
-  padding: 20rpx 0;
+  padding: 20rpx;
   margin: 20rpx 0;
 }
 .specialHotelList {
   margin-top: 60rpx;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
 }
 .specialHotelItem {
-  width: 45%;
+  width: 48%;
   height: 250rpx;
   margin: 10rpx 0;
   position: relative;
@@ -78,7 +75,6 @@
   float: right;
   position: absolute;
   right: 30rpx;
-  color: #888888;
 }
 .hotHotelList {
   margin-top: 60rpx;

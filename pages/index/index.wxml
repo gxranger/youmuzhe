@@ -40,13 +40,13 @@
         </view>
     </view>
 
-    <!-- 特价酒店 -->
+    <!-- 优惠活动 -->
     <view class="specialHotelWrap">
         <view class="title">
             <view class="columnBlue"></view>
-            <text>特价酒店</text>
+            <text>优惠活动</text>
         </view>
-        <view class="specialHotelList">
+        <view class="specialHotelList flex flex-wrap justify-around">
             <block wx:for="{{specialHotelList}}" wx:key="index">
                 <view class="specialHotelItem">
                     <image src="{{specialHotelList[index].imgUrl}}" mode="scaleToFill" />
@@ -62,8 +62,8 @@
             <view class="columnBlue"></view>
             <text>热门酒店</text>
         </view>
-        <view class="more">
-            查看更多>
+        <view class="more text-blue">
+            查看更多>>
         </view>
         
         <view class="hotHotelList">

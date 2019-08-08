@@ -3,7 +3,6 @@ Page({
   data: {
     photoesList:{},
     isPhoto:[false,false,false,false,false,false,false,false,false,false,false,false,false,false,false],
-    isLength:false,
     from_page_name:''
   },
   showModel(e) {
@@ -23,15 +22,8 @@ Page({
       })
   },
   returnMakeCar() {
-    if(Object.getOwnPropertyNames(this.data.photoesList).length==15){
-      let isCheck = true;
-      wx.setStorageSync('isCheck', isCheck);
-      wx.navigateBack();
-    }else{
-      this.setData({
-        isLength:true
-      })
-    }
+    wx.setStorageSync('isCheck', true);
+    wx.navigateBack();
   },
   photo(e) {
     wx.chooseImage({

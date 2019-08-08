@@ -46,5 +46,5 @@
     height: 100%;
 }
 .completeBtn {
-    margin: 75rpx 0;
+    margin: 50rpx 0;
 }

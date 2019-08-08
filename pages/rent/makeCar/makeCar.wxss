@@ -6,13 +6,9 @@
 }
 .itemCheck {
     width: 90%;
-    height: 50rpx;
     margin-top: 200rpx;
     margin-bottom: 40rpx;
     font-size: 32rpx;
-    display: flex;
-    justify-content: flex-start;
-    align-items: baseline;
 }
 .itemCheck .iconxuanzhong {
     font-size: 28rpx;
@@ -25,19 +21,6 @@
 .itemCheck text{
     font-size: 28rpx;
 }
-.contract {
-    color: #18a8ea;
-}
-.checkCar {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20rpx;
-}
-.checkCar text{
-    margin-bottom: 10rpx;
-    font-size: 30rpx;
-}
 .bottomBtn {
     width: 90%;
     margin:5rpx 0;
@@ -46,26 +29,20 @@
     color: #fff;
     font-size: 36rpx;
     margin-bottom: 25rpx;
-    display: flex;
-    justify-content: center;
     height: 90rpx;
+    line-height: 90rpx;
 }
-.unlockBtn {
-    background: #18a8ea;
-}
-.unlockBtn .iconweisuoding {
+.bottomBtn .iconweisuoding {
     font-size: 34rpx;
     position: relative;
     right: 15rpx;
 }
-.lightBtn .iconyuanguangdeng {
-    height: 90rpx;
-    line-height: 90rpx;
+.bottomBtn .iconyuanguangdeng {
     transform: scale(-1,1);
     font-size: 48rpx;
     position: relative;
+    top: 5rpx;
     right: 15rpx;
-    bottom: 5rpx;
 }
 .freeBtn .iconmianfei {
     position: relative;
@@ -87,4 +64,13 @@
     color: #000;
     font-size: 32rpx;
     margin-right: 15rpx;
+}
+
+.bottomBtn .lightBtn[disabled]{
+    background: #52DABE;
+    color: #f8f8f8;
+}
+.bottomBtn .unlockBtn[disabled]{
+    background: #56BDEF;
+    color: #f8f8f8;
 }

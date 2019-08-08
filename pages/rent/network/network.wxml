@@ -4,7 +4,7 @@
 
         <!-- 顶部定位&搜索框  -->
         <view class="networkTop">
-            <view class="cityPosition">
+            <view class="cityPosition" bindtap="positionInto">
                 <icon class="iconfont icondizhi" />
                 <text>贵阳</text>
             </view>

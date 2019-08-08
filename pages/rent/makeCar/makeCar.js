@@ -28,18 +28,19 @@ Page({
     wx.navigateTo({
       url: '../appearance/appearance?from_page_name=makecar'
       })
-    //console.log(wx.setStorageSync('isCheck'))
   },
 
   onLoad() {
-    // 车辆外观检查弹窗初始化
+    // 人脸识别弹窗初始化
     wx.clearStorageSync()
     
   },
   onShow() {
-
-    // 车辆外观检查弹窗状态监测，如本地存储参数有值则隐藏
-    if(wx.getStorageSync('isCheck')==''){
+    wx.showShareMenu({
+      withShareTicket: true
+    })
+    // 人脸识别弹窗状态监测，如本地存储参数为真则隐藏
+    if(wx.getStorageSync('isCheck')){
       this.setData({
         isCheckShow:true
       })

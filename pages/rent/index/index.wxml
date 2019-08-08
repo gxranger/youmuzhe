@@ -39,7 +39,7 @@
               <text>优惠活动</text>
           </view>
 
-          <view class="recommendList">
+          <view class="recommendList flex flex-wrap justify-around">
               <block wx:for="{{recommendList}}" wx:key="index">
                   <view class="recommendItem">
                       <image src="{{recommendList[index].imgUrl}}" mode="scaleToFill" />

@@ -25,7 +25,7 @@
     width: 100%;
     margin-top: 20rpx;
 }
-.uploadCert,.verifyPerson,.payWrap {
+.uploadCert {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -141,66 +141,4 @@ border: 1px solid #888888;
     border: 1px solid #888888;
     border-radius: 10rpx;
     font-size: 30rpx;
-}
-
-/* 面部识别 */
-.verifyPersonTitle {
-    width: 90%;
-    height: 60rpx;
-    display: flex;
-    justify-content: space-between;
-    margin: 20rpx 0;
-}
-.iconLeft,.iconRight{
-    width: 20%;
-    height: 60rpx;
-    display: flex;
-    align-items: center;
-}
-.iconLeft {
-    justify-content: flex-end;
-}
-.iconLeft image,.iconRight image {
-    width: 80%;
-    height: 25rpx;
-}
-.titleContent {
-    width: 55%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 28rpx;
-    /* border: blue 1px solid; */
-}
-.iconRight image {
-    transform: scale(-1,1);
-}
-.personImg {
-    width: 90%;
-    display: flex;
-    justify-content: center;
-    /* border: blue 1px solid; */
-    margin-bottom: 30rpx;
-}
-.personImg image {
-    width: 100%;
-    height: 420rpx;
-}
-.photoContent {
-    width: 90%;
-    font-size:28rpx;
-    text-align: center;
-}
-
-/* 缴纳保证金 */
-.payWrap {
-    margin-top: 60rpx;
-}
-.payTitle {
-    font-size: 30rpx;
-}
-.payNum {
-    font-weight: bold;
-    font-size: 48rpx;
-    color: #000;
 }

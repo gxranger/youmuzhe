@@ -4,13 +4,9 @@ Page({
       numList: [{
         name: '上传证件'
       }, {
-        name: '面部识别'
-      }, {
         name: '驾驶证认证'
-      }, {
-        name: '缴纳保证金'
-      }, ],
-      stepDisplay:[true],
+      }],
+      stepDisplay:[true,false],
       select: false,
       tihuoWay: '身份证',
       subSting: '身份证',
@@ -31,40 +27,22 @@ Page({
     /**
      * 生命周期函数--监听页面加载
      */
-    onLoad: function (options) {
-      this.setData({
-        from_page_name:options.from_page_name
-      })
-      if(this.data.from_page_name=="user"){
-        this.data.numList.pop();
-        this.setData({
-          numList:this.data.numList
-        })
-      }
+    onLoad: function () {
     },
 
     numSteps(e) {
-      let stepArr = [false];
       this.data.stepDisplay[0] = false;
-      for(let i = 0; i< this.data.numList.length; i++){
-        stepArr.push(i == this.data.num);
-      };
+      this.data.stepDisplay[1] = true;
       this.setData({
-        num: this.data.num == this.data.numList.length - 1 ? 0 : this.data.num + 1,
-        stepDisplay:stepArr
+        num: this.data.num + 1,
+        stepDisplay:this.data.stepDisplay
       });
-      console.log(stepArr)
     },
     bindShowMsg() {
         this.setData({
          select:!this.data.select
         })
       },
-    makeCarInto() {
-      wx.navigateTo({
-        url: '../makeCar/makeCar'
-      })
-    },
     mySelect(e) {
         var name = e.currentTarget.dataset.name;
         var id = e.currentTarget.dataset.id;
@@ -79,6 +57,9 @@ Page({
     },
 
     completeBtn() {
+      wx.navigateTo({
+        url: '../makeCar/makeCar'
+      })
       console.log(1212121)
     }
      

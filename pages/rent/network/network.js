@@ -30,6 +30,11 @@ Page({
     wx.hideLoading();
     
   },
+  positionInto() {
+    wx.navigateTo({
+      url: '../../position/position'
+    })
+  },
   tabSelect(e) {
     this.setData({
       TabCur: e.currentTarget.dataset.id,

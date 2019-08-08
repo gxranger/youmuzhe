@@ -1,9 +1,9 @@
 <view class="appearanceWrap">
     <view class="appearanceBtnWrap">
             <view class="appearanceTitle">
-                    <text class="text-black text-bold">车辆外观</text>
-                    <text>请选择对应车辆部位进行拍摄</text>
-                </view>
+                    <text>请选择车辆损坏部位进行拍摄</text>
+                    <text>如无损坏可跳过此步骤</text>
+            </view>
                 <view class="appearanceTopBtn flex">
                     <button class="{{isPhoto[0]?'text-blue line-blue':'text-gray line-gray'}}" bindtap="photo" data-id="0" data-name="zhsj">左后视镜</button>
                     <button class="{{isPhoto[1]?'text-blue line-blue':'text-gray line-gray'}}" bindtap="photo" data-id="1"  data-name="qbxg">前保险杠</button>
@@ -33,7 +33,7 @@
                     <button class="{{isPhoto[14]?'text-blue line-blue':'text-gray line-gray'}}" bindtap="photo" data-id="14"  data-name="hbaoxiangang">后保险杠</button>
                 </view>
     </view>
-    <view wx:if="{{from_page_name=='makecar'}}" class="completeBtn" bindtap="returnMakeCar">
+    <view  class="completeBtn" bindtap="returnMakeCar">
             <button class="bg-blue lg">检查完成</button>
     </view>
     <view wx:if="{{from_page_name=='returncar'}}" class="completeBtn" bindtap="internalInto">

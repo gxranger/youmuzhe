@@ -5,18 +5,15 @@
     background: #fff;
     display: flex;
     flex-direction: column;
-    padding: 20rpx 0;
+    padding: 20rpx;
     margin: 20rpx 0;
   }
   .recommendList {
     margin-top: 60rpx;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
   }
   .recommendItem {
-    width: 45%;
-    height: 180rpx;
+    width: 48%;
+    height: 200rpx;
     margin: 10rpx 0;
     border-bottom-right-radius: 15rpx;
     border-bottom-left-radius: 15rpx;
