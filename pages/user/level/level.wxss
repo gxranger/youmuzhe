@@ -1,0 +1,87 @@
+page {
+    background: #f8f8f8;
+}
+.mainInfo {
+    width: 100%;
+    height: 520rpx;
+    background-image: url(https://www.youmuzhe.net/image/index12.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat:no-repeat;
+    position: relative;
+}
+.userImg {
+    width: 280rpx;
+    height: 270rpx;
+    background-image: url(https://www.youmuzhe.net/image/userStar.png);
+    background-size: 280rpx;
+    background-repeat:no-repeat;
+    position: relative;
+}
+.userImg .round {
+    width: 180rpx;
+    height: 180rpx;
+    border:rgba(255,255,255, .4) 5px solid;
+}
+.levelTag {
+    width: 280rpx;
+    height: 80rpx;
+    font-size: 28rpx;
+    position: absolute;
+    bottom: 45rpx;
+    background-image: url(https://www.youmuzhe.net/image/userTitle.png);
+    background-size: 280rpx;
+    background-repeat:no-repeat;
+    position: relative;
+}
+.integral {
+    position: absolute;
+    bottom: 190rpx;
+}
+.levelProcess {
+    position: absolute;
+    bottom: 30rpx;
+}
+.levelProcess progress {
+    width: 650rpx;
+}
+.processWrap {
+    height: 65rpx;
+}
+.processInfo {
+    width: 100%;
+    height: 65rpx;
+    position: absolute;
+    bottom: 0rpx;
+    font-size: 26rpx;
+}
+.processInfo .flex {
+    width: 150rpx;
+}
+.processWrap {
+    position: relative;
+}
+.processRound {
+    width: 8px;
+    height: 8px;
+    background: #f8f8f8;
+    border-radius: 50%;
+    box-shadow: 0 0 20rpx #1CD2E7;
+}
+.cumulative {
+    width: 125rpx;
+    height: 70rpx;
+    line-height: 55rpx;
+    position: relative;
+    left: 130rpx;
+    background-image: url(https://www.youmuzhe.net/image/dialog.png);
+    background-size: 125rpx;
+    background-repeat:no-repeat;
+}
+.levelInfo {
+    width: 100%;
+    height: 240rpx;
+}
+.levelInfo view {
+    width: 100%;
+}

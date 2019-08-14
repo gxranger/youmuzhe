@@ -1,0 +1,49 @@
+<view class="level flex flex-direction align-center">
+  <view class="mainInfo flex flex-direction align-center">
+    <view class="userImg margin-top flex flex-direction justify-center align-center">
+      <image src="https://www.youmuzhe.net/image/tx.jpg" class="round margin-top" />
+      <view class="levelTag  flex justify-center text-white align-center">
+        <text>普卡会员</text>
+      </view>
+    </view>
+    <view class="integral text-white text-df flex flex-direction align-center">
+      <text>0</text>
+      <text>累计积分</text>
+    </view>
+    <view class="levelProcess flex flex-direction">
+        <view class="cumulative text-sm text-blue text-center">0/200</view>
+      <view class="processWrap"> 
+          <progress border-radius="50" activeColor="#5F8DA2" backgroundColor="#5F8DA2" stroke-width="8" percent="20" />
+          <view class="processInfo text-white flex justify-between">
+              <view class="flex flex-direction justify-between align-center">
+                <view class="processRound"></view>
+                <text>普卡</text>
+              </view>
+              <view class="flex flex-direction justify-between align-center">
+                <view class="processRound"></view>
+                <text>银卡</text>
+              </view>
+              <view class="flex flex-direction justify-between align-center">
+                <view class="processRound"></view>
+                <text>金卡</text>
+              </view>
+              <view class="flex flex-direction justify-between align-center">
+                <view class="processRound"></view>
+                <text>白金卡</text>
+              </view>
+              <view class="flex flex-direction justify-between align-center">
+                <view class="processRound"></view>
+                <text>钻石卡</text>
+              </view>
+            </view>
+      </view>
+    </view>
+  </view>
+  <view class="levelInfo padding-top padding-right flex flex-direction align-end bg-white text-blue">
+      <text class="text-sm">如何升级？</text>
+      <view class="flex flex-direction margin-top align-center">
+        <text class="text-bold text-lg margin-bottom-xs">暂无积分特权！</text>
+        <text class="text-gray text-df">暂无积分，去租车即可获得哦~</text>
+      </view>
+  </view>
+</view>
