@@ -1,0 +1,22 @@
+    <!-- 验证手机号弹窗 -->
+    <view class="cu-modal show">
+        <view class="cu-dialog bg-white">
+        <view class="text-left text-xl padding flex justify-between">
+            <view>
+                <text class="text-black text-bold">验证手机号</text>
+            </view>
+        </view>
+          <view class="phoneInput padding">
+              <input type="number" placeholder="请输入手机号" maxlength="11" class="solids text-lg text-left padding-left-sm"/>
+          </view>
+          <view class="phoneVerify padding flex">
+              <input type="number" placeholder="请输入验证码" maxlength="6" class="solids text-lg text-left padding-left-sm"/>
+              <button class="bg-blue" disabled="{{btnDisabled}}" bindtap="getCode">{{btnValue}}</button>
+          </view>
+          <view class="cu-bar bg-white justify-end">
+            <view class="action acBtn">
+            <button class="cu-btn bg-blue lg">绑定</button>
+            </view>
+          </view>
+        </view>
+    </view>

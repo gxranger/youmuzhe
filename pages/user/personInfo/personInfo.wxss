@@ -3,28 +3,3 @@
     width: 55rpx!important;
     height: 55rpx!important;
 }
-.action {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    border: #18a8ea 1px slid;
-    margin: 35rpx 0;
-}
-.action .cu-btn {
-    width: 100%;
-    margin: 10rpx 0;
-}
-.phoneVerify input {
-    width: 450rpx;
-}
-.phoneInput button{
-    width: 100%;
-}
-.phoneInput input,.phoneVerify input,.phoneVerify button{
-    height: 80rpx;
-}
-.phoneVerify button {
-    width: 300rpx;
-    line-height: 80rpx;
-    border-radius: 0;
-}

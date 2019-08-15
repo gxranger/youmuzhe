@@ -24,7 +24,7 @@
                 <icon class="iconfont iconjifen" />  积分</view>
       </view>
     </view>
-    <view class="cu-list menu card-menu margin-top-sm margin-bottom-xl shadow-lg radius">
+    <view class="cu-list bg-white menu card-menu margin-top-sm margin-bottom-xl shadow-lg">
       <view class="cu-item arrow" bindtap="messageInto">
         <view class="content">
           <icon class="iconfont iconxiaoxi text-green" />

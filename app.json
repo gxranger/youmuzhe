@@ -1,6 +1,8 @@
 {
   "pages": [
     "pages/user/index/index",
+    "pages/user/personInfo/personInfo",
+    
     "pages/user/orderList/orderList",
     "pages/hotel/index/index",
     "pages/user/level/level",
@@ -25,7 +27,6 @@
     "pages/user/message/message",
     "pages/user/feedback/feedback",
     "pages/user/comment/comment",
-    "pages/user/personInfo/personInfo",
     "pages/position/position",
     "pages/hotel/comment/comment",
     "pages/rent/evaluate/evaluate",
@@ -88,5 +89,8 @@
     }
     ]
   },
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "message-verify": "/component/message-verify/message-verify"
+  }
 }
