@@ -4,27 +4,11 @@
       <import src="../../templates/carInfo.wxml"/>
       <template is="carInfoTemplate" data="{{carInfo}}" />
 
-      <view class="mileageInfo">
-        <view>
-          <text class="text-black text-bold">{{carInfo.makeTime}}分钟</text>
-          <text>时长</text>
-        </view>
-        <view>
-          <text class="text-black text-bold">{{carInfo.mileage}}KM</text>
-          <text>里程</text>
-        </view>
-      </view>
-
       <view class="payDetail">
-        <view class="payDetailTitle text-black text-bold">费用详情</view>
         <view class="payDetailContent">
           <view class="timeCharge">
             <text>时长计费</text>
             <text>{{filters.toFix(carInfo.timeCharge)}}元</text>
-          </view>
-          <view class="mileageCharge">
-            <text>里程计费</text>
-            <text>{{filters.toFix(carInfo.mileageCharge)}}元</text>
           </view>
           <view class="discount">
             <view>活动套餐</view>

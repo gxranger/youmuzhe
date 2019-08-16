@@ -1,8 +1,9 @@
 
+    <wxs module="filters" src="../../../utils/filters.wxs"></wxs>
     <!-- topContent模板引入 -->
     <import src="../../templates/topContent.wxml"/>
     <template is="searchTemplate" data="{{searchInfo}}" />
-    <view class="hotelListWrap flex align-center bg-ghostWhite">
+    <view class="flex flex-direction align-center bg-white">
         <view class="listTab bg-white flex justify-center {{scrollTop>50 ? 'listTabFixed' : ''}}">
             <view class="tabContent flex justify-between">
                 <view class="position  flex align-center" bindtap="positionInto">
@@ -10,21 +11,21 @@
                     <text>贵阳</text>
                 </view>
                 <view class="listFilter flex justify-around">
-                    <view class="flex align-center" bindtap="distanceSwitch" data-name="distance">
+                    <view class="flex align-center" bindtap="sortSwitch" data-name="distance">
                         <text class="{{distanceStatus==1||distanceStatus==2?'text-blue':''}}">距离</text>
                         <view class="iconGroup">
                             <icon class="cuIcon-usefullfill {{distanceStatus==2?'text-blue':'text-gray'}}" />
                             <icon class="cuIcon-usefullfill iconReverseY {{distanceStatus==1?'text-blue':'text-gray'}}" />
                         </view>
                     </view>
-                    <view class="flex align-center" bindtap="distanceSwitch" data-name="price">
+                    <view class="flex align-center" bindtap="sortSwitch" data-name="price">
                         <text class="{{priceStatus==1||priceStatus==2?'text-blue':''}}">价格</text>
                         <view class="iconGroup  flex align-center">
                             <icon class="cuIcon-usefullfill {{priceStatus==2?'text-blue':'text-gray'}}" />
                             <icon class="cuIcon-usefullfill iconReverseY {{priceStatus==1?'text-blue':'text-gray'}}" />
                         </view>
                     </view>
-                    <view class=" flex align-center" bindtap="distanceSwitch" data-name="evaluate">
+                    <view class=" flex align-center" bindtap="sortSwitch" data-name="evaluate">
                         <text class="{{evaluateStatus==1||evaluateStatus==2?'text-blue':''}}">评分</text>
                         <view class="iconGroup">
                             <icon class="cuIcon-usefullfill {{evaluateStatus==2?'text-blue':'text-gray'}}" />
@@ -34,28 +35,36 @@
                 </view>
             </view>
         </view>
-        <view class="listContent flex margin-bottom">
+        <view class="flex flex-direction margin-top-xs">
             <block wx:for="{{hotelList}}" wx:key wx:for-item="hotel">
-                <view class="listLtem bg-white flex" bindtap="detailInto">
+                <view class="listLtem bg-white flex" bindtap="detailInto" data-id="{{hotel.id}}">
                         <view class="itemLeft">
-                            <view><image class="full-img radius" src="{{hotel.imgSrc}}" /> </view>
+                            <view class="radius" style="background-image: url({{hotel.litpic}})"> </view>
                         </view>
                         <view class="itemRight flex">
                             <view class="titleInfo flex">
-                                <view class="hotelName text-bold">{{hotel.name}}</view>
+                                <view class="hotelName text-bold">{{hotel.title}}</view>
                                 <view class="hotelComment flex">
-                                    <text class="text-blue">{{hotel.score}}分</text>
-                                    <text class="text-blue margin-left margin-right">“{{hotel.evaluateTag}}”</text>
-                                    <text class="text-grey">{{hotel.commentLen}}人点评</text>
+                                    <text wx:if="{{hotel.hotelrankid==1}}" class="text-blue">一星级</text>
+                                    <text wx:if="{{hotel.hotelrankid==2}}" class="text-blue">二星级</text>
+                                    <text wx:if="{{hotel.hotelrankid==3}}" class="text-blue">三星级</text>
+                                    <text wx:if="{{hotel.hotelrankid==4}}" class="text-blue">四星级</text>
+                                    <text wx:if="{{hotel.hotelrankid==5}}" class="text-blue">五星级</text>
+                                    <text class="text-blue margin-left-xs">{{hotel.satisfyscore}}分</text>
+                                    <text class="text-blue margin-left margin-right">“{{hotel.tagword}}”</text>
+                                    <text class="text-grey">{{hotel.commentnum}}人点评</text>
                                 </view>
                                 <view class="hotelTag flex">
-                                    <view class="text-blue" wx:for="{{hotel.hotelTag}}" wx:key >
-                                        {{hotel.hotelTag[index]}}
+                                    <view class="text-blue" wx:for="{{filters.toSplit(hotel.sellpoint)}}" wx:key wx:for-item="pointItem" >
+                                            {{pointItem}}
                                     </view>
+                                </view>
+                                <view class="distance text-blue">
+                                    距离您3.2公里
                                 </view>
                                 <view class="price flex justify-end">
                                         <text>￥</text>
-                                        <text class="text-bold">{{hotel.price}}</text>
+                                        <text class="text-bold">{{hotel.sellprice}}</text>
                                         <text>起</text>
                                 </view>
                             </view>

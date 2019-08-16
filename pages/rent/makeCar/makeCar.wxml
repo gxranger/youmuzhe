@@ -38,7 +38,7 @@
             </view>
             <view class="cu-bar bg-white justify-end">
               <view class="action">
-              <button class="cu-btn bg-blue lg">立即识别</button>
+              <button class="cu-btn bg-blue lg" bindtap="internalInto">立即识别</button>
               </view>
             </view>
           </view>

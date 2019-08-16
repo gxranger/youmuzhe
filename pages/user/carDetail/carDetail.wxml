@@ -68,7 +68,7 @@
             </view>
         </view>
     </view>
-    <view class="priceInfo bg-white margin-top-sm" hidden="true">
+    <view class="priceInfo bg-white margin-top-sm">
         <view class="priceItem flex align-center justify-between padding-left padding-right">
             <view>车辆租赁时长费</view>
             <view>

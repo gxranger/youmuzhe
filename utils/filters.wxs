@@ -4,9 +4,15 @@ var filters = {
 
         return value.toFixed(2) // 此处2为保留两位小数，保留几位小数，这里写几
 
+    },
+    toSplit:function (value) {
+        if(value){
+            return value.split(",",2)
+        }
     }
 }
 
 module.exports = {
-    toFix: filters.toFix
+    toFix: filters.toFix,
+    toSplit:filters.toSplit
 }

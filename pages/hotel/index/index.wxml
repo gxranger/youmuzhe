@@ -2,17 +2,19 @@
     <!-- topContent模板引入 -->
     <import src="../../templates/topContent.wxml"/>
     <template is="searchTemplate" data="{{searchInfo}}" />
-    <template is="swiperTemplate" data="{{imgList,currentSwiper}}" />
+    <template is="swiperTemplate" data="{{swiperList,swiperCurrent}}" />
 
     <view class="hotelWrap margin-bottom">
-    <view class="researchHotelWrap">   
-        <view class="destinationWrap">
-            <view>目的地</view>
-            <view class="destinationSelect flex justify-between align-center">
-                <text>贵阳</text>
-                <icon class="iconfont iconjiantou" />
+    <view class="researchHotelWrap">
+        <navigator url="../../position/position" hover-class="none">
+            <view class="destinationWrap">
+                <view>目的地</view>
+                <view class="destinationSelect flex justify-between align-center">
+                    <text>贵阳</text>
+                    <icon class="iconfont iconjiantou" />
+                </view>
             </view>
-        </view>
+        </navigator>  
             <view class="dateSelectWrap flex" bindtap="calenderInto">
                     <view class="dateSelectDate">
                         <view>{{inDateWeek}} 入住</view>
@@ -39,8 +41,8 @@
         <swiper class="card-swiper {{DotStyle?'square-dot':'round-dot'}}" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500" bindchange="cardSwiper" indicator-color="#8799a3" indicator-active-color="#18A8EA">
             <swiper-item wx:for="{{cardList}}" wx:key class="{{cardCur==index?'cur':''}}">
                 <view class="swiper-item">
-                <image  src="{{item.url}}"  wx:if="{{item.type=='image'}}"></image>
-                <video src="{{item.url}}" autoplay loop muted show-play-btn="{{false}}" controls="{{false}}" objectFit="cover" wx:if="{{item.type=='video'}}"></video>
+                <image  src="{{item.litpic}}"  ></image>
+                <video src="{{item.litpic}}" autoplay loop muted show-play-btn="{{false}}" controls="{{false}}" objectFit="cover" ></video>
                 </view>
             </swiper-item>
         </swiper>
@@ -53,19 +55,19 @@
                     <view class="new">NEW</view>
             </view>
             <view class="more text-blue">
-                    查看更多>>
+                    <navigator url="../list/list" hover-class="none"> 查看更多>></navigator>
             </view>
         </view>
         <view class="recommendHotelSwiper">
             <swiper class="screen-swiper square-dot" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500">
-                    <swiper-item wx:for="{{swiperList}}" wx:key>
+                    <swiper-item wx:for="{{recommendList}}" wx:key>
                         <view class="priceTag">
                             <text>￥1200</text>
                             <text>每晚</text>
                         </view>
                         <view class="hotelName">贵阳雅迪尔国际大酒店</view>
-                        <image src="{{item.url}}" mode="aspectFill" wx:if="{{item.type=='image'}}"></image>
-                        <video src="{{item.url}}" autoplay loop muted show-play-btn="{{false}}" controls="{{false}}" objectFit="cover" wx:if="{{item.type=='video'}}"></video>
+                        <image src="{{item.litpic}}" mode="aspectFill" ></image>
+                        <video src="{{item.litpic}}" autoplay loop muted show-play-btn="{{false}}" controls="{{false}}" objectFit="cover" ></video>
                     </swiper-item>
             </swiper>
         </view>
@@ -78,11 +80,10 @@
         </view>
         <view class="hotContent shadow flex justify-center">
             <view class="hotLeft">
-                <image class="full-img" src="https://www.youmuzhe.net/image/left.png" />
+                <image class="full-img" src="{{activeLeft[0].litpic}}" />
             </view>
             <view class="hotRight flex">
-                <view><image class="full-img" src="https://www.youmuzhe.net/image/right.png" /></view>
-                <view><image class="full-img" src="https://www.youmuzhe.net/image/right2.png" /></view>
+                <view wx:for="{{activeRight}}" wx:key ><image class="full-img" src="{{activeRight[index].litpic}}" /></view>
             </view>
         </view>
     </view>

@@ -1,22 +1,31 @@
 <view class="detailWrap flex">
     <view class="bg-white">
+            
         <view class="detailSwiperWrap">
+                
                 <swiper class="screen-swiper square-dot" indicator-dots="true" circular="true">
-                        <swiper-item wx:for="{{swiperList}}" wx:key>
+                        <swiper-item wx:for="{{hotelInfo.pic_list}}" wx:key>
                         <view class="albumBtn flex justify-center align-center" bindtap="albumInto">
                             <icon class="iconfont iconxianpaizhao text-white" />
                             <text class="text-white">相册</text>
                         </view>
-                        <image src="{{item.url}}" mode="aspectFill" wx:if="{{item.type=='image'}}"></image>
-                        <video src="{{item.url}}" autoplay loop muted show-play-btn="{{false}}" controls="{{false}}" objectFit="cover" wx:if="{{item.type=='video'}}"></video>
+                        <image src="{{item}}" mode="aspectFill"></image>
+                        <video src="{{item}}" autoplay loop muted show-play-btn="{{false}}" controls="{{false}}" objectFit="cover"></video>
                         </swiper-item>
                 </swiper>
         </view>
        
         <view class="hotelTitle flex align-center padding-bottom">
             <view class="hotelTitleWord">
-                <view class="titleWord text-bold text-black">贵阳凯宾斯基大酒店</view>
-                <view class="enTitle">Kempinski Hotel Guiyang | 五档豪华</view>
+                <view class="titleWord text-bold text-black">{{hotelInfo.title}}</view>
+                <view class="enTitle">
+                    {{hotelInfo.extend_info.e_english_name}} | 
+                    <text wx:if="{{hotelInfo.hotelrankid==1}}">一星级酒店</text>
+                    <text wx:if="{{hotelInfo.hotelrankid==2}}">二星级酒店</text>
+                    <text wx:if="{{hotelInfo.hotelrankid==3}}">三星级酒店</text>
+                    <text wx:if="{{hotelInfo.hotelrankid==4}}">四星级酒店</text>
+                    <text wx:if="{{hotelInfo.hotelrankid==5}}">五星级酒店</text>
+                </view>
             </view>
             <view class="shareBtnGroup flex justify-around">
                     <view class="bg-gradual-red flex justify-center align-center margin-right">
@@ -30,8 +39,8 @@
         <view class="contactWrap">
             <view class="contactItem flex justify-between" bindtap="commentInto">
                 <view class="starTitle flex align-center text-blue">
-                    <text class="text-bold">4.3分</text>
-                    <text class="margin-left">“设施齐全”  “交通方便”</text>
+                    <text class="text-bold">{{hotelInfo.satisfyscore}}分</text>
+                    <text class="margin-left">“{{hotelInfo.tagword}}”</text>
                 </view>
                 <view class="contactRight flex align-center">
                     <text class="text-blue">185条点评</text>
@@ -39,11 +48,11 @@
                 </view>
             </view>
 
-            <view class="contactItem margin-top flex justify-between" bindtap="facilityInto">
+            <view class="contactItem margin-top flex justify-between" bindtap="facilityInto" data-id="{{hotelInfo.id}}">
                     <view class="contactTitle flex">
                         <view class="contactIntroduce flex justify-between">
-                            <text>2016年开业</text>
-                            <text>2018年装修</text>
+                            <text>{{hotelInfo.opentime}}年开业</text>
+                            <text>{{hotelInfo.decoratetime}}年装修</text>
                         </view>
                         <view class="contactIconGroup flex ">
                             <view>
@@ -85,14 +94,14 @@
                     <view class="bg-ghostWhite">有窗</view>
                     <view class="bg-ghostWhite">到店付款</view>
                 </view>
-                <view class="hotelRoomItem margin-top padding-bottom margin-bottom flex">
+                <view class="hotelRoomItem margin-top padding-bottom margin-bottom flex" wx:for="{{hotelInfo.suit_list}}" wx:key wx:for-item="room" >
                     <view class="itemLeft flex">
-                        <view class="roomImg">
-                            <image src="https://www.youmuzhe.net/image/hotelCase2.jpg" />
-                        </view>
+                        <view class="roomImg" style="background-image: url(https://www.youmuzhe.net/{{room.litpic}})"></view>
                         <view class="roomInfo flex">
-                            <text class="text-bold">高级大床房</text>
-                            <text>不含早餐 | 8-10m² | 大床 | 有窗</text>
+                            <text class="text-bold">{{room.roomname}}</text>
+                            <text>
+                                <block wx:for="{{[room.roomstyle,room.roomwindow,room.breakfirst,room.computer]}}" wx:key wx:for-item="fa">{{fa?fa+' | ':''}}</block>
+                            </text>
                             <text class="text-green">限时取消 立即确认</text>
                         </view>
                     </view>
@@ -102,22 +111,6 @@
                     </view>
                 </view>
 
-                <view class="hotelRoomItem margin-top padding-bottom margin-bottom flex">
-                        <view class="itemLeft flex">
-                            <view class="roomImg">
-                                <image src="https://www.youmuzhe.net/image/hotelCase2.jpg" />
-                            </view>
-                            <view class="roomInfo flex">
-                                <text class="text-bold">高级大床房</text>
-                                <text>不含早餐 | 8-10m² | 大床 | 有窗</text>
-                                <text class="text-green">限时取消 立即确认</text>
-                            </view>
-                        </view>
-                        <view class="itemRight flex align-center justify-center">
-                            <button class="bg-blue" bindtap="showModal" data-target="appointModal">预定</button>
-                            <text class="text-orange text-bold">￥688</text>
-                        </view>
-                    </view>
         </view>
     </view>
 </view>

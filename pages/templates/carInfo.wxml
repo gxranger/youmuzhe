@@ -1,11 +1,29 @@
 <template name="carInfoTemplate">
-    <view class="carInfoWrap">
+    <view class="topWrap flex flex-direction align-center justify-center margin-bottom">
+        <view class="internalTitle">
+                <text style="color: #888888">请选择对应车辆部位进行确认</text>
+        </view>
         <view class="carImg">
-            <image src="{{carInfo.carImg}}" />
+                <image class="full-img" src="https://www.youmuzhe.net/image/car1.png" />
         </view>
         <view class="carInfo">
-            {{carInfo.carName}} {{carInfo.carColor}} | {{carInfo.carDisplacement}} | {{carInfo.carSeat}} 
+            福特福睿斯 白色 | 1.5T自动 | 三厢五座
         </view>
-        <view class="carNum"> {{carInfo.carNum}}</view>
+        <view class="carPetrol flex justify-around align-end">
+                <view class="kilometerNum text-df text-bold">
+                    <text>贵A54545454</text>
+                </view>
+                <view class="progressWrap flex">
+                        <icon class="iconfont iconjiayouzhan" />
+                        <view class="cu-progress round sm striped active">
+                                <view class="bg-blue" style="width: {{carInfo.petrolPercet}}"></view>
+                        </view>
+                        <text>60L</text>
+                </view>
+                <view class="kilometerNum">
+                    <icon class="iconfont iconlicheng_f" />
+                    <text>600KM</text>
+                </view>
+        </view>
     </view>
 </template>

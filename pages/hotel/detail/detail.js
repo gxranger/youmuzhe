@@ -1,6 +1,6 @@
 var Moment = require("../../../utils/moment.js");
 import { dateStr } from "../../../utils/util";
-
+const app = getApp()
 Page({
     data: {
       checkInDate:"",
@@ -37,12 +37,27 @@ Page({
         type: 'image',
         url: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big99008.jpg'
       }],
+      hotelInfo:{}
     },
 
    /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+
+    let self = this;
+    console.log(options.id,232323)
+
+    app.getApi().post('/standard/hotel/detail', {
+      productid: 2, //从酒店类别获取
+    })
+    .then(function(res) {
+      res.pic_list = res.pic_list.slice(0,5)
+      self.setData({hotelInfo: res})
+    })
+    .catch(function(e) {
+      //异常处理
+    })
     //设缓存缓存起来的日期
     wx.setStorage({
       key: 'ROOM_SOURCE_DATE',
@@ -59,6 +74,7 @@ Page({
    */
   onShow: function () {
     let getDate = wx.getStorageSync("ROOM_SOURCE_DATE");
+    
     this.setData({
       checkInDate: dateStr(getDate.checkInDate),
       checkOutDate: dateStr(getDate.checkOutDate),
@@ -123,9 +139,10 @@ Page({
         url: '../calender/calender'
       })
     },
-    facilityInto(){
+    facilityInto(e){
+      let id = e.currentTarget.dataset.id;
       wx.navigateTo({
-        url: '../facility/facility'
+        url: '../facility/facility?id='+id
       })
     },
     commentInto(){

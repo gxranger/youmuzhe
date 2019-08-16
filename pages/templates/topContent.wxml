@@ -9,21 +9,21 @@
 </template>
 
 <template name="swiperTemplate">
-    <!-- 幻灯片 -->
-    <view class='swiperWarp'>
-        <swiper bindanimationfinish="changeGoodsSwip" class='swiper' current='{{currentSwiper}}' autoplay bindchange='swiperChange'>
-            <block wx:for="{{imgList}}" wx:key="index">
-            <navigator url="{{imgList[index].derectUrl}}" hover-class="none">
-            <swiper-item>
-            <image src='{{imgList[index].fileUrl}}' class='img'></image>
-            </swiper-item>
-            </navigator>
-            </block>
-        </swiper>
-        <view class='dots'>
-            <block wx:for="{{imgList}}" wx:key="">
-            <view class='{{index == currentSwiper ?"iconfont iconlingxing":"dot"}}'></view>
-            </block>
+        <!-- 幻灯片 -->
+        <view class='swiperWarp'>
+            <swiper bindanimationfinish="changeGoodsSwip" class='swiper' current='{{currentSwiper}}' autoplay bindchange='swiperChange'>
+                <block wx:for="{{swiperList}}" wx:key="_">
+                <navigator url="{{item.link}}" hover-class="none">
+                <swiper-item>
+                <image src='{{item.litpic}}' class='img'></image>
+                </swiper-item>
+                </navigator>
+                </block>
+            </swiper>
+            <view class='dots'>
+                <block wx:for="{{swiperList}}" wx:key="index">
+                <view class='{{index == swiperCurrent ?"iconfont iconlingxing":"dot"}}'></view>
+                </block>
+            </view>
         </view>
-    </view>
-</template>
+    </template>

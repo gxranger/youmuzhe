@@ -1,25 +1,25 @@
 <view class="facilityWrap flex align-center">
         <view class="infoDeatail shadow-warp">
                 <scroll-view scroll-x class="bg-white nav text-center">
-                    <view class="cu-item {{index==TabCur?'text-blue':''}}" wx:for="{{hotelInfo}}" wx:key bindtap="tabSelect" data-id="{{index}}">
-                        {{hotelInfo[index].name}}
+                    <view class="cu-item {{index==TabCur?'text-blue':''}}" wx:for="{{tabTitle}}" wx:key bindtap="tabSelect" data-id="{{index}}">
+                        {{tabTitle[index]}}
                     </view>
                 </scroll-view>
         </view>
         <view class="infoDeatailContent">
             <view class="hotelIntroduce" hidden="{{!isShow[0]}}">
               <view class="topInfo flex justify-around">
-                  <view>装修时间：<text class="text-black text-bold">{{hotelInfo[0].renovation}}年</text></view>
-                  <view>开业时间：<text class="text-black text-bold">{{hotelInfo[0].open}}年</text></view>
-                  <view>酒店规模：<text class="text-black text-bold">{{hotelInfo[0].scale}}</text></view>
+                  <view>装修时间：<text class="text-black text-bold">{{facilityInfo.decoratetime}}年</text></view>
+                  <view>开业时间：<text class="text-black text-bold">{{facilityInfo.opentime}}年</text></view>
+                  <view>酒店规模：<text class="text-black text-bold">{{facilityInfo.extend_info.e_hotel_scale}}</text></view>
               </view> 
               <view class="introduceContent solids-bottom padding-top padding-bottom">
-                    {{hotelInfo[0].content}}
+                    <rich-text nodes="{{nodes}}" bindtap="tap">{{facilityInfo.content}}</rich-text>
               </view>
               <view class="footInfo flex padding-bottom">
-                  <view>
+                  <view bindtap="positionOpen" data-lat="{{facilityInfo.lat}}" data-lng="{{facilityInfo.lng}}">
                     <icon class="iconfont icondizhi text-blue" />
-                    <text class="text-blue">{{hotelInfo[0].address.name}}</text>
+                    <text class="text-blue">{{facilityInfo.address}}</text>
                   </view>
                   <view>
                         <icon class="iconfont icondianhua text-blue" />
@@ -69,6 +69,6 @@
                     <text>免费早餐</text>
                 </view>
             </view>
-            <view class="hotelAppoint" hidden="{{!isShow[2]}}">入店时间14：00以后，离店时间12：00以前，不允许携带宠物。</view>
+            <view class="hotelAppoint" hidden="{{!isShow[2]}}">{{facilityInfo.notice}}</view>
         </view>
 </view>

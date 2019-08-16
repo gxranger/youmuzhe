@@ -29,6 +29,11 @@ Page({
       url: '../appearance/appearance?from_page_name=makecar'
       })
   },
+  internalInto() {
+    wx.navigateTo({
+      url: '../internal/internal'
+      })
+  },
 
   onLoad() {
     // 人脸识别弹窗初始化

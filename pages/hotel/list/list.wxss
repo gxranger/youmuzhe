@@ -9,7 +9,7 @@
     height: 80rpx;
     color: #888888;
     font-size: 28rpx;
-    box-shadow: 0 5rpx 8rpx #e2e2e2;
+    box-shadow: 0 12rpx 10rpx rgba(216, 216, 216, 0.5);
 }
 .listTabFixed {
     position:fixed;
@@ -36,14 +36,10 @@
     margin-top: -2rpx;
     font-size: 14rpx;
 }
-.listContent {
-    width: 100%;
-    flex-direction: column;
-}
 .listLtem {
     width: 100%;
-    margin: 8rpx 0;
-    padding:20rpx;
+    padding:18rpx;
+    border-bottom: #f2f2f2 1px solid;
 }
 .itemLeft {
     width: 35%;
@@ -51,6 +47,10 @@
 .itemLeft view {
     width: 240rpx;
     height: 240rpx;
+    background-color: #f2f2f2;
+    background-position: center;
+    background-repeat:no-repeat;
+    background-size:cover;
 }
 .itemRight {
     width: 65%;
@@ -59,6 +59,7 @@
 .titleInfo {
     width: 100%;
     flex-direction: column;
+    position: relative;
 }
 .hotelName {
     font-size: 32rpx;
@@ -88,6 +89,8 @@
     font-size: 28rpx;
     color: #F5503F;
     align-items: baseline;
+    position: absolute;
+    bottom: 0;
 }
 .price .text-bold {
     font-size: 42rpx;
